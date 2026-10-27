@@ -1,0 +1,32 @@
+{
+  "max_seq_length": 256,
+  "fixed_chunks": 3235,
+  "fixed_share_over_limit": 0.0,
+  "fixed_median_tokens": 102.0,
+  "overlap_chunks": 3585,
+  "overlap_share_over_limit": 0.0,
+  "overlap_median_tokens": 102.0,
+  "semantic_chunks": 589,
+  "semantic_share_over_limit": 0.631578947368421,
+  "semantic_median_tokens": 389.0,
+  "groups": {
+    "visible": {
+      "n": 267,
+      "semantic": 0.8726591760299626,
+      "fixed": 0.7602996254681648,
+      "overlap": 0.8314606741573034
+    },
+    "beyond_limit": {
+      "n": 228,
+      "semantic": 0.4166666666666667,
+      "fixed": 0.7412280701754386,
+      "overlap": 0.8026315789473685
+    },
+    "unknown_position": {
+      "n": 5,
+      "semantic": 0.8,
+      "fixed": 0.8,
+      "overlap": 0.8
+    }
+  }
+}

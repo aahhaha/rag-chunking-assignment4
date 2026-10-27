@@ -1,0 +1,610 @@
+[
+  {
+    "ctx_chars@5": "2498",
+    "em": "0.0",
+    "f1": "0.39999999999999997",
+    "hit@1": "1",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "572a1c943f37b319004786e4",
+    "method": "fixed",
+    "pred": "landlords found new residents willing to pay higher 67, the dollar price of oil had risen by less than two percent per year",
+    "truncated": "0",
+    "question": "What drove increased rental prices in East New York?",
+    "gold": [
+      "residents willing to pay higher market rate for housing",
+      "gentrification of older neighbourhoods",
+      "new residents willing to pay higher market rate"
+    ],
+    "passage": "A number of researchers (David Rodda, Jacob Vigdor, and Janna Matlack), argue that a shortage of affordable housing – at least in the US – is caused in part by income inequality. David Rodda noted that from 1984 and 1991, the number of quality rental units decreased as the demand for higher quality housing increased (Rhoda 1994:148). Through gentrification of older neighbourhoods, for example, in East New York, rental prices increased rapidly as landlords found new residents willing to pay higher market rate for housing and left lower income families without rental units. The ad valorem property tax policy combined with rising prices made it difficult or impossible for low income residents to keep pace.",
+    "review_label": "Mixed text"
+  },
+  {
+    "ctx_chars@5": "2500",
+    "em": "0.0",
+    "f1": "0.4",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "571c8539dd7acb1400e4c0e6",
+    "method": "fixed",
+    "pred": "Aristotelian theory of motion",
+    "truncated": "0",
+    "question": "What previous work did Lavoisier experiments discredit?",
+    "gold": [
+      "phlogiston theory",
+      "phlogiston theory of combustion and corrosion",
+      "phlogiston theory of combustion and corrosion",
+      "phlogiston theory of combustion and corrosion",
+      "phlogiston theory"
+    ],
+    "passage": "Oxygen was discovered independently by Carl Wilhelm Scheele, in Uppsala, in 1773 or earlier, and Joseph Priestley in Wiltshire, in 1774, but Priestley is often given priority because his work was published first. The name oxygen was coined in 1777 by Antoine Lavoisier, whose experiments with oxygen helped to discredit the then-popular phlogiston theory of combustion and corrosion. Its name derives from the Greek roots ὀξύς oxys, \"acid\", literally \"sharp\", referring to the sour taste of acids and -γενής -genes, \"producer\", literally \"begetter\", because at the time of naming, it was mistakenly thought that all acids required oxygen in their composition. Common uses of oxygen includes the production cycle of steel, plastics and textiles, brazing, welding and cutting of steels and other metals, rocket propellant, in oxygen therapy and life support systems in aircraft, submarines, spaceflight and diving.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2193",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "57264991f1498d1400e8db31",
+    "method": "fixed",
+    "pred": "Jerusalem",
+    "truncated": "0",
+    "question": "Where did the residents of Antioch flee to?",
+    "gold": [
+      "The city's residents fled to the north",
+      "the north",
+      "north"
+    ],
+    "passage": "The plague struck various countries in the Middle East during the pandemic, leading to serious depopulation and permanent change in both economic and social structures. As it spread to western Europe, the disease entered the region from southern Russia also. By autumn 1347, the plague reached Alexandria in Egypt, probably through the port's trade with Constantinople, and ports on the Black Sea. During 1347, the disease travelled eastward to Gaza, and north along the eastern coast to cities in Lebanon, Syria and Palestine, including Ashkelon, Acre, Jerusalem, Sidon, Damascus, Homs, and Aleppo. In 1348–49, the disease reached Antioch. The city's residents fled to the north, most of them dying during the journey, but the infection had been spread to the people of Asia Minor.[citation needed]",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2499",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "57274a8cf1498d1400e8f5b7",
+    "method": "fixed",
+    "pred": "1967",
+    "truncated": "0",
+    "question": "When was 7 Lincoln Square completed?",
+    "gold": [
+      "June 1979",
+      "June 1979",
+      "1979"
+    ],
+    "passage": "Meanwhile, ABC News, which formed as a newly separate division, sought to become a global leader in television news. In 1977, Roone Arledge was named president of the new ABC News in addition to being president of ABC Sports. That same year, ABC launched a major expansion of its office facilities in New York City. The company first constructed a new 10-story building on land previously occupied by an abandoned warehouse on the corner of Columbus Avenue and West 66th Street; the facility that was built in its place is nicknamed \"7 Lincoln Square\" (although it is actually located at 149 Columbus Avenue). Meanwhile, a former parking lot, located at 30 West 67th Street, was transformed into an impressive 15-story building. Both buildings were completed in June 1979. WABC-TV moved its operations from offices at 77 West 66th Street to 149 Columbus Avenue, freeing up space for the ABC network to house some of its operations.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2497",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "57283a392ca10214002da11c",
+    "method": "fixed",
+    "pred": "The Three Doctors",
+    "truncated": "0",
+    "question": "Which Doctor Who show was the largest simulcast of a TV drama?",
+    "gold": [
+      "50th anniversary special",
+      "50th anniversary special",
+      "50th anniversary special"
+    ],
+    "passage": "In 2013, the Peabody Awards honoured Doctor Who with an Institutional Peabody \"for evolving with technology and the times like nothing else in the known television universe.\" The programme is listed in Guinness World Records as the longest-running science fiction television show in the world, the \"most successful\" science fiction series of all time—based on its over-all broadcast ratings, DVD and book sales, and iTunes traffic— and for the largest ever simulcast of a TV drama with its 50th anniversary special. During its original run, it was recognised for its imaginative stories, creative low-budget special effects, and pioneering use of electronic music (originally produced by the BBC Radiophonic Workshop).",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2499",
+    "em": "0.0",
+    "f1": "0.6666666666666666",
+    "hit@1": "0",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "572651f9f1498d1400e8dbf1",
+    "method": "fixed",
+    "pred": "two-thirds",
+    "truncated": "0",
+    "question": "How much of a voting majority must there be to effectively censure the Commission?",
+    "gold": [
+      "two-thirds majority",
+      "a two-thirds majority",
+      "a two-thirds majority",
+      "a two-thirds majority"
+    ],
+    "passage": "While the Commission has a monopoly on initiating legislation, the European Parliament and the Council of the European Union have powers of amendment and veto during the legislative process. According to the Treaty on European Union articles 9 and 10, the EU observes \"the principle of equality of its citizens\" and is meant to be founded on \"representative democracy\". In practice, equality and democracy are deficient because the elected representatives in the Parliament cannot initiate legislation against the Commission's wishes, citizens of smallest countries have ten times the voting weight in Parliament as citizens of the largest countries, and \"qualified majorities\" or consensus of the Council are required to legislate. The justification for this \"democratic deficit\" under the Treaties is usually thought to be that completion integration of the European economy and political institutions required the technical coordination of experts, while popular understanding of the EU developed and nationalist sentiments declined post-war. Over time, this has meant the Parliament gradually assumed more voice: from being an unelected assembly, to its first direct elections in 1979, to having increasingly more rights in the legislative process. Citizens' rights are therefore limited compared to the democratic polities within all European member states: under TEU article 11 citizens and associations have the rights such as publicising their views and submit an initiative that must be considered by the Commission with one million signatures. TFEU article 227 contains a further right for citizens to petition the Parliament on issues which affect them. Parliament elections, take place every five years, and votes for Members of the European Parliament in member states must be organised by proportional representation or a single transferable vote. There are 750 MEPs and their numbers are \"degressively proportional\" according to member state size. This means - although the Council is meant to be the body representing member states - in the Parliament citizens of smaller member states have more voice than citizens in larger member states. MEPs divide, as they do in national Parliaments, along political party lines: the conservative European People's Party is currently the largest, and the Party of European Socialists leads the opposition. Parties do not receive public funds from the EU, as the Court of Justice held in Parti écologiste \"Les Verts\" v Parliament that this was entirely an issue to be regulated by the member states. The Parliament's powers include calling inquiries into maladministration or appoint an Ombudsman pending any court proceedings. It can require the Commission respond to questions and by a two-thirds majority can censure the whole Commission (as happened to the Santer Commission in 1999). In some cases, the Parliament has explicit consultation rights, which the Commission must genuinely follow. However its role participation in the legislative process still remains limited because no member can actually or pass legislation without the Commission and Council, meaning power (\"kratia\") is not in the hands of directly elected representatives of the people (\"demos\"): in the EU it is not yet true that \"the administration is in the hands of the many and not of the few.\"",
+    "review_label": "Answer span"
+  },
+  {
+    "ctx_chars@5": "2499",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "57287c142ca10214002da3d2",
+    "method": "fixed",
+    "pred": "He instituted the reforms proposed by his Chinese advisers by centralizing the bureaucracy, expanding the circulation of paper money, and maintaining the traditional",
+    "truncated": "0",
+    "question": "What did Kublai do to prevent famines?",
+    "gold": [
+      "granaries were ordered built throughout the empire",
+      "granaries were ordered built throughout the empire",
+      "granaries were ordered built"
+    ],
+    "passage": "The Yuan undertook extensive public works. Among Kublai Khan's top engineers and scientists was the astronomer Guo Shoujing, who was tasked with many public works projects and helped the Yuan reform the lunisolar calendar to provide an accuracy of 365.2425 days of the year, which was only 26 seconds off the modern Gregorian calendar's measurement. Road and water communications were reorganized and improved. To provide against possible famines, granaries were ordered built throughout the empire. The city of Beijing was rebuilt with new palace grounds that included artificial lakes, hills and mountains, and parks. During the Yuan period, Beijing became the terminus of the Grand Canal of China, which was completely renovated. These commercially oriented improvements encouraged overland and maritime commerce throughout Asia and facilitated direct Chinese contacts with Europe. Chinese travelers to the West were able to provide assistance in such areas as hydraulic engineering. Contacts with the West also brought the introduction to China of a major food crop, sorghum, along with other foreign food products and methods of preparation.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2499",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "5726c80c5951b619008f7dea",
+    "method": "fixed",
+    "pred": "green-glazed ceramics, silk embroideries from officials its of a husband and wife painted in watercolour on silk date from the 18th century",
+    "truncated": "0",
+    "question": "Some of the museum's collection of Korean boxes are inlaid with what objects?",
+    "gold": [
+      "mother-of-pearl",
+      "mother-of-pearl",
+      "mother-of-pearl"
+    ],
+    "passage": "The smaller galleries cover Korea, the Himalayan kingdoms and South East Asia. Korean displays include green-glazed ceramics, silk embroideries from officials' robes and gleaming boxes inlaid with mother-of-pearl made between 500 AD and 2000. Himalayan items include important early Nepalese bronze sculptures, repoussé work and embroidery. Tibetan art from the 14th to the 19th century is represented by notable 14th- and 15th-century religious images in wood and bronze, scroll paintings and ritual objects. Art from Thailand, Burma, Cambodia, Indonesia and Sri Lanka in gold, silver, bronze, stone, terracotta and ivory represents these rich and complex cultures, the displays span the 6th to 19th centuries. Refined Hindu and Buddhist sculptures reflect the influence of India; items on show include betel-nut cutters, ivory combs and bronze palanquin hooks.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2496",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "5726ace8dd62a815002e8c9f",
+    "method": "fixed",
+    "pred": "scientific collections",
+    "truncated": "0",
+    "question": "What did the museum acquire from the Royal College of Science?",
+    "gold": [
+      "Henry Cole wing",
+      "Henry Cole wing",
+      "Henry Cole wing"
+    ],
+    "passage": "In the immediate post-war years there was little money available for other than essential repairs. The 1950s and early 1960s saw little in the way of building work; the first major work was the creation of new storage space for books in the Art Library in 1966 and 1967. This involved flooring over Aston Webb's main hall to form the book stacks, with a new medieval gallery on the ground floor (now the shop, opened in 2006). Then the lower ground-floor galleries in the south-west part of the museum were redesigned, opening in 1978 to form the new galleries covering Continental art 1600–1800 (late Renaissance, Baroque through Rococo and neo-Classical). In 1974 the museum had acquired what is now the Henry Cole wing from the Royal College of Science. In order to adapt the building as galleries, all the Victorian interiors except for the staircase were recast during the remodelling. To link this to the rest of the museum, a new entrance building was constructed on the site of the former boiler house, the intended site of the Spiral, between 1978 and 1982. This building is of concrete and very functional, the only embellishment being the iron gates by Christopher Hay and Douglas Coyne of the Royal College of Art. These are set in the columned screen wall designed by Aston Webb that forms the façade.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2498",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "573010fab2c2fd14005687da",
+    "method": "fixed",
+    "pred": "the frontiers between New France and the British colonies",
+    "truncated": "0",
+    "question": "Where did a bloody civil war break out?",
+    "gold": [
+      "Algeria",
+      "Algeria",
+      "Algeria"
+    ],
+    "passage": "These attacks resonated with conservative Muslims and the problem did not go away with Saddam's defeat either, since American troops remained stationed in the kingdom, and a de facto cooperation with the Palestinian-Israeli peace process developed. Saudi Arabia attempted to compensate for its loss of prestige among these groups by repressing those domestic Islamists who attacked it (bin Laden being a prime example), and increasing aid to Islamic groups (Islamist madrassas around the world and even aiding some violent Islamist groups) that did not, but its pre-war influence on behalf of moderation was greatly reduced. One result of this was a campaign of attacks on government officials and tourists in Egypt, a bloody civil war in Algeria and Osama bin Laden's terror attacks climaxing in the 9/11 attack.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2498",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "572fb42904bcaa1900d76c15",
+    "method": "fixed",
+    "pred": "the Presiding Officer",
+    "truncated": "0",
+    "question": "Who is elected to serve as the Presiding Officer at the beginning of each parliamentary session?",
+    "gold": [
+      "one MSP",
+      "MSP",
+      "MSP"
+    ],
+    "passage": "After each election to the Scottish Parliament, at the beginning of each parliamentary session, Parliament elects one MSP to serve as Presiding Officer, the equivalent of the speaker (currently Tricia Marwick), and two MSPs to serve as deputies (currently Elaine Smith and John Scott). The Presiding Officer and deputies are elected by a secret ballot of the 129 MSPs, which is the only secret ballot conducted in the Scottish Parliament. Principally, the role of the Presiding Officer is to chair chamber proceedings and the Scottish Parliamentary Corporate Body. When chairing meetings of the Parliament, the Presiding Officer and his/her deputies must be politically impartial. During debates, the Presiding Officer (or the deputy) is assisted by the parliamentary clerks, who give advice on how to interpret the standing orders that govern the proceedings of meetings. A vote clerk sits in front of the Presiding Officer and operates the electronic voting equipment and chamber clocks.",
+    "review_label": "Wrong entity or explanation"
+  },
+  {
+    "ctx_chars@5": "2498",
+    "em": "0.0",
+    "f1": "0.9696969696969697",
+    "hit@1": "1",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "5726509bdd62a815002e815b",
+    "method": "fixed",
+    "pred": "that the reported rates of mortality in rural areas during the 14th-century pandemic were inconsistent with the modern bubonic plague",
+    "truncated": "0",
+    "question": "What did Shrewsbury note about the plague?",
+    "gold": [
+      "rates of mortality in rural areas during the 14th-century pandemic were inconsistent with the modern bubonic plague",
+      "the reported rates of mortality in rural areas during the 14th-century pandemic were inconsistent with the modern bubonic plague",
+      "reported rates of mortality in rural areas during the 14th-century pandemic were inconsistent with the modern bubonic plague"
+    ],
+    "passage": "The plague theory was first significantly challenged by the work of British bacteriologist J. F. D. Shrewsbury in 1970, who noted that the reported rates of mortality in rural areas during the 14th-century pandemic were inconsistent with the modern bubonic plague, leading him to conclude that contemporary accounts were exaggerations. In 1984 zoologist Graham Twigg produced the first major work to challenge the bubonic plague theory directly, and his doubts about the identity of the Black Death have been taken up by a number of authors, including Samuel K. Cohn, Jr. (2002), David Herlihy (1997), and Susan Scott and Christopher Duncan (2001).",
+    "review_label": "Answer span"
+  },
+  {
+    "ctx_chars@5": "2498",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "57264a8cdd62a815002e808e",
+    "method": "fixed",
+    "pred": "the Council",
+    "truncated": "0",
+    "question": "Which authority figure is designated to schedule and set the work of the EU?",
+    "gold": [
+      "The Commission's President",
+      "The Commission's President",
+      "The Commission's President",
+      "The Commission's President ("
+    ],
+    "passage": "The European Commission is the main executive body of the European Union. Article 17(1) of the Treaty on European Union states the Commission should \"promote the general interest of the Union\" while Article 17(3) adds that Commissioners should be \"completely independent\" and not \"take instructions from any Government\". Under article 17(2), \"Union legislative acts may only be adopted on the basis of a Commission proposal, except where the Treaties provide otherwise.\" This means that the Commission has a monopoly on initiating the legislative procedure, although the Council is the \"de facto catalyst of many legislative initiatives\". The Parliament can also formally request the Commission to submit a legislative proposal but the Commission can reject such a suggestion, giving reasons. The Commission's President (currently an ex-Luxembourg Prime Minister, Jean-Claude Juncker) sets the agenda for the EU's work. Decisions are taken by a simple majority vote, usually through a \"written procedure\" of circulating the proposals and adopting if there are no objections.[citation needed] Since Ireland refused to consent to changes in the Treaty of Lisbon 2007, there remains one Commissioner for each of the 28 member states, including the President and the High Representative for Foreign and Security Policy (currently Federica Mogherini). The Commissioners (and most importantly, the portfolios they will hold) are bargained over intensively by the member states. The Commissioners, as a block, are then subject to a qualified majority vote of the Council to approve, and majority approval of the Parliament. The proposal to make the Commissioners be drawn from the elected Parliament, was not adopted in the Treaty of Lisbon. This means Commissioners are, through the appointment process, the unelected subordinates of member state governments.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2497",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "573062662461fd1900a9cdfa",
+    "method": "fixed",
+    "pred": "colonization",
+    "truncated": "0",
+    "question": "imperialism often divides countries by using which technique?",
+    "gold": [
+      "othering",
+      "othering",
+      "othering",
+      "othering",
+      "othering"
+    ],
+    "passage": "Imperialism is defined as \"A policy of extending a country’s power and influence through diplomacy or military force.\" Imperialism is particularly focused on the control that one group, often a state power, has on another group of people. This is often through various forms of \"othering\" (see other) based on racial, religious, or cultural stereotypes. There are \"formal\" or \"informal\" imperialisms. \"Formal imperialism\" is defined as \"physical control or full-fledged colonial rule\". \"Informal imperialism\" is less direct; however, it is still a powerful form of dominance.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2499",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "57293ca73f37b3190047815f",
+    "method": "fixed",
+    "pred": "the United Nations",
+    "truncated": "0",
+    "question": "What rules does the IPCC have to follow?",
+    "gold": [
+      "the Financial Regulations and Rules of the WMO",
+      "Financial Regulations and Rules of the WMO",
+      "Financial Regulations and Rules of the WMO"
+    ],
+    "passage": "The IPCC receives funding through the IPCC Trust Fund, established in 1989 by the United Nations Environment Programme (UNEP) and the World Meteorological Organization (WMO), Costs of the Secretary and of housing the secretariat are provided by the WMO, while UNEP meets the cost of the Depute Secretary. Annual cash contributions to the Trust Fund are made by the WMO, by UNEP, and by IPCC Members; the scale of payments is determined by the IPCC Panel, which is also responsible for considering and adopting by consensus the annual budget. The organisation is required to comply with the Financial Regulations and Rules of the WMO.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2498",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "57293d116aef051400154bc8",
+    "method": "fixed",
+    "pred": "unanswerable",
+    "truncated": "0",
+    "question": "What does the IPCC not do?",
+    "gold": [
+      "does not carry out research nor does it monitor climate related data",
+      "research",
+      "carry out research nor does it monitor climate related data"
+    ],
+    "passage": "The IPCC does not carry out research nor does it monitor climate related data. Lead authors of IPCC reports assess the available information about climate change based on published sources. According to IPCC guidelines, authors should give priority to peer-reviewed sources. Authors may refer to non-peer-reviewed sources (the \"grey literature\"), provided that they are of sufficient quality. Examples of non-peer-reviewed sources include model results, reports from government agencies and non-governmental organizations, and industry journals. Each subsequent IPCC report notes areas where the science has improved since the previous report and also notes areas where further research is required.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2499",
+    "em": "0.0",
+    "f1": "0.5",
+    "hit@1": "0",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "56f867e3a6d7ea1400e175da",
+    "method": "fixed",
+    "pred": "the Large Catechism",
+    "truncated": "0",
+    "question": "What work of Luther's is seen as a clear religious teaching?",
+    "gold": [
+      "Small Catechism",
+      "Small Catechism",
+      "The Small Catechism"
+    ],
+    "passage": "The catechism is one of Luther's most personal works. \"Regarding the plan to collect my writings in volumes,\" he wrote, \"I am quite cool and not at all eager about it because, roused by a Saturnian hunger, I would rather see them all devoured. For I acknowledge none of them to be really a book of mine, except perhaps the Bondage of the Will and the Catechism.\" The Small Catechism has earned a reputation as a model of clear religious teaching. It remains in use today, along with Luther's hymns and his translation of the Bible.",
+    "review_label": "Wrong entity or explanation"
+  },
+  {
+    "ctx_chars@5": "2497",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "56f86966aef2371900626054",
+    "method": "fixed",
+    "pred": "ministry of Word, Sacrament, Order and Service",
+    "truncated": "0",
+    "question": "What work is useful for pastors?",
+    "gold": [
+      "Larger Catechism",
+      "Larger Catechism",
+      "Larger Catechism"
+    ],
+    "passage": "Luther's Small Catechism proved especially effective in helping parents teach their children; likewise the Larger Catechism was effective for pastors. Using the German vernacular, they expressed the Apostles' Creed in simpler, more personal, Trinitarian language. He rewrote each article of the Creed to express the character of the Father, the Son, or the Holy Spirit. Luther's goal was to enable the catechumens to see themselves as a personal object of the work of the three persons of the Trinity, each of which works in the catechumen's life. That is, Luther depicted the Trinity not as a doctrine to be learned, but as persons to be known. The Father creates, the Son redeems, and the Spirit sanctifies, a divine unity with separate personalities. Salvation originates with the Father and draws the believer to the Father. Luther's treatment of the Apostles' Creed must be understood in the context of the Decalogue (the Ten Commandments) and the Lord's Prayer, which are also part of the Lutheran catechical teaching.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2499",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "56e1f10ee3433e1400423223",
+    "method": "fixed",
+    "pred": "properties of plants",
+    "truncated": "0",
+    "question": "Though unkown, what are the most commonly ascribed attributes of L in relation to P",
+    "gold": [
+      "strictly contained in P or equal to P",
+      "contained in P or equal to P.",
+      "strictly contained in P or equal to P"
+    ],
+    "passage": "Similarly, it is not known if L (the set of all problems that can be solved in logarithmic space) is strictly contained in P or equal to P. Again, there are many complexity classes between the two, such as NL and NC, and it is not known if they are distinct or equal classes.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2497",
+    "em": "0.0",
+    "f1": "0.9523809523809523",
+    "hit@1": "1",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "57268220f1498d1400e8e218",
+    "method": "fixed",
+    "pred": "to provide better absolute bounds on the timing and rates of deposition",
+    "truncated": "0",
+    "question": "Why is it important to precisely date rocks within the stratigraphic section? ",
+    "gold": [
+      "provide better absolute bounds on the timing and rates of deposition",
+      "gain information about past climate",
+      "provide better absolute bounds on the timing and rates of deposition"
+    ],
+    "passage": "In the laboratory, biostratigraphers analyze rock samples from outcrop and drill cores for the fossils found in them. These fossils help scientists to date the core and to understand the depositional environment in which the rock units formed. Geochronologists precisely date rocks within the stratigraphic section in order to provide better absolute bounds on the timing and rates of deposition. Magnetic stratigraphers look for signs of magnetic reversals in igneous rock units within the drill cores. Other scientists perform stable isotope studies on the rocks to gain information about past climate.",
+    "review_label": "Answer span"
+  },
+  {
+    "ctx_chars@5": "2499",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "570961aa200fba1400367f16",
+    "method": "fixed",
+    "pred": "Eutelsat",
+    "truncated": "0",
+    "question": "Who's satellites would the new free-to-air channels be broadcast from?",
+    "gold": [
+      "Astra",
+      "Astra's",
+      "Astra's satellites"
+    ],
+    "passage": "The service started on 1 September 1993 based on the idea from the then chief executive officer, Sam Chisholm and Rupert Murdoch, of converting the company business strategy to an entirely fee-based concept. The new package included four channels formerly available free-to-air, broadcasting on Astra's satellites, as well as introducing new channels. The service continued until the closure of BSkyB's analogue service on 27 September 2001, due to the launch and expansion of the Sky Digital platform. Some of the channels did broadcast either in the clear or soft encrypted (whereby a Videocrypt decoder was required to decode, without a subscription card) prior to their addition to the Sky Multichannels package. Within two months of the launch, BSkyB gained 400,000 new subscribers, with the majority taking at least one premium channel as well, which helped BSkyB reach 3.5 million households by mid-1994. Michael Grade criticized the operations in front of the Select Committee on National Heritage, mainly for the lack of original programming on many of the new channels.",
+    "review_label": "Wrong entity or explanation"
+  },
+  {
+    "ctx_chars@5": "2498",
+    "em": "0.0",
+    "f1": "0.8571428571428571",
+    "hit@1": "1",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "5726cc11dd62a815002e9088",
+    "method": "fixed",
+    "pred": "12th to 16th centuries",
+    "truncated": "0",
+    "question": "The V&A library's collection of illuminated manuscripts are dated to which centuries?",
+    "gold": [
+      "from the 12th to 16th",
+      "12th to 16th",
+      "12th to 16th"
+    ],
+    "passage": "Writers whose papers are in the library are as diverse as Charles Dickens and Beatrix Potter. Illuminated manuscripts in the library dating from the 12th to 16th centuries include: the Eadwine Psalter[citation needed], Canterbury; Pocket Book of Hours, Reims; Missal from the Royal Abbey of Saint Denis, Paris; the Simon Marmion Book of Hours, Bruges; 1524 Charter illuminated by Lucas Horenbout, London; the Armagnac manuscript of the trial and rehabilitation of Joan of Arc, Rouen. also the Victorian period is represented by William Morris.",
+    "review_label": "Answer span"
+  },
+  {
+    "ctx_chars@5": "2263",
+    "em": "0.0",
+    "f1": "0.15384615384615383",
+    "hit@1": "1",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "5728fd3c3f37b31900477f2f",
+    "method": "fixed",
+    "pred": "the legitimacy of a particular law it has enacted",
+    "truncated": "0",
+    "question": "What should the punishment rely on instead in a just society?",
+    "gold": [
+      "moral reasons to follow this law",
+      "whether it would do more harm than good",
+      "whether it would do more harm than good",
+      "whether it would do more harm than good",
+      "whether it would do more harm than good"
+    ],
+    "passage": "Along with giving the offender his \"just deserts\", achieving crime control via incapacitation and deterrence is a major goal of criminal punishment. Brownlee argues, \"Bringing in deterrence at the level of justification detracts from the law’s engagement in a moral dialogue with the offender as a rational person because it focuses attention on the threat of punishment and not the moral reasons to follow this law.\" Leonard Hubert Hoffmann writes, \"In deciding whether or not to impose punishment, the most important consideration would be whether it would do more harm than good. This means that the objector has no right not to be punished. It is a matter for the state (including the judges) to decide on utilitarian grounds whether to do so or not.\"",
+    "review_label": "Wrong entity or explanation"
+  },
+  {
+    "ctx_chars@5": "2500",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "1",
+    "id": "56dde27d9a695914005b9652",
+    "method": "fixed",
+    "pred": "Normandy",
+    "truncated": "0",
+    "question": "What part of France were the Normans located?",
+    "gold": [
+      "north",
+      "the north",
+      "north"
+    ],
+    "passage": "The descendants of Rollo's Vikings and their Frankish wives would replace the Norse religion and Old Norse language with Catholicism (Christianity) and the Gallo-Romance language of the local people, blending their maternal Frankish heritage with Old Norse traditions and customs to synthesize a unique \"Norman\" culture in the north of France. The Norman language was forged by the adoption of the indigenous langue d'oïl branch of Romance by a Norse-speaking ruling class, and it developed into the regional language that survives today.",
+    "review_label": "Answer outside top 3"
+  },
+  {
+    "ctx_chars@5": "2500",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "572800b03acd2414000df1f4",
+    "method": "fixed",
+    "pred": "the Daleks",
+    "truncated": "0",
+    "question": "What is the name of a Time Lord that Doctor Who has fought?",
+    "gold": [
+      "The Master",
+      "The Master",
+      "The Master"
+    ],
+    "passage": "Doctor Who originally ran for 26 seasons on BBC One, from 23 November 1963 until 6 December 1989. During the original run, each weekly episode formed part of a story (or \"serial\") — usually of four to six parts in earlier years and three to four in later years. Notable exceptions were: The Daleks' Master Plan, which aired in 12 episodes (plus an earlier one-episode teaser, \"Mission to the Unknown\", featuring none of the regular cast); almost an entire season of seven-episode serials (season 7); the 10-episode serial The War Games; and The Trial of a Time Lord, which ran for 14 episodes (albeit divided into three production codes and four narrative segments) during season 23. Occasionally serials were loosely connected by a storyline, such as season 8 being devoted to the Doctor battling a rogue Time Lord called The Master, season 16's quest for The Key to Time, season 18's journey through E-Space and the theme of entropy, and season 20's Black Guardian Trilogy.",
+    "review_label": "Wrong entity or explanation"
+  },
+  {
+    "ctx_chars@5": "2499",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "5710e9f8a58dae1900cd6b34",
+    "method": "fixed",
+    "pred": "1760",
+    "truncated": "0",
+    "question": "When was the colony destroyed?",
+    "gold": [
+      "1565",
+      "1565",
+      "1565"
+    ],
+    "passage": "In 1564 a group of Norman Huguenots under the leadership of Jean Ribault established the small colony of Fort Caroline on the banks of the St. Johns River in what is today Jacksonville, Florida. The effort was the first at any permanent European settlement in the present-day continental United States, but survived only a short time. A September 1565 French naval attack against the new Spanish colony at St. Augustine failed when its ships were hit by a hurricane on their way to the Spanish encampment at Fort Matanzas. Hundreds of French soldiers were stranded and surrendered to the numerically inferior Spanish forces led by Pedro Menendez. Menendez proceeded to massacre the defenseless Huguenots, after which he wiped out the Fort Caroline garrison.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2498",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "56e10d2dcd28a01900c674db",
+    "method": "fixed",
+    "pred": "1888",
+    "truncated": "0",
+    "question": "When did Tesla make these claims?",
+    "gold": [
+      "1935",
+      "In 1935",
+      "1935"
+    ],
+    "passage": "In 1935, in an annual birthday celebration interview, Tesla announced a method of transmitting mechanical energy with minimal loss over any terrestrial distance, a related new means of communication, and a method of accurately determining the location of underground mineral deposits.",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2340",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "1",
+    "hit@5": "1",
+    "id": "56d9ccacdc89441400fdb842",
+    "method": "fixed",
+    "pred": "Thomas",
+    "truncated": "0",
+    "question": "What is the last name of the player who was Manning's top receiver for Super Bowl 50?",
+    "gold": [
+      "Sanders",
+      "Sanders",
+      "Sanders"
+    ],
+    "passage": "Manning finished the game 13 of 23 for 141 yards with one interception and zero touchdowns. Sanders was his top receiver with six receptions for 83 yards. Anderson was the game's leading rusher with 90 yards and a touchdown, along with four receptions for 10 yards. Miller had six total tackles (five solo), 2½ sacks, and two forced fumbles. Ware had five total tackles and two sacks. Ward had seven total tackles, a fumble recovery, and an interception. McManus made all four of his field goals, making him perfect on all 11 attempts during the post-season. Newton completed 18 of 41 passes for 265 yards, with one interception. He was also the team's leading rusher with 45 yards on six carries. Brown caught four passes for 80 yards, while Ginn had four receptions for 74. Ealy was the top defensive performer for Carolina with four total tackles, three sacks, a forced fumble, a fumble recovery, and an interception. Defensive End Charles Johnson had four total tackles, a sack, and a forced fumble. Linebacker Luke Kuechly had 11 total tackles, while Thomas Davis had seven, despite playing just two weeks after breaking his right arm in the NFC title game.",
+    "review_label": "Wrong entity or explanation"
+  },
+  {
+    "ctx_chars@5": "2499",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "570d391fb3d812140066d576",
+    "method": "fixed",
+    "pred": "Grea",
+    "truncated": "0",
+    "question": "Of what mountain system are the Victorian Alps a part?",
+    "gold": [
+      "Great Dividing Range",
+      "the Great Dividing Range",
+      "Great Dividing Range"
+    ],
+    "passage": "The Victorian Alps in the northeast are the coldest part of Victoria. The Alps are part of the Great Dividing Range mountain system extending east-west through the centre of Victoria. Average temperatures are less than 9 °C (48 °F) in winter and below 0 °C (32 °F) in the highest parts of the ranges. The state's lowest minimum temperature of −11.7 °C (10.9 °F) was recorded at Omeo on 13 June 1965, and again at Falls Creek on 3 July 1970. Temperature extremes for the state are listed in the table below:",
+    "review_label": "No hit in top 5"
+  },
+  {
+    "ctx_chars@5": "2497",
+    "em": "0.0",
+    "f1": "0.0",
+    "hit@1": "0",
+    "hit@3": "0",
+    "hit@5": "0",
+    "id": "572a13841d0469140077973b",
+    "method": "fixed",
+    "pred": "Using statisti ore equality will have higher aggregate utility",
+    "truncated": "0",
+    "question": "What have studies on income inequality sometimes found evidence confirming?",
+    "gold": [
+      "Kuznets curve hypothesis",
+      "Kuznets curve hypothesis",
+      "Kuznets curve hypothesis"
+    ],
+    "passage": "Studies on income inequality and growth have sometimes found evidence confirming the Kuznets curve hypothesis, which states that with economic development, inequality first increases, then decreases. Economist Thomas Piketty challenges this notion, claiming that from 1914 to 1945 wars and \"violent economic and political shocks\" reduced inequality. Moreover, Piketty argues that the \"magical\" Kuznets curve hypothesis, with its emphasis on the balancing of economic growth in the long run, cannot account for the significant increase in economic inequality throughout the developed world since the 1970s.",
+    "review_label": "No hit in top 5"
+  }
+]
