@@ -1,0 +1,146 @@
+{
+  "checked_at": "2026-10-27T14:30:51.392281+00:00",
+  "operator": "Codex AI assistant on student computer",
+  "scope": "Full inference rerun in existing environment; not independent human or clean-environment validation",
+  "paired_rows": 1500,
+  "methods": {
+    "fixed": {
+      "hit@1": {
+        "historical_mean": 0.516,
+        "rerun_mean": 0.516,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "hit@3": {
+        "historical_mean": 0.698,
+        "rerun_mean": 0.698,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "hit@5": {
+        "historical_mean": 0.752,
+        "rerun_mean": 0.752,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "em": {
+        "historical_mean": 0.548,
+        "rerun_mean": 0.548,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "f1": {
+        "historical_mean": 0.6236934644635881,
+        "rerun_mean": 0.6236934644635881,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "truncated": {
+        "historical_mean": 0.002,
+        "rerun_mean": 0.002,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "ctx_chars@5": {
+        "historical_mean": 2479.46,
+        "rerun_mean": 2479.46,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "different_predictions": 0
+    },
+    "overlap": {
+      "hit@1": {
+        "historical_mean": 0.594,
+        "rerun_mean": 0.594,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "hit@3": {
+        "historical_mean": 0.754,
+        "rerun_mean": 0.754,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "hit@5": {
+        "historical_mean": 0.818,
+        "rerun_mean": 0.818,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "em": {
+        "historical_mean": 0.58,
+        "rerun_mean": 0.58,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "f1": {
+        "historical_mean": 0.6543119231619356,
+        "rerun_mean": 0.6543119231619356,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "truncated": {
+        "historical_mean": 0.0,
+        "rerun_mean": 0.0,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "ctx_chars@5": {
+        "historical_mean": 2485.76,
+        "rerun_mean": 2485.76,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "different_predictions": 0
+    },
+    "semantic": {
+      "hit@1": {
+        "historical_mean": 0.376,
+        "rerun_mean": 0.376,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "hit@3": {
+        "historical_mean": 0.566,
+        "rerun_mean": 0.566,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "hit@5": {
+        "historical_mean": 0.664,
+        "rerun_mean": 0.664,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "em": {
+        "historical_mean": 0.014,
+        "rerun_mean": 0.014,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "f1": {
+        "historical_mean": 0.04020501079759039,
+        "rerun_mean": 0.04020501079759039,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "truncated": {
+        "historical_mean": 0.956,
+        "rerun_mean": 0.956,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "ctx_chars@5": {
+        "historical_mean": 14532.286,
+        "rerun_mean": 14532.286,
+        "difference": 0.0,
+        "different_items": 0
+      },
+      "different_predictions": 0
+    }
+  },
+  "rerun_sha256": "0fb21867c3636b64510ef6653697a93f2e00ee1b0e828e8ca1b8f4c9555a7597",
+  "all_numeric_items_match": true,
+  "all_predictions_match": true
+}

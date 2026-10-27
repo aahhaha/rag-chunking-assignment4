@@ -351,3 +351,8 @@ My hypothesis was not supported in this setup. I do not conclude that all semant
 - Реально провести reproduction test с одногруппником.
 - Создать нужный repository, release/tag assignment-4 и добавить настоящий URL.
 - Не включать .venv, модели, пароли и токены в публичный репозиторий.
+
+
+## Обновление после технической проверки
+
+Репозиторий создан: https://github.com/aahhaha/rag-chunking-assignment4 (приватный). Текущий результат полного прогона и отличия записаны в reproduction/environment.json и reproduction/comparison.json; Appendix C обновлён по этим файлам. Проверку выполнил Codex на том же компьютере в существующем окружении. Это не проверка другим студентом и не чистая установка. Если преподаватель принимает такую замену, нужно его согласие. Исторические результаты не перезаписаны.

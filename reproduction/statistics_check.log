@@ -1,0 +1,1 @@
+All six exact McNemar p-values agree with scipy.stats.binomtest

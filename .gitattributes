@@ -1,0 +1,6 @@
+# Preserve raw evidence and source hashes across operating systems.
+*.csv -text
+*.json -text
+*.py -text
+*.docx binary
+*.png binary

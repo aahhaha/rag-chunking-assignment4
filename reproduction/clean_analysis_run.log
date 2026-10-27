@@ -1,0 +1,36 @@
+{
+  "fixed": {
+    "main_em": 0.5566666666666666,
+    "budget_em": 0.5466666666666666,
+    "delta_ci": [
+      -0.023333333333333334,
+      0.0
+    ]
+  },
+  "overlap": {
+    "main_em": 0.5866666666666667,
+    "budget_em": 0.5866666666666667,
+    "delta_ci": [
+      -0.01,
+      0.01
+    ]
+  },
+  "semantic": {
+    "main_em": 0.013333333333333334,
+    "budget_em": 0.24666666666666667,
+    "delta_ci": [
+      0.18333333333333332,
+      0.2833333333333333
+    ]
+  }
+}
+{'metric': 'hit@5', 'a': 'fixed', 'b': 'overlap', 'difference': 0.066, 'ci': [0.03, 0.1], 'a_only': 25, 'b_only': 58, 'p': 0.00037834276316077865, 'holm': 0.0007566855263215573}
+{'metric': 'hit@5', 'a': 'fixed', 'b': 'semantic', 'difference': -0.088, 'ci': [-0.13805, -0.036], 'a_only': 113, 'b_only': 69, 'p': 0.001369453073380436, 'holm': 0.001369453073380436}
+{'metric': 'hit@5', 'a': 'overlap', 'b': 'semantic', 'difference': -0.154, 'ci': [-0.206, -0.102], 'a_only': 128, 'b_only': 51, 'p': 7.967842285572557e-09, 'holm': 2.3903526856717672e-08}
+{'metric': 'em', 'a': 'fixed', 'b': 'overlap', 'difference': 0.032, 'ci': [-0.01, 0.07], 'a_only': 42, 'b_only': 58, 'p': 0.13321061920721333, 'holm': 0.13321061920721333}
+{'metric': 'em', 'a': 'fixed', 'b': 'semantic', 'difference': -0.534, 'ci': [-0.57805, -0.492], 'a_only': 269, 'b_only': 2, 'p': 1.942768947968237e-77, 'holm': 3.885537895936474e-77}
+{'metric': 'em', 'a': 'overlap', 'b': 'semantic', 'difference': -0.566, 'ci': [-0.61, -0.5239500000000002], 'a_only': 286, 'b_only': 3, 'p': 8.089648151257848e-81, 'holm': 2.4268944453773543e-80}
+{'metric': 'f1', 'a': 'fixed', 'b': 'overlap', 'difference': 0.030618458698347437, 'ci': [-0.006612367261807084, 0.06626591749055968]}
+{'metric': 'f1', 'a': 'fixed', 'b': 'semantic', 'difference': -0.5834884536659979, 'ci': [-0.6243712821644722, -0.543756078881169]}
+{'metric': 'f1', 'a': 'overlap', 'b': 'semantic', 'difference': -0.6141069123643452, 'ci': [-0.6522323850423591, -0.5748888144017847]}
+Analysis regenerated and paired sample checks passed

@@ -26,7 +26,7 @@ py -3 -m venv .venv-a4
 .\.venv-a4\Scripts\python.exe assignment4/build_report.py
 ```
 
-The figure script uses Windows Arial at `C:/Windows/Fonts/arial.ttf`. For another OS, replace that font path with a local Arial-compatible font. Numerical calculations do not depend on the font. `build_report.py` expects error_candidates.json, included in this package. No inference is performed by either command.
+The figure script selects Windows or macOS Arial, Linux DejaVu Sans, or a bundled Pillow fallback font. Numerical calculations do not depend on the font. `build_report.py` expects error_candidates.json, included in this package. No inference is performed by either command.
 
 Check SHA-256 values against `assignment4/analysis.json`. The script asserts identical question IDs across conditions and that the budget sample is exactly the first 300 main-run IDs. Bootstrap: NumPy default_rng seed 0, 2,000 resamples, percentile 2.5 and 97.5. McNemar: exact two-sided binomial tail over discordant pairs; Holm separately within each binary metric.
 
@@ -48,7 +48,7 @@ Use distinct output paths to preserve historical results. Fake embeddings are sm
 2. Confirm whether a real prior Moodle protocol upload exists. Never backdate it. If absent, discuss the retrospective study with the instructor.
 3. Resolve the AI-track requirement for three seeds or CV versus the deterministic-run CI option with the instructor. The report explicitly declares the single configuration.
 4. Have a classmate install and run the full pipeline in a clean environment, and fill Appendix C with their real name, date, hardware, logs and result differences.
-5. Publish only the intended package files to a chosen GitHub/GitLab repository, add its URL to the report, and create the real `assignment-4` release/tag. No repository has been published by this preparation step.
+5. Repository created at https://github.com/aahhaha/rag-chunking-assignment4 (private). The assignment-4 release is created after the full technical rerun finishes. Give the instructor access before submission.
 6. Open the DOCX in Word and check every page before submitting. The packaged renderer could not run locally because soffice.exe is unavailable; page layout has not been visually verified.
 
 ## Licence
@@ -58,3 +58,14 @@ The new analysis and document-building scripts are supplied under the MIT licenc
 ## Defence guide
 
 See Assignment4_Defence_Guide_RU.md for the research explanation, code walkthrough, statistical interpretation, commands, numerical provenance and pending requirements.
+
+## Verified analysis installation
+
+On 27 October 2026, the assistant installed requirements-analysis.txt in a new Python 3.12 environment and reran analyse.py. The regenerated main_summary.csv was byte-identical. See reproduction/clean_analysis_check.json. This is a clean analysis test, not a clean inference-environment test.
+
+The original Assignment3_AibynSamat.docx is included as the source for historical chunk length statistics and the prior methodology.
+
+
+## Repository and technical reproduction
+
+Repository: https://github.com/aahhaha/rag-chunking-assignment4 (private). Release: assignment-4. The instructor needs repository access. See REPRODUCTION.md and Appendix C for the AI-operated full inference rerun in the existing environment. It is not an independent human or clean-environment test. The historical CSVs remain unchanged.

@@ -77,7 +77,10 @@ Internal validity is limited by unequal effective input lengths and the explorat
 Future work should use a newly frozen protocol and untouched evaluation questions, compare semantic splitting with and without token caps, and align the retrieval and generation budgets. It should retain chunk IDs, ranking scores, tokenised prompts, model revisions, hardware, and runtime logs. Independent verification of the error labels and a clean-environment rerun would strengthen reproducibility. They would help test whether the semantic result changes once the input-window problem is addressed.
 
 ## 8 Reproducibility Statement
-The local package contains the experiment scripts, saved results, data hashes, and code that regenerates the tables and figures. The analysis was rerun from the saved CSV files; model inference was not repeated. The public repository, assignment-4 release tag, and independent reproduction test still need to be completed. Appendix C leaves those items pending. AI tools helped with drafting, analysis code, reference checking, and the error review. I am responsible for checking the final work and following the course rules.
+The repository contains the experiment scripts, saved results, data hashes, and code that regenerates the tables and figures. The saved-output analysis was rerun successfully, and all six main exact McNemar p-values were checked against SciPy. A separate full inference reproduction was launched by the Codex AI assistant on my computer using the existing environment and cached models. Appendix C records its status and any differences against the historical results. This technical check is not an independent classmate test or a clean-environment installation. Acceptance as an alternative reproduction record requires the instructor's agreement. AI tools helped with drafting, analysis code, reference checking, the error review, and the technical rerun. I am responsible for checking the final work and following the course rules.
+
+Repository: https://github.com/aahhaha/rag-chunking-assignment4
+Release identifier: assignment-4. The repository is private; the instructor needs access to inspect it.
 
 ## 9 References
 Gao, Y., et al. (2023, revised 2024). Retrieval-Augmented Generation for Large Language Models A Survey. arXiv:2312.10997. https://arxiv.org/abs/2312.10997

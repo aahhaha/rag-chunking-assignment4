@@ -26,8 +26,9 @@ def analyse(name):
         for a,b in itertools.combinations(METHODS,2):
             x=np.array([float(data[a][i][metric]) for i in ids]); y=np.array([float(data[b][i][metric]) for i in ids]); d=y-x
             aonly=int(((x==1)&(y==0)).sum()); bonly=int(((x==0)&(y==1)).sum())
-            t={'metric':metric,'a':a,'b':b,'difference':float(d.mean()),'ci':ci(d),'a_only':aonly,'b_only':bonly}
+            t={'metric':metric,'a':a,'b':b,'difference':float(d.mean()),'ci':ci(d)}
             if metric!='f1':
+                t.update(a_only=aonly,b_only=bonly)
                 n=aonly+bonly
                 t['p']=min(1.,2*sum(math.comb(n,j) for j in range(min(aonly,bonly)+1))/2**n) if n else 1.
             tests.append(t)
@@ -69,7 +70,11 @@ with (ROOT/'main_summary.csv').open('w',newline='',encoding='utf-8') as f:
 
 def chart(filename, groups, series, values, ylabel):
     im=Image.new('RGB',(1440,760),'white');d=ImageDraw.Draw(im)
-    font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',26); small=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',23)
+    def font_at(size):
+        for candidate in ['C:/Windows/Fonts/arial.ttf','/System/Library/Fonts/Supplemental/Arial.ttf','/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf']:
+            if Path(candidate).exists():return ImageFont.truetype(candidate,size)
+        return ImageFont.load_default(size=size)
+    font=font_at(26);small=font_at(23)
     colors=['#365b82','#d08b41','#6f8f76']; left=120;top=110;bottom=620;right=1380
     d.text((left,35),ylabel,fill='black',font=font)
     for y in range(0,101,20):

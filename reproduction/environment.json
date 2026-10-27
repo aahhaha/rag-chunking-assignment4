@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-10-27T13:26:01.945475+00:00",
+  "operator": "Codex AI assistant on student computer",
+  "independent_human_test": false,
+  "clean_environment": false,
+  "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+  "executable": "C:\\Users\\paradise\\Desktop\\AITU\\RMT\\venv\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "cpu_count": 16,
+  "torch_threads": 4,
+  "dataset_sha256": "95aa6a52d5d6a735563366753ca50492a658031da74f301ac5238b03966972c9",
+  "experiment_sha256": "b58a60fd145862835a352fe8e27d0aefcf06a2e50cd4d16e74c838b7652dc103",
+  "status": "completed",
+  "elapsed_seconds": 3887.93,
+  "generated_answers": 1500,
+  "finished_at": "2026-10-27T14:30:49.877314+00:00"
+}

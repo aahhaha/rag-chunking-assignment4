@@ -99,8 +99,23 @@ for i,c in enumerate(cases,1):
     p(f"Hit@3 {c['hit@3']}; Hit@5 {c['hit@5']}; F1 {float(c['f1']):.3f}.")
     if i in [10,20]:D.add_page_break()
 heading('Appendix C Reproduction Test Record')
-table(['Check','Outcome'],[['Saved result reanalysis','Completed locally: analyse.py regenerated JSON, CSV, and figures; paired IDs and 300-question subset assertions passed.'],['Full model rerun in clean environment','Pending independent classmate test. No successful outcome is claimed.'],['Tester and date','To be entered by the actual independent tester.'],['Repository URL and release','Pending publication and assignment-4 tag.'],['Environment fidelity','Assignment 3 lists versions, but a verified historical lockfile, model revision pins, hardware and timing logs are absent.']],[2,4.9])
-p('Record after the actual independent test: tester, date, OS/hardware, installation command, experiment command, dataset hash, generated output hash, numerical differences, and error logs. Use README.md. Do not mark this test passed based only on reanalysis of existing CSVs.')
+ep=R.parent/'reproduction'/'environment.json';cp=R.parent/'reproduction'/'comparison.json'
+env=json.loads(ep.read_text(encoding='utf-8')) if ep.exists() else {}
+cmp=json.loads(cp.read_text(encoding='utf-8')) if cp.exists() else {}
+status=env.get('status','running' if env else 'not recorded')
+clean_path=R.parent/'reproduction'/'clean_analysis_check.json'
+clean=json.loads(clean_path.read_text(encoding='utf-8')) if clean_path.exists() else {}
+hp=R.parent/'reproduction'/'hardware.json'
+hardware=json.loads(hp.read_text(encoding='utf-8-sig')) if hp.exists() and hp.stat().st_size else {}
+table(['Check','Outcome'],[['Saved result reanalysis','Completed locally by the student and assistant. Paired IDs and the 300-question subset assertions passed.'],['Statistical verification','All six main exact McNemar p-values agree with scipy.stats.binomtest. See reproduction/statistics_check.log.'],['Full model rerun','Status: '+status+'. 500 questions per method; fixed, overlap and semantic; seed 42.'],['Operator and date','Codex AI assistant on the student computer. Start UTC: '+env.get('started_at','not recorded')],['Environment','Existing Python 3.11 environment and cached models; not a clean installation. '+env.get('platform','')],['Duration','Elapsed seconds: '+str(env.get('elapsed_seconds','pending'))],['Comparison with historical outputs','All per-item numeric metrics match: '+str(cmp.get('all_numeric_items_match','pending'))+'. All prediction strings match: '+str(cmp.get('all_predictions_match','pending'))+'.'],['Independent human test','Not performed. The student works individually; instructor approval is needed to accept this technical rerun as an alternative.'],['Repository','https://github.com/aahhaha/rag-chunking-assignment4; release identifier assignment-4. Private repository: instructor access required.'],['Evidence','reproduction/environment.json, full_run.log, rerun_main.csv, comparison.json and requirements-inference-observed.txt.']],[2,4.9])
+if cmp:
+    p('Table C1 Full inference rerun compared with the historical main run')
+    table(['Method','Recall@5 old and new','EM old and new','Different predictions'],[[m,f"{v['hit@5']['historical_mean']:.3f} / {v['hit@5']['rerun_mean']:.3f}",f"{v['em']['historical_mean']:.3f} / {v['em']['rerun_mean']:.3f}",v['different_predictions']] for m,v in cmp['methods'].items()],[1,2,2,1.9])
+if clean:
+    p('A separate clean environment was created for saved-output analysis. Dependency installation and analyse.py completed; the regenerated main_summary.csv matches the original byte for byte: '+str(clean.get('summary_matches_original'))+'. This validates the analysis installation, not a clean installation of the model pipeline. See reproduction/clean_analysis_check.json and clean_analysis_run.log.')
+if hardware:
+    p('Processor used for the technical rerun: '+hardware.get('Name','not recorded')+'. Logical processors: '+str(hardware.get('NumberOfLogicalProcessors','not recorded'))+'. The rerun used four Torch threads for every condition.')
+p('This record documents an AI-operated technical rerun on the same machine. It does not establish an independent human reproduction, a fresh installation, or a protocol upload before the original experiments. The original results remain preserved separately from the rerun.')
 heading('Appendix D Exploratory Checks and Run Inventory')
 p('Table D1 Budget check n equals 300 with 95 percent question bootstrap intervals')
 table(['Condition','Recall@5','Exact Match','Token F1'],results('results_budget1500.csv'),[1.1,1.9,1.9,2])
