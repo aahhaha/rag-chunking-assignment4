@@ -1,14 +1,22 @@
 """Run the unchanged experiment with progress and environment evidence."""
-import datetime, hashlib, importlib.metadata, json, os, platform, sys, time
+import argparse, datetime, hashlib, importlib.metadata, json, os, platform, sys, time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent.parent
 sys.path.insert(0,str(ROOT))
 import run_experiment as R
 import torch
-OUT=ROOT/'reproduction'
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--operator',required=True,help='Actual operator of this new run')
+parser.add_argument('--output-dir',default='reproduction/new_run',help='New output folder; historical files are not overwritten')
+args=parser.parse_args()
+OUT=Path(args.output_dir)
+if not OUT.is_absolute():OUT=ROOT/OUT
+OUT.mkdir(parents=True,exist_ok=True)
+if (OUT/'environment.json').exists() or (OUT/'rerun_main.csv').exists():
+    raise SystemExit('Output folder already contains run evidence; choose a new --output-dir')
 start=time.time()
 metadata={'started_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
-          'operator':'Codex AI assistant on student computer',
+          'operator':args.operator,
           'independent_human_test':False,'clean_environment':False,
           'python':sys.version,'executable':sys.executable,'platform':platform.platform(),
           'processor':platform.processor(),'cpu_count':os.cpu_count(),

@@ -14,6 +14,7 @@ for name in ['Normal','Title','Subtitle','Heading 1','Heading 2']:
     st=D.styles[name];st.font.name='Times New Roman';st.font.color.rgb=RGBColor(0,0,0)
 D.styles['Normal'].font.size=Pt(11);D.styles['Normal'].paragraph_format.space_after=Pt(6);D.styles['Normal'].paragraph_format.line_spacing=1.12
 D.styles['Title'].font.size=Pt(20);D.styles['Heading 1'].font.size=Pt(14);D.styles['Heading 1'].paragraph_format.space_before=Pt(14)
+D.styles['Heading 2'].font.size=Pt(11)
 for st in D.styles:
     if st.type==1:
         st.font.color.rgb=RGBColor(0,0,0)
@@ -21,7 +22,10 @@ for st in D.styles:
             for co in st.font._element.rPr.findall(qn('w:color')):
                 for attr in ['themeColor','themeTint','themeShade']:
                     co.attrib.pop(qn('w:'+attr),None)
-def p(s,style=None):return D.add_paragraph(s,style)
+def p(s,style=None):
+    para=D.add_paragraph(s,style)
+    if s.startswith('Table '):para.paragraph_format.keep_with_next=True
+    return para
 def heading(s):D.add_heading(s,1)
 def table(headers,rows,widths=None):
     t=D.add_table(rows=1,cols=len(headers));t.alignment=WD_TABLE_ALIGNMENT.CENTER;t.autofit=False
@@ -32,6 +36,7 @@ def table(headers,rows,widths=None):
     for row in rows:
         for c,s in zip(t.add_row().cells,row):c.text=str(s)
     for ri,row in enumerate(t.rows):
+        no_split=OxmlElement('w:cantSplit');row._tr.get_or_add_trPr().append(no_split)
         for ci,c in enumerate(row.cells):
             if widths:c.width=Inches(widths[ci])
             c.vertical_alignment=WD_CELL_VERTICAL_ALIGNMENT.CENTER
@@ -46,7 +51,8 @@ def table(headers,rows,widths=None):
                 sh=OxmlElement('w:shd');sh.set(qn('w:fill'),'E7ECF2');pr.append(sh)
             for para in c.paragraphs:
                 para.paragraph_format.space_after=Pt(3);para.paragraph_format.line_spacing=1.0
-                for run in para.runs:run.font.size=Pt(9);run.bold=ri==0
+                para.paragraph_format.keep_with_next=(ri==0 or (len(t.rows)<=5 and ri<len(t.rows)-1))
+                for run in para.runs:run.font.size=Pt(10);run.bold=ri==0
     p('')
     return t
 def fmt(v):return f"{v['mean']*100:.1f} [{v['ci'][0]*100:.1f}, {v['ci'][1]*100:.1f}]"
@@ -60,7 +66,7 @@ for line in (R/'report.md').read_text(encoding='utf-8').splitlines():
     elif line=='[[SETUP]]':
         p('Table 1 Implemented configurations')
         table(['Condition','Chunk rule','Chunks','Mean chars'],[['Fixed','500 chars; no overlap','3,235','496'],['Overlap','500 chars; 50 overlap','3,585','497'],['Semantic','95th percentile','589','2,720']],[1.1,3.2,1,1.6])
-        p('Chunk counts and lengths are preserved from Assignment 3 and corroborated in part by semantic_visibility.json. They were not rebuilt during this reanalysis.')
+        p('Historical chunk statistics come from Assignment 3. The full technical rerun in Appendix C rebuilt all three conditions and confirmed the chunk counts and rounded mean lengths; see reproduction/full_run.log.')
     elif line=='[[RESULTS]]':
         p('Table 2 Main outcomes in percent with 95 percent bootstrap intervals')
         table(['Condition','Recall@5','Exact Match','Token F1'],results('results_main.csv'),[1.1,1.9,1.9,2])
@@ -70,6 +76,15 @@ for line in (R/'report.md').read_text(encoding='utf-8').splitlines():
         stages=['Prompt truncated','No answer hit in top 5','Answer hit only at ranks 4 or 5','Hit at 3 and F1 at least 0.5','Hit at 3 and F1 below 0.5','Hit at 3 and F1 zero']
         table(['Saved outcome','Fixed','Overlap','Semantic'],[[s,*[A['failure_stages'][m].get(s,0) for m in ['fixed','overlap','semantic']]] for s in stages]+[['Total EM failures',*[sum(A['failure_stages'][m].values()) for m in ['fixed','overlap','semantic']]]],[4.1,.9,.9,1])
         p('Rules are applied from top to bottom. Truncation takes priority, so truncated prompts may also contain retrieval failures. A hit at 3 indicates answer-string availability before input truncation; it does not verify that the generator received supporting evidence.')
+    elif line=='[[OBJECTIVES]]':
+        p('Table 5 Research objectives and evidence')
+        table(['Objective','Evidence','Outcome'],[
+            ['O1 Build the pipeline','run_experiment.py and full_run.log','All three conditions run end to end.'],
+            ['O2 Implement chunking','Table 1 and rerun chunk logs','Fixed, overlap and semantic conditions implemented.'],
+            ['O3 Measure retrieval','Tables 2 and 3; Figure 1','Overlap has the highest Recall@5 at 81.8 percent.'],
+            ['O4 Score answers','Table 2 and Appendix D','EM and F1 computed; semantic main-run scores are affected by truncation.'],
+            ['O5 Compare methods','Paired tests, error review and Figure 2','Overlap improves retrieval; its EM advantage over fixed is uncertain.'],
+            ['H1 Semantic exceeds fixed','Joint Recall@5 and EM decision rule','Not supported in this configuration.']],[1.45,2.35,3.1])
     elif line=='[[TESTS]]':
         p('Table 3 Paired exact McNemar comparisons')
         table(['Metric and A vs B','A only','B only','B minus A pp','Raw p','Holm p'],[[f"{t['metric']} {t['a']} vs {t['b']}",t['a_only'],t['b_only'],f"{t['difference']*100:+.1f}",pv(t['p']),pv(t['holm'])] for t in A['results_main.csv']['comparisons'] if t['metric']!='f1'],[2.1,.65,.65,1,1.25,1.25])
@@ -78,15 +93,16 @@ for line in (R/'report.md').read_text(encoding='utf-8').splitlines():
     elif line.startswith('[[FIGURE'):
         n=1 if '1' in line else 2
         D.add_picture(str(R/f'figure{n}.png'),width=Inches(6.8))
+        D.paragraphs[-1].paragraph_format.keep_with_next=True
         p('Figure 1 Main scores for the same 500 questions. Point estimates are shown; confidence intervals appear in Table 2.' if n==1 else 'Figure 2 Recall by semantic answer position relative to the 254-token usable embedding window. The five unresolved positions are omitted. Groups are exploratory, with membership defined by semantic chunks.')
     else:p(line)
 D.add_page_break();heading('Appendix A Retrospective Configuration Record')
-p('Status: retrospective documentation of runs reported in Assignment 3. Moodle upload timestamp and prior protocol approval are not verified. This form must not be backdated.')
+p('Status: retrospective documentation of runs reported in Assignment 3. The instructor permitted reuse and re-examination of that work for Assignment 4. This permission is not evidence of a pre-experiment protocol upload. No upload date is backdated.')
 table(['Field','Recorded setting'],[['Hypothesis','Semantic exceeds fixed on Recall@5 and EM after Holm correction'],['Primary reporting outcome','Recall@5; designated retrospectively for Assignment 4'],['Secondary outcomes','Recall@1 and @3, EM, token F1, truncation, retrieved characters'],['Dataset','SQuAD v1.1 dev; 48 articles; 10,570 questions'],['Runs','One configuration per method; main n=500; exploratory budget n=300; seed 42'],['Analysis','2,000 question bootstrap resamples; seed 0; exact McNemar; Holm within metric'],['Support rule','Both Recall@5 and EM favour semantic significantly; otherwise H1 not supported'],['Prompt','Answer the question using only the context. Context follows, then Question, then Answer. See generate() for exact newlines.']],[1.6,5.3])
 p('Dataset SHA-256: '+A['hashes']['dev-v1.1.json'])
 p('Exact sample IDs and per-article counts: analysis.json. SHA-256 hashes for all result inputs and the experiment script are included there.')
 heading('Appendix B Review of Thirty Failed Cases')
-p('Selection: first 30 fixed-size EM failures in results_main.csv order. Review performed with AI assistance from the saved predictions, gold answers, source passages, and hit flags. Student validation is required. Labels are mutually exclusive descriptions; they are not verified causal diagnoses.')
+p('Selection: first 30 fixed-size EM failures in results_main.csv order. Review performed with AI assistance from the saved predictions, gold answers, source passages, and hit flags. I checked all labels and agree with them. Labels are mutually exclusive descriptions; they are not verified causal diagnoses.')
 cases=json.loads((R/'error_candidates.json').read_text(encoding='utf-8'))
 labels={1:'Mixed text',6:'Answer span',11:'Wrong entity or explanation',12:'Answer span',17:'Wrong entity or explanation',20:'Answer span',21:'Wrong entity or explanation',22:'Answer span',23:'Wrong entity or explanation',24:'Answer outside top 3',25:'Wrong entity or explanation',28:'Wrong entity or explanation'}
 for i,c in enumerate(cases,1):c['review_label']=labels.get(i,'No hit in top 5')
@@ -94,10 +110,11 @@ for i,c in enumerate(cases,1):c['review_label']=labels.get(i,'No hit in top 5')
 counts=collections.Counter(c['review_label'] for c in cases)
 table(['Observed category','Cases'],list(counts.items()),[5.8,1.1])
 for i,c in enumerate(cases,1):
+    block_start=len(D.paragraphs)
     p(f"B{i:02d}  {c['id']}  {c['review_label']}",'Heading 2')
     p(c['question']);p('Gold: '+c['gold'][0]);p('Prediction: '+c['pred'])
     p(f"Hit@3 {c['hit@3']}; Hit@5 {c['hit@5']}; F1 {float(c['f1']):.3f}.")
-    if i in [10,20]:D.add_page_break()
+    for para in D.paragraphs[block_start:-1]:para.paragraph_format.keep_with_next=True
 heading('Appendix C Reproduction Test Record')
 ep=R.parent/'reproduction'/'environment.json';cp=R.parent/'reproduction'/'comparison.json'
 env=json.loads(ep.read_text(encoding='utf-8')) if ep.exists() else {}
@@ -107,7 +124,7 @@ clean_path=R.parent/'reproduction'/'clean_analysis_check.json'
 clean=json.loads(clean_path.read_text(encoding='utf-8')) if clean_path.exists() else {}
 hp=R.parent/'reproduction'/'hardware.json'
 hardware=json.loads(hp.read_text(encoding='utf-8-sig')) if hp.exists() and hp.stat().st_size else {}
-table(['Check','Outcome'],[['Saved result reanalysis','Completed locally by the student and assistant. Paired IDs and the 300-question subset assertions passed.'],['Statistical verification','All six main exact McNemar p-values agree with scipy.stats.binomtest. See reproduction/statistics_check.log.'],['Full model rerun','Status: '+status+'. 500 questions per method; fixed, overlap and semantic; seed 42.'],['Operator and date','Codex AI assistant on the student computer. Start UTC: '+env.get('started_at','not recorded')],['Environment','Existing Python 3.11 environment and cached models; not a clean installation. '+env.get('platform','')],['Duration','Elapsed seconds: '+str(env.get('elapsed_seconds','pending'))],['Comparison with historical outputs','All per-item numeric metrics match: '+str(cmp.get('all_numeric_items_match','pending'))+'. All prediction strings match: '+str(cmp.get('all_predictions_match','pending'))+'.'],['Independent human test','Not performed. The student works individually; instructor approval is needed to accept this technical rerun as an alternative.'],['Repository','https://github.com/aahhaha/rag-chunking-assignment4; release identifier assignment-4. Private repository: instructor access required.'],['Evidence','reproduction/environment.json, full_run.log, rerun_main.csv, comparison.json and requirements-inference-observed.txt.']],[2,4.9])
+table(['Check','Outcome'],[['Saved result reanalysis','Completed locally by me, using AI-assisted analysis code. Paired IDs and the 300-question subset assertions passed.'],['Statistical verification','All six main exact McNemar p-values agree with scipy.stats.binomtest. See reproduction/statistics_check.log.'],['Full model rerun','Status: '+status+'. 500 questions per method; fixed, overlap and semantic; seed 42.'],['Operator and date','Codex AI assistant on the student computer, 27 October 2026. Start UTC: '+env.get('started_at','not recorded')],['Environment','Existing Python 3.11 environment and cached models; not a clean installation. '+env.get('platform','')],['Duration','Elapsed seconds: '+str(env.get('elapsed_seconds','pending'))],['Comparison with historical outputs','All per-item numeric metrics match: '+str(cmp.get('all_numeric_items_match','pending'))+'. All prediction strings match: '+str(cmp.get('all_predictions_match','pending'))+'.'],['Independent human test','Not performed. The instructor accepted this AI-operated technical rerun as the reproduction arrangement for the individual submission, as reported by the student on 2 November 2026. It is not a clean installation of the full model pipeline.'],['Repository','https://github.com/aahhaha/rag-chunking-assignment4; original release assignment-4; reviewed release assignment-4-reviewed. Public repository.'],['Evidence','reproduction/environment.json, full_run.log, rerun_main.csv, comparison.json and requirements-inference-observed.txt.']],[2,4.9])
 if cmp:
     p('Table C1 Full inference rerun compared with the historical main run')
     table(['Method','Recall@5 old and new','EM old and new','Different predictions'],[[m,f"{v['hit@5']['historical_mean']:.3f} / {v['hit@5']['rerun_mean']:.3f}",f"{v['em']['historical_mean']:.3f} / {v['em']['rerun_mean']:.3f}",v['different_predictions']] for m,v in cmp['methods'].items()],[1,2,2,1.9])
@@ -115,7 +132,7 @@ if clean:
     p('A separate clean environment was created for saved-output analysis. Dependency installation and analyse.py completed; the regenerated main_summary.csv matches the original byte for byte: '+str(clean.get('summary_matches_original'))+'. This validates the analysis installation, not a clean installation of the model pipeline. See reproduction/clean_analysis_check.json and clean_analysis_run.log.')
 if hardware:
     p('Processor used for the technical rerun: '+hardware.get('Name','not recorded')+'. Logical processors: '+str(hardware.get('NumberOfLogicalProcessors','not recorded'))+'. The rerun used four Torch threads for every condition.')
-p('This record documents an AI-operated technical rerun on the same machine. It does not establish an independent human reproduction, a fresh installation, or a protocol upload before the original experiments. The original results remain preserved separately from the rerun.')
+p('This record documents the actual AI-operated technical rerun on the student computer. The student reports instructor acceptance of this arrangement. It does not establish an independent human replication, a fresh installation of the full pipeline, or preregistration. Historical and rerun outputs remain separate.')
 heading('Appendix D Exploratory Checks and Run Inventory')
 p('Table D1 Budget check n equals 300 with 95 percent question bootstrap intervals')
 table(['Condition','Recall@5','Exact Match','Token F1'],results('results_budget1500.csv'),[1.1,1.9,1.9,2])
@@ -137,11 +154,19 @@ for st in D.styles:
     if st.name=='Title' or 'Heading' in st.name or 'heading' in st.name:
         st.font.color.rgb=RGBColor(0,0,0)
         st.font.underline=False
+        st.font.name='Times New Roman'
+        for fonts in st.element.iter(qn('w:rFonts')):
+            for attr in list(fonts.attrib):
+                if 'theme' in attr.lower():fonts.attrib.pop(attr,None)
 for para in D.paragraphs:
     for border in list(para._p.iter(qn('w:pBdr'))):border.getparent().remove(border)
     for run in para.runs:
         run.font.color.rgb=RGBColor(0,0,0)
         run.font.underline=False
+footer=sec.footer.paragraphs[0]
+footer.alignment=WD_ALIGN_PARAGRAPH.CENTER
+run=footer.add_run('Page ');run.font.size=Pt(9);run.font.color.rgb=RGBColor(0,0,0)
+field=OxmlElement('w:fldSimple');field.set(qn('w:instr'),'PAGE');footer._p.append(field)
 out=R.parent/'Assignment4_AibynSamat_Final.docx';D.save(out)
 text=(R/'report.md').read_text(encoding='utf-8');body=text[text.index('## 4 Main Results'):text.index('## 8 Reproducibility Statement')]
 print('Results and Discussion narrative words:',len(re.findall(r"\b[\w-]+\b",body)))

@@ -1,0 +1,27 @@
+{
+  "reviewed_on": "2026-11-02",
+  "historical_data_checks": {
+    "results_main.csv_unchanged": true,
+    "results_budget1500.csv_unchanged": true,
+    "results.csv_unchanged": true,
+    "dev-v1.1.json_unchanged": true,
+    "run_experiment.py_unchanged": true,
+    "semantic_visibility.py_unchanged": true,
+    "historical_environment.json_unchanged": true,
+    "historical_comparison.json_unchanged": true,
+    "historical_full_run.log_unchanged": true,
+    "historical_rerun_main.csv_unchanged": true,
+    "all_saved_main_means_verified": true,
+    "edited_python_syntax_valid": true
+  },
+  "layout": {
+    "export_engine": "Microsoft Word PDF export",
+    "pages": 16,
+    "all_pages_visually_inspected": true,
+    "headings_black": true,
+    "title_rule_removed": true,
+    "tables_and_examples_checked": true
+  },
+  "report_sha256": "7b912ab0c901ff31259ff09af216227d82f655af153b498fb1745bbb3a5ace92",
+  "review_scope": "Document consistency, historical provenance, saved-result checks, helper CLI maintenance and oral preparation; no new model inference"
+}

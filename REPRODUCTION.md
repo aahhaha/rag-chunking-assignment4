@@ -1,41 +1,33 @@
-# Reproduction evidence
+# Reproduction record
 
-Repository: https://github.com/aahhaha/rag-chunking-assignment4
+## Recorded checks
 
-The student successfully ran `assignment4/analyse.py` on 27 October 2026 and supplied its console output. The Codex assistant also checked all six main binary pairwise p-values against `scipy.stats.binomtest`; see `reproduction/statistics_check.log`.
+1. The student ran `assignment4/analyse.py` on 27 October 2026.
+2. The assistant independently checked six main exact McNemar p-values against `scipy.stats.binomtest`.
+3. The assistant installed the analysis requirements in a new Python 3.12 environment, reran analysis, and obtained a byte-identical `main_summary.csv`.
+4. The Codex AI assistant performed a full 500-question-per-method inference rerun on the student computer on 27 October 2026, using the existing Python 3.11 environment and cached models. All 1,500 predictions and numerical outcomes matched. Duration: 3,887.93 seconds.
 
-A full 500-question, three-condition inference rerun was started by the Codex AI assistant on the student's computer on 27 October 2026. Its final status, actual duration, Python details and input hashes are recorded in `reproduction/environment.json` when present. Do not infer success from the existence of a start log. `status=completed` and the comparison file are required to establish completion.
+The full inference rerun was not performed by an independently verified classmate and did not install the full model environment from scratch. The student reported instructor acceptance of this alternative on 2 November 2026. See `instructor_acceptance.json`; no exact date of the instructor conversation or signed approval is asserted.
 
-This rerun uses the existing `venv` and locally cached models. It is not an independent classmate test and not a clean-environment installation. It must not be described as satisfying those separate course requirements without instructor approval. It cannot establish that the original protocol was registered before results were seen.
+## Evidence
 
-## Commands
+| File in reproduction/ | Evidence |
+|---|---|
+| `environment.json` | Original operator, timestamps, machine, input hashes and completed status |
+| `requirements-inference-observed.txt` | Actual installed inference environment; not a clean-install guarantee |
+| `hardware.json` | CPU model and logical processors |
+| `full_run.log` | Raw output, progress, chunk counts, scores and tests |
+| `rerun_main.csv` | New inference outputs from the recorded run |
+| `comparison.json` and `.log` | Per-item comparison with the historical main run |
+| `statistics_check.log` | Six exact tests matched SciPy |
+| `clean_analysis_check.json` | Separate clean saved-output analysis check |
+| `clean_analysis_install.log` and `clean_analysis_run.log` | Installation and execution of the analysis check |
+| `instructor_acceptance.json` | Student-reported course approval, recorded separately from historical logs |
 
-From the repository root, in an environment containing the inference dependencies:
+`progress.json` records progress only and is not evidence of successful completion on its own. Read `status=completed` in environment.json and the comparison results together.
 
-```powershell
-$env:HF_HUB_OFFLINE='1'
-$env:TRANSFORMERS_OFFLINE='1'
-$env:OMP_NUM_THREADS='4'
-$env:MKL_NUM_THREADS='4'
-$env:TOKENIZERS_PARALLELISM='false'
-python -u reproduction/run_reproduction.py *> reproduction/full_run.log
-python reproduction/compare_reproduction.py
-```
+## Safe future checks
 
-Offline mode requires both models to be cached already. For a first download, omit the two offline variables and obtain the models normally. The wrapper imports the unchanged experiment script, runs the original 500-question configuration, and adds progress/environment logging. Four CPU threads are recorded as a computational setting; all three methods share it. No dataset, splitter, prompt or decoding parameter is changed. Outputs go to `reproduction/rerun_main.csv`, preserving the historical results.
+Use the commands in README.md. `run_reproduction.py` requires the actual operator name and writes to a new folder by default. `compare_reproduction.py` accepts explicit input/output paths; it preserves the historical comparison.json. These helpers were updated for safe future use on 2 November 2026. The historical logs predate that maintenance change and remain unchanged.
 
-## Evidence files
-
-- `environment.json`: operator, environment, timestamps, input hashes, completion status and duration.
-- `requirements-inference-observed.txt`: actual packages in the rerun environment. This is an observed environment snapshot, not proof that installation succeeds in a fresh environment.
-- `full_run.log`: stdout and stderr from full model inference.
-- `progress.json`: progress only, not evidence of completion.
-- `rerun_main.csv`: newly generated predictions and metrics, available after completion.
-- `comparison.json`: paired comparison with original saved outputs, available after the comparison command succeeds.
-- `statistics_check.log`: independent SciPy verification of the six exact main paired p-values.
-
-The comparison checks method/question keys, per-item metrics and predictions. Numerical differences must be retained and explained rather than overwritten. The original report outcomes remain historical results unless explicitly revised and documented.
-
-## Clean saved-output analysis check
-
-The assistant also created a fresh Python 3.12 environment, installed requirements-analysis.txt and reran analyse.py. The summary matched byte for byte. See clean_analysis_check.json, clean_analysis_install.log and clean_analysis_run.log. This check covers only analysis dependencies; the full inference rerun still uses the existing environment.
+Offline model loading can be enabled with HF_HUB_OFFLINE=1 and TRANSFORMERS_OFFLINE=1 once both models are cached. Four Torch/OMP/MKL threads were used for every condition in the recorded rerun. The original dataset, splitters, prompt, sampling seed and greedy decoding remain unchanged. No new model experiment was performed during the 2 November report review.

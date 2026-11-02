@@ -1,0 +1,11 @@
+{
+  "reported_on": "2026-11-02",
+  "source": "Student statement in the current conversation; not a signed approval record",
+  "reuse_of_assignment3_experiments": "Instructor accepted re-examination for Assignment 4, as reported by the student",
+  "individual_reproduction_arrangement": "Instructor accepted the technical rerun arrangement, as reported by the student",
+  "scope_limitations": [
+    "Does not establish preregistration",
+    "Does not create an independent human replication",
+    "Does not waive or claim additional seeds or cross-validation"
+  ]
+}
