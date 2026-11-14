@@ -6,7 +6,7 @@ The final manuscript integrates the earlier chunking research and saved experime
 
 ## Submission files
 
-- `submission/Final_Manuscript_Aibyn_Samat.docx`: journal-formatted article, 4,880 main-text words and 230-word abstract.
+- `submission/Final_Manuscript_Aibyn_Samat.docx`: journal-formatted article, 5,288 main-text words and 226-word abstract.
 - `submission/Journal_Fit_and_Readiness.docx`: Appendix A with primary and backup journals, Appendix B checklist and rubric evidence map.
 - `submission/Cover_Letter.docx`: one-page cover letter for Discover Computing.
 - `submission/Supplementary_Results.docx`: budget outcomes, raw p values and hashes.
@@ -59,7 +59,7 @@ Discover Computing accepts Word for Research articles and does not mandate a sep
 
 The source register verifies bibliographic records; it does not certify that the student has read them. The author must review the manuscript, references and declarations and approve the final version. University similarity checking is not performed in this package. External human reproduction is not performed. The AI-operated technical rerun and clean saved-output analysis are described accurately in the manuscript and the original reproduction folder.
 
-Historical outputs and earlier release tags are preserved. The final release uses the tag `final`. No passwords, authentication tokens, private messages, full downloaded article texts or raw Canva template are included in the submission package. The modified slides contain template design elements under Canva's applicable use terms; the raw template is not relicensed as project code.
+Historical outputs and earlier release tags are preserved. The original `final` tag is preserved; this edited release uses `final-revised`. No passwords, authentication tokens, private messages, full downloaded article texts or raw Canva template are included in the submission package. The modified slides contain template design elements under Canva's applicable use terms; the raw template is not relicensed as project code.
 
 ## Licensing
 

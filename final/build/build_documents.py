@@ -112,19 +112,19 @@ def csvwrite(name,heads,rows):
 def percent(v,digits=1):return f'{100*v:.{digits}f}'
 def interval(v):return f"{percent(v['mean'])} [{percent(v['ci'][0])}, {percent(v['ci'][1])}]"
 T={}
-T['RELATED']=('Table 1 Closest studies and the scope of the present comparison',['Study','Intervention and evidence','Relation to this study'],[
+T['RELATED']=('Table 1 Related studies and comparison with this experiment',['Study','Intervention and evidence','Relation to this study'],[
  [cite('Qu et al. {qu}'),'Semantic versus fixed segmentation across retrieval and generation tasks','Mixed benefits; different benchmark and cost evaluation'],
  [cite('Kiss et al. {kiss}'),'Max Min semantic method; clustering and multiple choice RAG','Different semantic algorithm and answer task'],
  [cite('Elkiran and Rasheed {pairings}'),'Retriever and reranker pairings; quality and efficiency','Pipeline interactions; no matching chunking comparison'],
  ['Present study','Three splitters; 500 paired questions; matched context check','Compact models; explicit input limits and saved outputs']], [1.25,2.7,2.85])
-T['CONFIG']=('Table 2 Segmentation configurations and historical chunk statistics',['Method','Rule','Chunks','Mean chars'],[['Fixed','500 chars; no overlap',3235,496],['Overlap','500 chars; 50 overlap',3585,497],['Semantic','95th percentile',589,2720]],[1.1,2.7,1.2,1.8])
-T['MAIN']=('Table 3 Main scores in percent with 95 percent question bootstrap intervals n equals 500',['Method','Recall at 5','Exact Match','Token F1'],[[m.capitalize(),*[interval(MAIN[m][k]) for k in ['hit@5','em','f1']]] for m in M],[1.0,1.9,1.9,2.0])
+T['CONFIG']=('Table 2 Chunking settings and recorded fragment sizes',['Method','Rule','Chunks','Mean chars'],[['Fixed','500 chars; no overlap',3235,496],['Overlap','500 chars; 50 overlap',3585,497],['Semantic','95th percentile',589,2720]],[1.1,2.7,1.2,1.8])
+T['MAIN']=('Table 3 Main results on 500 questions in percent with 95% bootstrap intervals',['Method','Recall at 5','Exact Match','Token F1'],[[m.capitalize(),*[interval(MAIN[m][k]) for k in ['hit@5','em','f1']]] for m in M],[1.0,1.9,1.9,2.0])
 T['DEPTH']=('Table 4 Retrieval depth and prompt diagnostics on 500 questions',['Method','Recall at 1 %','Recall at 3 %','Truncated %','Mean chars at 5'],[[m.capitalize(),*[percent(MAIN[m][k]['mean']) for k in ['hit@1','hit@3','truncated']],f"{MAIN[m]['ctx_chars@5']['mean']:,.0f}"] for m in M],[1.05,1.35,1.35,1.35,1.7])
-T['TESTS']=('Table 5 Paired exact McNemar comparisons and absolute differences',['Metric A vs B','A only','B only','B minus A pp','Holm p'],[[t['metric']+' '+t['a']+' vs '+t['b'],t['a_only'],t['b_only'],f"{t['difference']*100:+.1f}",'<0.0001' if t['holm']<.0001 else f"{t['holm']:.4f}"] for t in A['results_main.csv']['comparisons'] if t['metric']!='f1'],[2.3,.75,.75,1.55,1.45])
-T['F1']=('Table 6 Paired F1 differences in percentage points',['B minus A','Difference pp','95 percent CI pp'],[[t['b']+' minus '+t['a'],f"{100*t['difference']:+.2f}",f"[{100*t['ci'][0]:+.2f}, {100*t['ci'][1]:+.2f}]"] for t in A['results_main.csv']['comparisons'] if t['metric']=='f1'],[2.8,1.55,2.45])
+T['TESTS']=('Table 5 Paired McNemar comparisons and differences in percentage points',['Metric A vs B','A only','B only','B minus A pp','Holm p'],[[t['metric']+' '+t['a']+' vs '+t['b'],t['a_only'],t['b_only'],f"{t['difference']*100:+.1f}",'<0.0001' if t['holm']<.0001 else f"{t['holm']:.4f}"] for t in A['results_main.csv']['comparisons'] if t['metric']!='f1'],[2.3,.75,.75,1.55,1.45])
+T['F1']=('Table 6 Paired F1 differences in percentage points with 95% intervals',['B minus A','Difference pp','95 percent CI pp'],[[t['b']+' minus '+t['a'],f"{100*t['difference']:+.2f}",f"[{100*t['ci'][0]:+.2f}, {100*t['ci'][1]:+.2f}]"] for t in A['results_main.csv']['comparisons'] if t['metric']=='f1'],[2.8,1.55,2.45])
 stages=['Prompt truncated','No answer hit in top 5','Answer hit only at ranks 4 or 5','Hit at 3 and F1 at least 0.5','Hit at 3 and F1 below 0.5','Hit at 3 and F1 zero']
-T['ERRORS']=('Table 7 All EM failures by the first matching rule',['Failure category','Fixed','Overlap','Semantic'],[[s,*[A['failure_stages'][m].get(s,0) for m in M]] for s in stages]+[['Total',*[sum(A['failure_stages'][m].values()) for m in M]]],[3.6,1,1.05,1.15])
-T['BUDGET']=('Table 8 Matched 300 question comparison of main and capped context EM',['Method','Main EM %','Capped EM %','Change pp and 95 percent CI'],[[m.capitalize(),percent(v['main_em'],2),percent(v['budget_em'],2),f"{100*(v['budget_em']-v['main_em']):+.2f} [{100*v['delta_ci'][0]:+.2f}, {100*v['delta_ci'][1]:+.2f}]"] for m,v in A['matched_budget'].items()],[1.0,1.35,1.45,3.0])
+T['ERRORS']=('Table 7 Exact Match failures grouped by the first matching rule',['Failure category','Fixed','Overlap','Semantic'],[[s,*[A['failure_stages'][m].get(s,0) for m in M]] for s in stages]+[['Total',*[sum(A['failure_stages'][m].values()) for m in M]]],[3.6,1,1.05,1.15])
+T['BUDGET']=('Table 8 Exact Match before and after the context cap on the same 300 questions',['Method','Main EM %','Capped EM %','Change pp and 95 percent CI'],[[m.capitalize(),percent(v['main_em'],2),percent(v['budget_em'],2),f"{100*(v['budget_em']-v['main_em']):+.2f} [{100*v['delta_ci'][0]:+.2f}, {100*v['delta_ci'][1]:+.2f}]"] for m,v in A['matched_budget'].items()],[1.0,1.35,1.45,3.0])
 for key,(title,heads,rows,widths) in T.items():csvwrite(key.lower(),heads,rows)
 (GEN/'tables.json').write_text(json.dumps({k:dict(caption=v[0],headers=v[1],rows=v[2]) for k,v in T.items()},indent=2),encoding='utf-8')
 
@@ -176,7 +176,7 @@ for line in TEXT.splitlines():
    title,heads,rows,widths=T[key];table(d,title,heads,rows,widths)
   else:
    n=int(key[-1]);d.add_picture(str(GEN/f'Fig{n}.png'),width=Inches(6.8));d.paragraphs[-1].paragraph_format.keep_with_next=True
-   d.add_paragraph('Fig. 1 Main outcomes on the same 500 questions with 95 percent question bootstrap intervals' if n==1 else 'Fig. 2 Recall at five by answer position in semantic chunks relative to the usable embedding window of 254 tokens The same groups apply to every method Five unresolved positions are omitted')
+   d.add_paragraph('Fig. 1 Main results on 500 questions. Error bars show 95% question bootstrap intervals.' if n==1 else 'Fig. 2 Recall at five by answer position relative to the 254-token embedding window. Each group contains the same questions for all three methods. Five questions with unresolved positions are omitted.')
  else:d.add_paragraph(cite(ascii_clean(line)))
 d.add_heading('References',1)
 for r in REF:
@@ -185,8 +185,8 @@ d.save(OUT/'Final_Manuscript_Aibyn_Samat.docx')
 (GEN/'manuscript_with_references.txt').write_text(cite(TEXT)+'\n\nReferences\n'+'\n'.join(f"[{r['number']}] {r['authors']} {r['title']}. {r['venue']} {r['url']}" for r in REF),encoding='utf-8')
 
 supp=newdoc('Supplementary Results and Numerical Provenance')
-table(supp,'Table S1 Capped context outcomes n equals 300 in percent with 95 percent intervals',['Method','Recall at 5','EM','F1'],[[m.capitalize(),*[interval(A['results_budget1500.csv']['methods'][m][k]) for k in ['hit@5','em','f1']]] for m in M],[1,1.9,1.9,2])
-table(supp,'Table S2 Main binary comparisons with raw p values and paired intervals',['Metric and pair','Raw p','Difference pp and CI'],[[t['metric']+' '+t['a']+' vs '+t['b'],f"{t['p']:.8g}",f"{t['difference']*100:+.1f} [{t['ci'][0]*100:+.2f}, {t['ci'][1]*100:+.2f}]"] for t in A['results_main.csv']['comparisons'] if t['metric']!='f1'],[2.5,1.35,2.95])
+table(supp,'Table S1 Results with capped context on 300 questions in percent with 95% intervals',['Method','Recall at 5','EM','F1'],[[m.capitalize(),*[interval(A['results_budget1500.csv']['methods'][m][k]) for k in ['hit@5','em','f1']]] for m in M],[1,1.9,1.9,2])
+table(supp,'Table S2 Paired binary comparisons with unadjusted p values and difference intervals',['Metric and pair','Raw p','Difference pp and CI'],[[t['metric']+' '+t['a']+' vs '+t['b'],f"{t['p']:.8g}",f"{t['difference']*100:+.1f} [{t['ci'][0]*100:+.2f}, {t['ci'][1]*100:+.2f}]"] for t in A['results_main.csv']['comparisons'] if t['metric']!='f1'],[2.5,1.35,2.95])
 for key in ['results_main.csv','results_budget1500.csv','dev-v1.1.json','run_experiment.py']:
  supp.add_paragraph(key+': '+A['hashes'][key])
 supp.add_paragraph('The main and capped outputs were reported in the earlier course work. No new inference outcomes were generated for the final manuscript. Tables 2 and the subgroup figure use the historical chunk record and semantic_visibility.json. Question level membership for the visibility groups is unavailable.')

@@ -3,72 +3,72 @@
     "slide": 1,
     "title": "Chunking and Context Limits",
     "seconds": 35,
-    "english": "My project examines how document chunking affects a retrieval augmented question answering system. The system first searches for evidence and then generates an answer. I compare fixed, overlapping and semantic chunks using compact models that can run locally. The main result is that overlap improves retrieval, while its improvement in exact answers is less certain. The semantic configuration performs poorly when its long chunks meet small input windows. I will explain the experiment, the statistical evidence and the limits of this conclusion. The manuscript builds on my earlier course experiments rather than claiming that I collected a new benchmark for the final project."
+    "english": "My project is about how we split documents before using them in a question answering system. The system searches for useful text and gives that text to a language model. I compared three ways of splitting it: fixed size, overlap and semantic chunking. Overlap gave the best retrieval result in this experiment. The much lower semantic answer score led to another question: how much of the text was actually reaching the models? I will show the setup, the main numbers and the length problem. The final article brings together the experiments from my earlier assignments."
   },
   {
     "slide": 2,
-    "title": "Research Question and Contribution",
+    "title": "Research Question",
     "seconds": 52,
-    "english": "Imagine a book that cannot fit on a reader's desk. We cut it into cards, find relevant cards and give a few to the reader. Cutting at the wrong place can separate an answer from its explanation. My research question asks how much three cutting strategies change retrieval and answer accuracy under one shared pipeline. The contribution is a paired comparison with saved question outputs and a diagnosis of context length problems. I do not propose a new chunking algorithm. I also do not claim that one method is always best across every model or dataset."
+    "english": "Imagine a book that is too large to put on a reader's desk. We cut it into cards, find the useful cards and give a few to the reader. That is roughly what this pipeline does. If a cut separates an answer from its explanation, the reader may miss something important. My question was whether the three cutting methods change retrieval and answer quality. Each method was tested on the same 500 questions with the same models. After seeing problems with long semantic chunks, I also checked what happened when the context was made shorter."
   },
   {
     "slide": 3,
     "title": "Related Research",
     "seconds": 52,
-    "english": "The closest study is Qu and colleagues. They found that semantic chunking did not give consistent gains across their tested retrieval tasks. Kiss and colleagues obtained positive results with a different Max-Min semantic algorithm. These findings are not necessarily contradictory, because the algorithms, datasets and answer tasks differ. My study examines a narrower compact-model setting. It makes the embedding and generation windows explicit and reports a matched context-cap check. This is the gap I address. It is not a claim that no previous researcher has compared chunking methods."
+    "english": "Previous studies gave me reasons to compare these methods rather than assume semantic chunking would win. Qu and colleagues found that semantic chunking did not consistently help across their tasks. Kiss and colleagues reported improvements with another method called Max-Min. These results can both be valid because the algorithms and evaluations differ. My experiment uses a percentile splitter and small local models. What I add is a close look at the input limits and saved outputs in that setup. I am not introducing a new splitting algorithm or claiming to repeat those papers' full experiments."
   },
   {
     "slide": 4,
     "title": "Data and Pipeline",
     "seconds": 52,
-    "english": "The dataset is SQuAD version 1.1 development data. The retrieval collection contains 48 Wikipedia articles. I select 500 questions with seed 42 and evaluate the same IDs under every method. MiniLM creates normalised vectors and FAISS performs exact search. I retrieve five chunks for evaluation, but pass only the first three to FLAN-T5-base. The generator uses greedy decoding, a 512-token input limit and at most 32 new tokens. A retrieval hit requires an answer string in the correct article. This makes the metric transparent, but it does not prove that the entire supporting statement reaches the generator."
+    "english": "I used the SQuAD development dataset, which contains questions about Wikipedia articles. All 48 articles form the search collection. A shuffle with seed 42 selects 500 questions, and every method gets those same question IDs. MiniLM turns the text into vectors, and FAISS searches them. The system retrieves five chunks, but sends only the first three to FLAN-T5-base. This difference matters when we read the scores. The generator accepts at most 512 input tokens and produces up to 32 new tokens, with sampling disabled. A retrieval hit means an answer string appears in a chunk from the correct article."
   },
   {
     "slide": 5,
     "title": "Three Chunking Methods",
     "seconds": 52,
-    "english": "Fixed chunks contain up to 500 characters with no overlap. The overlap condition uses the same size and repeats 50 characters at each boundary. The semantic condition splits at large changes between sentence embeddings using a 95th-percentile threshold. That threshold is not 95 percent answer accuracy. Fixed produces 3,235 chunks, overlap 3,585 and semantic only 589. Semantic chunks average 2,720 characters, much longer than the other conditions. The methods share models and nominal limits, but the effective amount of usable text differs. That distinction is central to the interpretation."
+    "english": "Fixed chunking takes up to 500 characters at a time. Overlap uses the same size but repeats 50 characters around a boundary. Semantic chunking looks for large changes between sentence embeddings, using the 95th percentile as its split threshold. That number is a rule for choosing boundaries, not a measure of answer accuracy. The table shows the main practical difference. Fixed and overlap produce more than three thousand chunks averaging about five hundred characters. Semantic produces only 589, averaging 2,720 characters. Those much longer chunks are important because the models still have the same small input windows."
   },
   {
     "slide": 6,
     "title": "Main Results",
     "seconds": 52,
-    "english": "Overlap has the highest observed Recall at five, 81.8 percent, compared with 75.2 for fixed and 66.4 for semantic. These correspond to 409, 376 and 332 successful questions out of 500. Exact Match is 58.0, 54.8 and 1.4 percent. F1 gives partial credit for overlapping words, so it is higher than Exact Match. The large semantic gap between retrieval and answers shows why the stages need separate evaluation. A retrieved full string can contain the answer even when the generator later receives an incomplete input. The manuscript reports uncertainty intervals alongside these point estimates."
+    "english": "The green bars show retrieval. Overlap reaches 81.8 percent, or 409 questions out of 500. Fixed reaches 75.2 percent and semantic 66.4 percent. The answer scores tell a different story. Exact Match is 58 percent for overlap, 54.8 for fixed and just 1.4 for semantic. F1 gives partial credit when some answer words match, so its scores are higher here. The semantic retriever can find chunks containing an answer, yet the generator usually fails to return it. This is why I evaluate retrieval and generation separately. Finding the text does not guarantee that the generator can use it."
   },
   {
     "slide": 7,
-    "title": "Paired Statistical Evidence",
+    "title": "Statistical Comparison",
     "seconds": 52,
-    "english": "Because the methods answer the same questions, I use paired analysis. For retrieval, overlap succeeds alone on 58 questions and fixed alone on 25. The net gain is 33 questions, or 6.6 percentage points. The paired bootstrap interval is 3.0 to 10.0 points and Holm adjusted p is 0.0008. McNemar tests binary disagreements, while bootstrap estimates uncertainty by resampling saved questions. Holm accounts for the three comparisons within each metric. For Exact Match, p is 0.1332 and the difference interval includes zero. I therefore cannot confidently claim an answer accuracy advantage, and I do not interpret this as proof of equivalence."
+    "english": "The comparison is paired because the methods answer the same questions. Overlap finds an answer where fixed fails on 58 questions. Fixed wins alone on 25. That is 33 additional hits out of 500, a gain of 6.6 percentage points. The paired interval is 3 to 10 points. McNemar tests these binary disagreements, and Holm corrects for the three comparisons within the metric. The adjusted p value is about 0.0008. For Exact Match, the interval includes zero and p is 0.1332. So I can support a retrieval gain, but I cannot confidently claim an Exact Match gain from these data."
   },
   {
     "slide": 8,
-    "title": "Error Analysis and Input Limits",
+    "title": "Where Text Gets Lost",
     "seconds": 52,
-    "english": "There are two length problems. MiniLM represents at most 256 tokens, with about 254 available for text. A long chunk may contain the answer beyond that visible portion. Later, the generator prompt combines three chunks before placing the question at the end. Its 512-token limit can remove useful text or the question. Semantic prompts are truncated in 478 out of 500 cases. Among wrong semantic answers, 477 are assigned first to truncation. One truncated prompt still gives a correct exact answer, which explains the different counts. The categories describe observed outcomes rather than proven causes for each individual prediction."
+    "english": "There are two places where long text can be lost. MiniLM has 256 token positions, about 254 of them available for ordinary text. An answer later in a long chunk may never affect its embedding. The generator then gets three chunks followed by the question, within a 512-token limit. Long context can push useful text or the question beyond that limit. In the semantic run, 478 of the 500 prompts were truncated. Of those, one still gave an exact answer. That leaves 477 truncated failures in the error table. The flags locate a problem, although they do not prove the cause of every wrong answer."
   },
   {
     "slide": 9,
-    "title": "Matched Context Check",
+    "title": "Shorter Context Check",
     "seconds": 52,
-    "english": "I added an exploratory context cap after observing the truncation problem. It keeps only the first 1,500 context characters before tokenisation. The fair comparison uses the same 300 questions in both runs. Semantic Exact Match rises from 1.33 percent, four correct answers, to 24.67 percent, 74 correct answers. The paired improvement is 23.33 points with an interval from 18.33 to 28.33. Fixed drops by one point and overlap is unchanged. Tokenizer truncation falls to zero, but the character cap still removes text. This supports the importance of prompt construction without isolating semantic boundaries or validating the setting on unseen questions."
+    "english": "To investigate this, I checked a run that kept only the first 1,500 characters of context before building the prompt. The fair comparison uses the same 300 questions before and after this change. Semantic goes from four exact answers to 74: 1.33 percent to 24.67 percent. The gain is 23.33 percentage points, with an interval from 18.33 to 28.33. Overlap stays the same and fixed drops by one point. This check was added after noticing the problem, so it is exploratory. It also changes how much evidence remains and whether the question fits. It cannot isolate the effect of semantic boundaries alone."
   },
   {
     "slide": 10,
     "title": "Limitations",
     "seconds": 52,
-    "english": "The main threat is unequal effective input length. Semantic changes both boundaries and chunk length, so the whole gap cannot be assigned to meaning preservation alone. The experiment uses one English dataset, one encoder, one generator and one shuffle. String containment can accept irrelevant answer occurrences, and Exact Match can penalise acceptable wording. Questions from the same articles are related, so question bootstrap intervals may understate some uncertainty. The extra checks were chosen after seeing the results. Future work should freeze the protocol, apply token caps before indexing, preserve the question and evaluate untouched data with additional models."
+    "english": "The main limitation is that semantic chunking changes both the boundaries and the length of the chunks. The poor score could reflect how those long chunks interact with this pipeline. I cannot conclude that every semantic method is worse. There is also only one English dataset and one model pair. Exact Match may reject valid wording, and short answer strings can appear in irrelevant text. Questions from one article are related, which can make question bootstrap intervals too narrow. A next experiment should set token limits in advance, keep the question in the prompt and test new questions with other models."
   },
   {
     "slide": 11,
-    "title": "Reproducibility",
+    "title": "Rechecking the Results",
     "seconds": 52,
-    "english": "Every main question has saved method, ID, prediction and metric fields. The analysis aligns IDs, regenerates summaries and checks the matched subset. A later full inference rerun produced the same 1,500 prediction strings and per-item numeric outcomes. It took about 64.8 minutes in the existing local environment. Codex operated that rerun on my computer, as disclosed. It is not an independent human replication or a clean installation of the complete model pipeline. A separate clean environment check validated saved-output analysis. The README explains the distinction and gives a fast command to rebuild every Results table and figure."
+    "english": "The repository saves the prediction and scores for every question. The analysis checks the IDs before comparing methods, so the pairs line up correctly. Codex later reran the full model pipeline on my computer, and all 1,500 saved prediction strings and numeric outcomes matched. That took about 65 minutes in the existing environment. The disclosure in the article explains the AI assistance. This was a technical repeatability check, not an independent human replication. There was also a separate clean installation check for the saved-output analysis. For a quick demonstration, I can regenerate all Results tables and figures without running the models again."
   },
   {
     "slide": 12,
-    "title": "Conclusion and Journal Fit",
+    "title": "Conclusion",
     "seconds": 45,
-    "english": "My conclusion is conditional. Overlap improves retrieval in this compact pipeline, while its Exact Match advantage remains uncertain. The semantic hypothesis is not supported under this configuration. The diagnostic result is that chunking must be evaluated together with the input limits of the models that use the chunks. Discover Computing is the primary target because it publishes semantic chunking and RAG pipeline evaluations. Its Scopus source record and official source list show active coverage. Discover Artificial Intelligence is the backup. Journal submission is voluntary after the course and publication is not guaranteed. I can now show the saved rows behind a result or explain the statistical tests."
+    "english": "The answer to my research question depends on the setup. Overlap improved retrieval here, while its Exact Match advantage remains uncertain. The original hypothesis that semantic would improve both scores was not supported. The additional check points to a useful lesson: chunk boundaries have to be considered together with model input limits. For the journal part, I selected Discover Computing because it publishes work on semantic chunking and RAG evaluation. Discover Artificial Intelligence is the backup. Their indexing records and guidelines are documented in the appendix. No journal submission or acceptance is claimed. I can also show how a reported number is calculated from the saved question rows."
   }
 ]

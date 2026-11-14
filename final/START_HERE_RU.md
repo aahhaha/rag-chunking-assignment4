@@ -11,9 +11,9 @@
 3. `Cover_Letter.docx`: письмо редактору, одна страница.
 4. `Supplementary_Results.docx`: дополнительные результаты и происхождение чисел.
 5. `Final_Defence_Aibyn_Samat.pdf`: презентация, 12 слайдов. PPTX оставь для редактирования и показа.
-6. Ссылку на https://github.com/aahhaha/rag-chunking-assignment4/releases/tag/final и архив проекта, если есть поле для кода.
+6. Ссылку на https://github.com/aahhaha/rag-chunking-assignment4/releases/tag/final-revised и архив проекта, если есть поле для кода.
 
-Если Moodle даёт одно поле для всех файлов, загрузи полный архив `Final_Submission_Aibyn_Samat.zip`. В нём папка `final/submission` содержит актуальные документы. Старые Assignment 3 и 4 оставлены в репозитории для проверки истории, они не заменяют финальную статью.
+Если Moodle даёт одно поле для всех файлов, загрузи полный архив `Final_Submission_Aibyn_Samat_Revised.zip`. В нём папка `final/submission` содержит актуальные документы. Старые Assignment 3 и 4 оставлены в репозитории для проверки истории, они не заменяют финальную статью.
 
 ## Перед загрузкой
 

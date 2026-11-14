@@ -1,6 +1,6 @@
 {
   "RELATED": {
-    "caption": "Table 1 Closest studies and the scope of the present comparison",
+    "caption": "Table 1 Related studies and comparison with this experiment",
     "headers": [
       "Study",
       "Intervention and evidence",
@@ -30,7 +30,7 @@
     ]
   },
   "CONFIG": {
-    "caption": "Table 2 Segmentation configurations and historical chunk statistics",
+    "caption": "Table 2 Chunking settings and recorded fragment sizes",
     "headers": [
       "Method",
       "Rule",
@@ -59,7 +59,7 @@
     ]
   },
   "MAIN": {
-    "caption": "Table 3 Main scores in percent with 95 percent question bootstrap intervals n equals 500",
+    "caption": "Table 3 Main results on 500 questions in percent with 95% bootstrap intervals",
     "headers": [
       "Method",
       "Recall at 5",
@@ -121,7 +121,7 @@
     ]
   },
   "TESTS": {
-    "caption": "Table 5 Paired exact McNemar comparisons and absolute differences",
+    "caption": "Table 5 Paired McNemar comparisons and differences in percentage points",
     "headers": [
       "Metric A vs B",
       "A only",
@@ -175,7 +175,7 @@
     ]
   },
   "F1": {
-    "caption": "Table 6 Paired F1 differences in percentage points",
+    "caption": "Table 6 Paired F1 differences in percentage points with 95% intervals",
     "headers": [
       "B minus A",
       "Difference pp",
@@ -200,7 +200,7 @@
     ]
   },
   "ERRORS": {
-    "caption": "Table 7 All EM failures by the first matching rule",
+    "caption": "Table 7 Exact Match failures grouped by the first matching rule",
     "headers": [
       "Failure category",
       "Fixed",
@@ -253,7 +253,7 @@
     ]
   },
   "BUDGET": {
-    "caption": "Table 8 Matched 300 question comparison of main and capped context EM",
+    "caption": "Table 8 Exact Match before and after the context cap on the same 300 questions",
     "headers": [
       "Method",
       "Main EM %",

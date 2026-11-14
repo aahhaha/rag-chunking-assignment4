@@ -2,6 +2,7 @@ import build_documents as b
 from pathlib import Path
 import json
 R=b.ROOT;O=b.OUT
+counts=json.loads((R/'generated/content_checks.json').read_text(encoding='utf-8'))
 evidence={'checked':'2026-11-14','primary':{'title':'Discover Computing','source_id':'21101228213','eissn':'2948-2992','status':'Active','coverage':'2024-2026','citescore_year':2025,'citescore':2.0,'categories':{'Library and Information Sciences':{'rank':'120/296','percentile':59},'Information Systems':{'rank':'314/519','percentile':39}}},'backup':{'title':'Discover Artificial Intelligence','source_id':'21101215114','eissn':'2731-0809','status':'Active','coverage':'2021-2026','citescore_year':2025,'citescore':6.2,'categories':{'Computer Vision and Pattern Recognition':{'rank':'45/183','percentile':75},'Information Systems':{'rank':'153/519','percentile':70},'Artificial Intelligence':{'rank':'177/570','percentile':69},'Human Computer Interaction':{'rank':'83/196','percentile':57}}},'source_list':'Official October 2026 workbook downloaded from Elsevier content page. Both Active; neither in Discontinued Titles sheet.','hijacked_check':'488 rows of the publicly linked Retraction Watch checker searched by titles and eISSNs; no matches. This does not guarantee absence of undiscovered clones.','credentials':'No password used or retained. No account created.'}
 (R/'sources/journal_verification.json').write_text(json.dumps(evidence,indent=2),encoding='utf-8')
 d=b.newdoc('Journal Fit Statement and Submission Readiness')
@@ -37,7 +38,7 @@ d.add_paragraph('Primary author guidelines: https://link.springer.com/journal/10
 d.add_heading('Appendix B Submission Readiness Checklist',1)
 d.add_paragraph('This checklist separates completed preparation from external or author actions. A No entry is not silently treated as Yes. Publication readiness after grading has additional requirements, including an external human reproduction.')
 checks=[
- ['Journal format and length','Yes','Arial 12 pt; IMRaD; main text 4,880 words; abstract 230 words; numbered references. Discover accepts Word without a mandatory Research Word template.'],
+ ['Journal format and length','Yes',f"Arial 12 pt; IMRaD; main text {counts['main_text_words']:,} words; abstract {counts['abstract_words']} words; numbered references. Discover accepts Word without a mandatory Research Word template."],
  ['Consistent reported results','Yes','Main values and matched comparisons generated from analysis.json and saved CSVs.'],
  ['Traceable numerical results','Yes','Generated table CSVs, hashes, result IDs and evidence map accompany the code. Historical chunk and subgroup summaries are distinguished.'],
  ['References real and formatted','Yes','30 published sources with source links; DOI included where available.'],
@@ -51,7 +52,7 @@ checks=[
  ['Similarity check acceptable','No','Requires the university system and its threshold; no score is invented.'],
  ['Reproduction by another person','No','AI operated technical rerun and clean analysis check completed. Course instructor accepted the earlier individual arrangement; no external human rerun is claimed.'],
  ['Final author approval','No','Student must read and approve the final version before upload or journal submission.'],
- ['Final repository release','Yes','Release tag final identifies this package: https://github.com/aahhaha/rag-chunking-assignment4/releases/tag/final.'],
+ ['Final repository release','Yes','The original final tag is retained. The edited package uses final-revised: https://github.com/aahhaha/rag-chunking-assignment4/releases/tag/final-revised.'],
  ['Individual project permission','Yes as reported','Student confirmed on 14 November 2026 that the instructor accepted the individual final project.'],
 ]
 b.table(d,'Readiness status against the course checklist',['Check','Status','Evidence or remaining action'],checks,[2.05,1.0,3.75])
@@ -66,7 +67,7 @@ c=b.newdoc('Cover Letter')
 for text in ['14 November 2026','Editor, Discover Computing','Dear Editor,',
  'I would like to present the research manuscript "Chunking and Context Limits in Retrieval Augmented Question Answering with Compact Models" for consideration as a Research article.',
  'The paper compares fixed, overlapping and percentile semantic segmentation in a common local question answering pipeline. On the same 500 SQuAD questions, overlap improves Recall at five over fixed segmentation by 6.6 percentage points, with a paired 95% interval of 3.0 to 10.0 points and Holm adjusted p = 0.0008. Its higher Exact Match score is not statistically established. The semantic condition exposes a practical input length failure that we examine with a matched exploratory context cap.',
- 'The contribution is an inspectable empirical comparison and diagnostic case. It is relevant to the journal\'s work on semantic chunking and RAG pipeline evaluation, including Kiss et al. (doi:10.1007/s10791-025-09638-7), Upadhyay and Viviani (doi:10.1007/s10791-025-09505-5), and Elkiran and Rasheed (doi:10.1007/s10791-026-10156-3). We distinguish our compact model configuration and string based outcomes from those studies rather than claiming a general ranking of semantic methods.',
+ 'The study compares existing splitters in a local pipeline and examines where long chunks exceed model input limits. It fits the journal\'s work on semantic chunking and RAG evaluation, including Kiss et al. (doi:10.1007/s10791-025-09638-7), Upadhyay and Viviani (doi:10.1007/s10791-025-09505-5), and Elkiran and Rasheed (doi:10.1007/s10791-026-10156-3). The findings apply to the tested models and answer matching measures. They do not establish a general ranking of semantic methods.',
  'The manuscript provides public code, question level outputs and reproducibility evidence. The dataset is an existing public benchmark, with no newly recruited participants. It discloses substantive AI assistance and the limits of the technical rerun. The experiments previously appeared in course assignments and the public repository; this history is disclosed in the manuscript. This workflow has not submitted the manuscript to another journal.',
  'Thank you for considering the study. I would welcome an assessment of its methodological fit and contribution.',
  'Sincerely,','Aibyn Samat','Astana IT University, Astana, Kazakhstan','242187@astanait.edu.kz']:
