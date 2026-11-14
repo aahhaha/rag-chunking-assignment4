@@ -1,0 +1,8 @@
+Failure category,Fixed,Overlap,Semantic
+Prompt truncated,0,0,477
+No answer hit in top 5,123,91,14
+Answer hit only at ranks 4 or 5,27,32,1
+Hit at 3 and F1 at least 0.5,31,32,0
+Hit at 3 and F1 below 0.5,13,14,0
+Hit at 3 and F1 zero,32,41,1
+Total,226,210,493

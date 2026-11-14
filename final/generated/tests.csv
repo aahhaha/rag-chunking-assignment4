@@ -1,0 +1,7 @@
+Metric A vs B,A only,B only,B minus A pp,Holm p
+hit@5 fixed vs overlap,25,58,+6.6,0.0008
+hit@5 fixed vs semantic,113,69,-8.8,0.0014
+hit@5 overlap vs semantic,128,51,-15.4,<0.0001
+em fixed vs overlap,42,58,+3.2,0.1332
+em fixed vs semantic,269,2,-53.4,<0.0001
+em overlap vs semantic,286,3,-56.6,<0.0001

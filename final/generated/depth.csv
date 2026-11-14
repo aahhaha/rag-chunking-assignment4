@@ -1,0 +1,4 @@
+Method,Recall at 1 %,Recall at 3 %,Truncated %,Mean chars at 5
+Fixed,51.6,69.8,0.2,"2,479"
+Overlap,59.4,75.4,0.0,"2,486"
+Semantic,37.6,56.6,95.6,"14,532"

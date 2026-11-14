@@ -1,0 +1,284 @@
+{
+  "RELATED": {
+    "caption": "Table 1 Closest studies and the scope of the present comparison",
+    "headers": [
+      "Study",
+      "Intervention and evidence",
+      "Relation to this study"
+    ],
+    "rows": [
+      [
+        "Qu et al. [5]",
+        "Semantic versus fixed segmentation across retrieval and generation tasks",
+        "Mixed benefits; different benchmark and cost evaluation"
+      ],
+      [
+        "Kiss et al. [6]",
+        "Max Min semantic method; clustering and multiple choice RAG",
+        "Different semantic algorithm and answer task"
+      ],
+      [
+        "Elkiran and Rasheed [12]",
+        "Retriever and reranker pairings; quality and efficiency",
+        "Pipeline interactions; no matching chunking comparison"
+      ],
+      [
+        "Present study",
+        "Three splitters; 500 paired questions; matched context check",
+        "Compact models; explicit input limits and saved outputs"
+      ]
+    ]
+  },
+  "CONFIG": {
+    "caption": "Table 2 Segmentation configurations and historical chunk statistics",
+    "headers": [
+      "Method",
+      "Rule",
+      "Chunks",
+      "Mean chars"
+    ],
+    "rows": [
+      [
+        "Fixed",
+        "500 chars; no overlap",
+        3235,
+        496
+      ],
+      [
+        "Overlap",
+        "500 chars; 50 overlap",
+        3585,
+        497
+      ],
+      [
+        "Semantic",
+        "95th percentile",
+        589,
+        2720
+      ]
+    ]
+  },
+  "MAIN": {
+    "caption": "Table 3 Main scores in percent with 95 percent question bootstrap intervals n equals 500",
+    "headers": [
+      "Method",
+      "Recall at 5",
+      "Exact Match",
+      "Token F1"
+    ],
+    "rows": [
+      [
+        "Fixed",
+        "75.2 [71.6, 79.0]",
+        "54.8 [50.6, 59.2]",
+        "62.4 [58.6, 66.4]"
+      ],
+      [
+        "Overlap",
+        "81.8 [78.4, 85.2]",
+        "58.0 [53.8, 62.2]",
+        "65.4 [61.6, 69.3]"
+      ],
+      [
+        "Semantic",
+        "66.4 [62.2, 70.4]",
+        "1.4 [0.4, 2.4]",
+        "4.0 [2.8, 5.4]"
+      ]
+    ]
+  },
+  "DEPTH": {
+    "caption": "Table 4 Retrieval depth and prompt diagnostics on 500 questions",
+    "headers": [
+      "Method",
+      "Recall at 1 %",
+      "Recall at 3 %",
+      "Truncated %",
+      "Mean chars at 5"
+    ],
+    "rows": [
+      [
+        "Fixed",
+        "51.6",
+        "69.8",
+        "0.2",
+        "2,479"
+      ],
+      [
+        "Overlap",
+        "59.4",
+        "75.4",
+        "0.0",
+        "2,486"
+      ],
+      [
+        "Semantic",
+        "37.6",
+        "56.6",
+        "95.6",
+        "14,532"
+      ]
+    ]
+  },
+  "TESTS": {
+    "caption": "Table 5 Paired exact McNemar comparisons and absolute differences",
+    "headers": [
+      "Metric A vs B",
+      "A only",
+      "B only",
+      "B minus A pp",
+      "Holm p"
+    ],
+    "rows": [
+      [
+        "hit@5 fixed vs overlap",
+        25,
+        58,
+        "+6.6",
+        "0.0008"
+      ],
+      [
+        "hit@5 fixed vs semantic",
+        113,
+        69,
+        "-8.8",
+        "0.0014"
+      ],
+      [
+        "hit@5 overlap vs semantic",
+        128,
+        51,
+        "-15.4",
+        "<0.0001"
+      ],
+      [
+        "em fixed vs overlap",
+        42,
+        58,
+        "+3.2",
+        "0.1332"
+      ],
+      [
+        "em fixed vs semantic",
+        269,
+        2,
+        "-53.4",
+        "<0.0001"
+      ],
+      [
+        "em overlap vs semantic",
+        286,
+        3,
+        "-56.6",
+        "<0.0001"
+      ]
+    ]
+  },
+  "F1": {
+    "caption": "Table 6 Paired F1 differences in percentage points",
+    "headers": [
+      "B minus A",
+      "Difference pp",
+      "95 percent CI pp"
+    ],
+    "rows": [
+      [
+        "overlap minus fixed",
+        "+3.06",
+        "[-0.66, +6.63]"
+      ],
+      [
+        "semantic minus fixed",
+        "-58.35",
+        "[-62.44, -54.38]"
+      ],
+      [
+        "semantic minus overlap",
+        "-61.41",
+        "[-65.22, -57.49]"
+      ]
+    ]
+  },
+  "ERRORS": {
+    "caption": "Table 7 All EM failures by the first matching rule",
+    "headers": [
+      "Failure category",
+      "Fixed",
+      "Overlap",
+      "Semantic"
+    ],
+    "rows": [
+      [
+        "Prompt truncated",
+        0,
+        0,
+        477
+      ],
+      [
+        "No answer hit in top 5",
+        123,
+        91,
+        14
+      ],
+      [
+        "Answer hit only at ranks 4 or 5",
+        27,
+        32,
+        1
+      ],
+      [
+        "Hit at 3 and F1 at least 0.5",
+        31,
+        32,
+        0
+      ],
+      [
+        "Hit at 3 and F1 below 0.5",
+        13,
+        14,
+        0
+      ],
+      [
+        "Hit at 3 and F1 zero",
+        32,
+        41,
+        1
+      ],
+      [
+        "Total",
+        226,
+        210,
+        493
+      ]
+    ]
+  },
+  "BUDGET": {
+    "caption": "Table 8 Matched 300 question comparison of main and capped context EM",
+    "headers": [
+      "Method",
+      "Main EM %",
+      "Capped EM %",
+      "Change pp and 95 percent CI"
+    ],
+    "rows": [
+      [
+        "Fixed",
+        "55.67",
+        "54.67",
+        "-1.00 [-2.33, +0.00]"
+      ],
+      [
+        "Overlap",
+        "58.67",
+        "58.67",
+        "+0.00 [-1.00, +1.00]"
+      ],
+      [
+        "Semantic",
+        "1.33",
+        "24.67",
+        "+23.33 [+18.33, +28.33]"
+      ]
+    ]
+  }
+}

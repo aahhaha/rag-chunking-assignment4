@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "main_n": 500,
+  "matched_n": 300,
+  "raw_inputs_unchanged": true,
+  "eight_tables_and_two_figures_regenerated": true,
+  "exact_counts_checked": {
+    "fixed": [
+      376,
+      274
+    ],
+    "overlap": [
+      409,
+      290
+    ],
+    "semantic": [
+      332,
+      7
+    ]
+  },
+  "chunk_log_counts_checked": {
+    "fixed": [
+      3235,
+      496
+    ],
+    "overlap": [
+      3585,
+      497
+    ],
+    "semantic": [
+      589,
+      2720
+    ]
+  },
+  "raw_sha256": {
+    "results_main.csv": "0fb21867c3636b64510ef6653697a93f2e00ee1b0e828e8ca1b8f4c9555a7597",
+    "results_budget1500.csv": "9e87db237aa8802620dd9266e9490cad2ee063e30150366cdce557a36dfbc973",
+    "results.csv": "9a73bad45df03c5cd9a51f03d86585d2ecfb519aac80cc76f51b535ac0b9102e",
+    "dev-v1.1.json": "95aa6a52d5d6a735563366753ca50492a658031da74f301ac5238b03966972c9",
+    "run_experiment.py": "b58a60fd145862835a352fe8e27d0aefcf06a2e50cd4d16e74c838b7652dc103",
+    "semantic_visibility.json": "7d4e0b4cba1c915d7ae0dc828f3dd0b91c4b79e29c90ff2d7970de2abd21f568"
+  }
+}

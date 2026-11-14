@@ -1,0 +1,52 @@
+{
+  "checked": "2026-11-14",
+  "primary": {
+    "title": "Discover Computing",
+    "source_id": "21101228213",
+    "eissn": "2948-2992",
+    "status": "Active",
+    "coverage": "2024-2026",
+    "citescore_year": 2025,
+    "citescore": 2.0,
+    "categories": {
+      "Library and Information Sciences": {
+        "rank": "120/296",
+        "percentile": 59
+      },
+      "Information Systems": {
+        "rank": "314/519",
+        "percentile": 39
+      }
+    }
+  },
+  "backup": {
+    "title": "Discover Artificial Intelligence",
+    "source_id": "21101215114",
+    "eissn": "2731-0809",
+    "status": "Active",
+    "coverage": "2021-2026",
+    "citescore_year": 2025,
+    "citescore": 6.2,
+    "categories": {
+      "Computer Vision and Pattern Recognition": {
+        "rank": "45/183",
+        "percentile": 75
+      },
+      "Information Systems": {
+        "rank": "153/519",
+        "percentile": 70
+      },
+      "Artificial Intelligence": {
+        "rank": "177/570",
+        "percentile": 69
+      },
+      "Human Computer Interaction": {
+        "rank": "83/196",
+        "percentile": 57
+      }
+    }
+  },
+  "source_list": "Official October 2026 workbook downloaded from Elsevier content page. Both Active; neither in Discontinued Titles sheet.",
+  "hijacked_check": "488 rows of the publicly linked Retraction Watch checker searched by titles and eISSNs; no matches. This does not guarantee absence of undiscovered clones.",
+  "credentials": "No password used or retained. No account created."
+}

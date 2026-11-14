@@ -1,0 +1,1712 @@
+[
+  {
+    "key": "rag",
+    "url": "https://arxiv.org/abs/2005.11401",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+      ],
+      "citation_author": [
+        "Lewis, Patrick",
+        "Perez, Ethan",
+        "Piktus, Aleksandra",
+        "Petroni, Fabio",
+        "Karpukhin, Vladimir",
+        "Goyal, Naman",
+        "Küttler, Heinrich",
+        "Lewis, Mike",
+        "Yih, Wen-tau",
+        "Rocktäschel, Tim",
+        "Riedel, Sebastian",
+        "Kiela, Douwe"
+      ],
+      "citation_date": [
+        "2020/05/22"
+      ],
+      "citation_online_date": [
+        "2021/04/12"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2005.11401"
+      ],
+      "citation_arxiv_id": [
+        "2005.11401"
+      ],
+      "citation_abstract": [
+        "Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pre-trained models with a differentiable access mechanism to explicit non-parametric memory can overcome this issue, but have so far been only investigated for extractive downstream tasks. We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation. We introduce RAG models where the parametric memory is a pre-trained seq2seq model and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG formulations, one which conditions on the same retrieved passages across the whole generated sequence, the other can use different passages per token. We fine-tune and evaluate our models on a wide range of knowledge-intensive NLP tasks and set the state-of-the-art on three open domain QA tasks, outperforming parametric seq2seq models and task-specific retrieve-and-extract architectures. For language generation tasks, we find that RAG models generate more specific, diverse and factual language than a state-of-the-art parametric-only seq2seq baseline."
+      ]
+    }
+  },
+  {
+    "key": "dpr",
+    "url": "https://aclanthology.org/2020.emnlp-main.550/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Dense Passage Retrieval for Open-Domain Question Answering"
+      ],
+      "citation_author": [
+        "Vladimir Karpukhin",
+        "Barlas Oguz",
+        "Sewon Min",
+        "Patrick Lewis",
+        "Ledell Wu",
+        "Sergey Edunov",
+        "Danqi Chen",
+        "Wen-tau Yih"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)"
+      ],
+      "citation_publication_date": [
+        "2020/11"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2020.emnlp-main.550.pdf"
+      ],
+      "citation_firstpage": [
+        "6769"
+      ],
+      "citation_lastpage": [
+        "6781"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2020.emnlp-main.550"
+      ]
+    }
+  },
+  {
+    "key": "sbert",
+    "url": "https://aclanthology.org/D19-1410/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+      ],
+      "citation_author": [
+        "Nils Reimers",
+        "Iryna Gurevych"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)"
+      ],
+      "citation_publication_date": [
+        "2019/11"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/D19-1410.pdf"
+      ],
+      "citation_firstpage": [
+        "3982"
+      ],
+      "citation_lastpage": [
+        "3992"
+      ],
+      "citation_doi": [
+        "10.18653/v1/D19-1410"
+      ]
+    }
+  },
+  {
+    "key": "squad",
+    "url": "https://aclanthology.org/D16-1264/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "SQuAD: 100,000+ Questions for Machine Comprehension of Text"
+      ],
+      "citation_author": [
+        "Pranav Rajpurkar",
+        "Jian Zhang",
+        "Konstantin Lopyrev",
+        "Percy Liang"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing"
+      ],
+      "citation_publication_date": [
+        "2016/11"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/D16-1264.pdf"
+      ],
+      "citation_firstpage": [
+        "2383"
+      ],
+      "citation_lastpage": [
+        "2392"
+      ],
+      "citation_doi": [
+        "10.18653/v1/D16-1264"
+      ]
+    }
+  },
+  {
+    "key": "t5",
+    "url": "https://jmlr.org/papers/v21/20-074.html",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer"
+      ],
+      "citation_author": [
+        "Colin Raffel",
+        "Noam Shazeer",
+        "Adam Roberts",
+        "Katherine Lee",
+        "Sharan Narang",
+        "Michael Matena",
+        "Yanqi Zhou",
+        "Wei Li",
+        "Peter J. Liu"
+      ],
+      "citation_journal_title": [
+        "Journal of Machine Learning Research"
+      ],
+      "citation_volume": [
+        "21"
+      ],
+      "citation_issue": [
+        "140"
+      ],
+      "citation_firstpage": [
+        "1"
+      ],
+      "citation_lastpage": [
+        "67"
+      ],
+      "citation_pdf_url": [
+        "http://jmlr.org/papers/volume21/20-074/20-074.pdf"
+      ],
+      "citation_publication_date": [
+        "2020"
+      ],
+      "citation_public_url": [
+        "http://jmlr.org/papers/v21/20-074.html"
+      ],
+      "citation_abstract_html_url": [
+        "http://jmlr.org/papers/v21/20-074.html"
+      ],
+      "citation_issn": [
+        "1533-7928"
+      ]
+    }
+  },
+  {
+    "key": "flan",
+    "url": "https://jmlr.org/papers/v25/23-0870.html",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Scaling Instruction-Finetuned Language Models"
+      ],
+      "citation_author": [
+        "Hyung Won Chung",
+        "Le Hou",
+        "Shayne Longpre",
+        "Barret Zoph",
+        "Yi Tay",
+        "William Fedus",
+        "Yunxuan Li",
+        "Xuezhi Wang",
+        "Mostafa Dehghani",
+        "Siddhartha Brahma",
+        "Albert Webson",
+        "Shixiang Shane Gu",
+        "Zhuyun Dai",
+        "Mirac Suzgun",
+        "Xinyun Chen",
+        "Aakanksha Chowdhery",
+        "Alex Castro-Ros",
+        "Marie Pellat",
+        "Kevin Robinson",
+        "Dasha Valter",
+        "Sharan Narang",
+        "Gaurav Mishra",
+        "Adams Yu",
+        "Vincent Zhao",
+        "Yanping Huang",
+        "Andrew Dai",
+        "Hongkun Yu",
+        "Slav Petrov",
+        "Ed H. Chi",
+        "Jeff Dean",
+        "Jacob Devlin",
+        "Adam Roberts",
+        "Denny Zhou",
+        "Quoc V. Le",
+        "Jason Wei"
+      ],
+      "citation_journal_title": [
+        "Journal of Machine Learning Research"
+      ],
+      "citation_volume": [
+        "25"
+      ],
+      "citation_issue": [
+        "70"
+      ],
+      "citation_firstpage": [
+        "1"
+      ],
+      "citation_lastpage": [
+        "53"
+      ],
+      "citation_pdf_url": [
+        "http://jmlr.org/papers/volume25/23-0870/23-0870.pdf"
+      ],
+      "citation_publication_date": [
+        "2024"
+      ],
+      "citation_public_url": [
+        "http://jmlr.org/papers/v25/23-0870.html"
+      ],
+      "citation_abstract_html_url": [
+        "http://jmlr.org/papers/v25/23-0870.html"
+      ],
+      "citation_issn": [
+        "1533-7928"
+      ]
+    }
+  },
+  {
+    "key": "qu",
+    "url": "https://aclanthology.org/2025.findings-naacl.114/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Is Semantic Chunking Worth the Computational Cost?"
+      ],
+      "citation_author": [
+        "Renyi Qu",
+        "Ruixuan Tu",
+        "Forrest Bao"
+      ],
+      "citation_conference_title": [
+        "Findings of the Association for Computational Linguistics: NAACL 2025"
+      ],
+      "citation_publication_date": [
+        "2025/4"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2025.findings-naacl.114.pdf"
+      ],
+      "citation_firstpage": [
+        "2155"
+      ],
+      "citation_lastpage": [
+        "2177"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2025.findings-naacl.114"
+      ]
+    }
+  },
+  {
+    "key": "kiss",
+    "url": "https://link.springer.com/article/10.1007/s10791-025-09638-7",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_pdf_url": [
+        "https://link.springer.com/content/pdf/10.1007/s10791-025-09638-7.pdf"
+      ],
+      "citation_fulltext_html_url": [
+        "https://link.springer.com/article/10.1007/s10791-025-09638-7"
+      ],
+      "citation_journal_title": [
+        "Discover Computing"
+      ],
+      "citation_journal_abbrev": [
+        "Discov Computing"
+      ],
+      "citation_publisher": [
+        "Springer Netherlands"
+      ],
+      "citation_issn": [
+        "2948-2992"
+      ],
+      "citation_title": [
+        "Max–Min semantic chunking of documents for RAG application"
+      ],
+      "citation_volume": [
+        "28"
+      ],
+      "citation_issue": [
+        "1"
+      ],
+      "citation_publication_date": [
+        "2025/12"
+      ],
+      "citation_online_date": [
+        "2025/06/13"
+      ],
+      "citation_firstpage": [
+        "117"
+      ],
+      "citation_lastpage": [
+        ""
+      ],
+      "citation_article_type": [
+        "Research"
+      ],
+      "citation_fulltext_world_readable": [
+        ""
+      ],
+      "citation_language": [
+        "en"
+      ],
+      "citation_doi": [
+        "10.1007/s10791-025-09638-7"
+      ],
+      "citation_springer_api_url": [
+        "http://api.springer.com/xmldata/jats?q=doi:10.1007/s10791-025-09638-7&api_key="
+      ],
+      "citation_reference": [
+        "citation_journal_title=Adv Neural Inform Process Syst; citation_title=Retrieval-augmented generation for knowledge-intensive NLP tasks; citation_author=P Lewis, E Perez, A Piktus, F Petroni, V Karpukhin, N Goyal, H Küttler, M Lewis, W-T Yih, T Rocktäschel; citation_volume=33; citation_publication_date=2020; citation_pages=9459-9474; citation_id=CR1",
+        "citation_journal_title=Inform Retr J; citation_title=Investigating better context representations for generative question answering; citation_author=S Francis, M-F Moens; citation_volume=26; citation_issue=1; citation_publication_date=2023; citation_pages=7; citation_doi=10.1007/s10791-023-09420-7; citation_id=CR2",
+        "Wadhwa H, Seetharaman R, Aggarwal S, Ghosh R, Basu S, Srinivasan S, Zhao W, Chaudhari S, Aghazadeh E. From RAGs to rich parameters: probing how language models utilize external knowledge over parametric information for factual queries. 2024.",
+        "Shi F, Chen X, Misra K, Scales N, Dohan D, Chi EH, Schärli N, Zhou D. Large language models can be easily distracted by irrelevant context. In: International Conference on Machine Learning. PMLR; 2023. pp. 31210–27.",
+        "Qian H, Liu Z, Mao K, Zhou Y, Dou Z. Grounding language model with chunking-free in-context retrieval. \n                  arxiv:2402.09760\n                  \n                 [Preprint]. 2024.",
+        "LlamaIndex: Sentence splitter (Parse text with a preference for complete sentences.). 2024. \n                  https://docs.llamaindex.ai/en/stable/api_reference/node_parsers/sentence_splitter/\n                  \n                . Accessed 4 Oct 2024.",
+        "LlamaIndex: Semantic Nodeparser (Splits a document into Nodes, with each node being a group of semantically related sentences.). 2024. \n                  https://docs.llamaindex.ai/en/v0.10.17/api/llama_index.core.node_parser.SemanticSplitterNodeParser.html\n                  \n                . Accessed 4 Oct 2024.",
+        "Jimeno-Yepes A, You Y, Milczek J, Laverde S, Li R. Financial report chunking for effective retrieval augmented generation. ArXiv abs/2402.05131. 2024.",
+        "Juvekar K, Purwar A. Introducing a new hyper-parameter for RAG: context window utilization. \n                  arxiv:2407.19794\n                  \n                 [Preprint]. 2024.",
+        "citation_journal_title=Trans Assoc Comput Linguist; citation_title=In-context retrieval-augmented language models; citation_author=O Ram, Y Levine, I Dalmedigos, D Muhlgay, A Shashua, K Leyton-Brown, Y Shoham; citation_volume=11; citation_publication_date=2023; citation_pages=1316-1331; citation_doi=10.1162/tacl_a_00605; citation_id=CR10",
+        "Guu K, Lee K, Tung Z, Pasupat P, Chang M-W. REALM: retrieval-augmented language model pre-training. \n                  arxiv:2002.08909\n                  \n                 [Preprint]. 2020.",
+        "Schwaber-Cohen R. Chunking strategies for LLM applications. 2023. \n                  https://www.pinecone.io/learn/chunking-strategies/\n                  \n                . Accessed 9 Jan 2025.",
+        "citation_journal_title=J Mach Learn Res; citation_title=Atlas: few-shot learning with retrieval augmented language models; citation_author=G Izacard, P Lewis, M Lomeli, L Hosseini, F Petroni, T Schick, J Dwivedi-Yu, A Joulin, S Riedel, E Grave; citation_volume=24; citation_issue=251; citation_publication_date=2023; citation_pages=1-43; citation_id=CR13",
+        "Zhou X, Li G, Liu Z. LLM as DBA. 2023.",
+        "Kamradt G. Semantic chunking. 2024. \n                  https://www.youtube.com/watch?v=8OJC21T2SL4&t=1933s\n                  \n                . Accessed 9 Jan 2025.",
+        "LangChain: Semantic Chunker. 2024. https://api.python.langchain.com/en/latest/text_splitter/langchain_experimental.text_splitter.SemanticChunker.html. Accessed 9 Jan 2025. 2024",
+        "Qu R, Tu R, Bao F. Is semantic chunking worth the computational cost?. 2024.",
+        "Liu Z, Simon C-E, Caspani F. Passage segmentation of documents for extractive question answering. 2025.",
+        "Pesl RD, Mathew JG, Mecella M, Aiello M. Advanced system integration: analyzing OpenAPI chunking for retrieval-augmented generation. \n                  arxiv:2411.19804\n                  \n                 [Preprint]. 2024.",
+        "Xiao S, Liu Z, Zhang P, Muennighoff N. C-pack: packaged resources to advance general Chinese embedding. 2023.",
+        "Khattab O, Zaharia M. Colbert: efficient and effective passage search via contextualized late interaction over bert. In: Proceedings of the 43rd International ACM SIGIR Conference on Research and Development in Information Retrieval. 2020. pp. 39–48.",
+        "Nikbakht R, Benzaghta M, Geraci G. TSpec-LLM: an open-source dataset for LLM understanding of 3GPP specifications. 2024.",
+        "citation_journal_title=J Mach Learn Res; citation_title=Scikit-learn: machine learning in python; citation_author=F Pedregosa, G Varoquaux, A Gramfort, V Michel, B Thirion, O Grisel, M Blondel, P Prettenhofer, R Weiss, V Dubourg, J Vanderplas, A Passos, D Cournapeau, M Brucher, M Perrot, E Duchesnay; citation_volume=12; citation_publication_date=2011; citation_pages=2825-2830; citation_id=CR23",
+        "Vinh N, Epps J, Bailey J. Information theoretic measures for clusterings comparison: variants. properties, normalization and correction for chance. 2009;18.",
+        "Rosenberg A, Hirschberg J. V-measure: a conditional entropy-based external cluster evaluation measure. In: Proceedings of the 2007 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning (EMNLP-CoNLL). 2007. pp. 410–20.",
+        "citation_journal_title=Psychol Methods; citation_title=Properties of the hubert-arabie adjusted rand index; citation_author=D Steinley; citation_volume=9; citation_publication_date=2004; citation_pages=386-96; citation_doi=10.1037/1082-989X.9.3.386; citation_id=CR26",
+        "citation_journal_title=Scholarpedia; citation_title=Nelder-mead algorithm; citation_author=S Singer, J Nelder; citation_volume=4; citation_issue=7; citation_publication_date=2009; citation_pages=2928; citation_doi=10.4249/scholarpedia.2928; citation_id=CR27",
+        "Roychowdhury S, Soman S, Ranjani HG, Gunda N, Chhabra V, Bala SK. Evaluation of RAG metrics for question answering in the telecom domain. \n                  arxiv:2407.12873\n                  \n                 [Preprint]. 2024."
+      ],
+      "citation_author": [
+        "Kiss, Csaba",
+        "Nagy, Marcell",
+        "Szilágyi, Péter"
+      ],
+      "citation_author_email": [
+        "kisscs@math.bme.hu",
+        "marcessz@math.bme.hu",
+        "peter.1.szilagyi@nokia-bell-labs.com"
+      ],
+      "citation_author_institution": [
+        "Department of Stochastics, Institute of Mathematics,  Budapest University of Technology and Economics, Budapest, Hungary",
+        "Department of Stochastics, Institute of Mathematics,  Budapest University of Technology and Economics, Budapest, Hungary",
+        "Nokia Bell Labs, Budapest, Hungary"
+      ],
+      "citation_cover_date": [
+        "2025/12/01"
+      ]
+    }
+  },
+  {
+    "key": "lost",
+    "url": "https://aclanthology.org/2024.tacl-1.9/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Lost in the Middle: How Language Models Use Long Contexts"
+      ],
+      "citation_author": [
+        "Nelson F. Liu",
+        "Kevin Lin",
+        "John Hewitt",
+        "Ashwin Paranjape",
+        "Michele Bevilacqua",
+        "Fabio Petroni",
+        "Percy Liang"
+      ],
+      "citation_journal_title": [
+        "Transactions of the Association for Computational Linguistics"
+      ],
+      "citation_volume": [
+        "12"
+      ],
+      "citation_publication_date": [
+        "2024"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2024.tacl-1.9.pdf"
+      ],
+      "citation_firstpage": [
+        "157"
+      ],
+      "citation_lastpage": [
+        "173"
+      ],
+      "citation_doi": [
+        "10.1162/tacl_a_00638"
+      ]
+    }
+  },
+  {
+    "key": "ragas",
+    "url": "https://aclanthology.org/2024.eacl-demo.16/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "RAGAs: Automated Evaluation of Retrieval Augmented Generation"
+      ],
+      "citation_author": [
+        "Shahul Es",
+        "Jithin James",
+        "Luis Espinosa Anke",
+        "Steven Schockaert"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics: System Demonstrations"
+      ],
+      "citation_publication_date": [
+        "2024/3"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2024.eacl-demo.16.pdf"
+      ],
+      "citation_firstpage": [
+        "150"
+      ],
+      "citation_lastpage": [
+        "158"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2024.eacl-demo.16"
+      ]
+    }
+  },
+  {
+    "key": "ares",
+    "url": "https://aclanthology.org/2024.naacl-long.20/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems"
+      ],
+      "citation_author": [
+        "Jon Saad-Falcon",
+        "Omar Khattab",
+        "Christopher Potts",
+        "Matei Zaharia"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)"
+      ],
+      "citation_publication_date": [
+        "2024/6"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2024.naacl-long.20.pdf"
+      ],
+      "citation_firstpage": [
+        "338"
+      ],
+      "citation_lastpage": [
+        "354"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2024.naacl-long.20"
+      ]
+    }
+  },
+  {
+    "key": "mteb",
+    "url": "https://aclanthology.org/2023.eacl-main.148/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "MTEB: Massive Text Embedding Benchmark"
+      ],
+      "citation_author": [
+        "Niklas Muennighoff",
+        "Nouamane Tazi",
+        "Loic Magne",
+        "Nils Reimers"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics"
+      ],
+      "citation_publication_date": [
+        "2023/5"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2023.eacl-main.148.pdf"
+      ],
+      "citation_firstpage": [
+        "2014"
+      ],
+      "citation_lastpage": [
+        "2037"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2023.eacl-main.148"
+      ]
+    }
+  },
+  {
+    "key": "longbench",
+    "url": "https://aclanthology.org/2024.acl-long.172/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding"
+      ],
+      "citation_author": [
+        "Yushi Bai",
+        "Xin Lv",
+        "Jiajie Zhang",
+        "Hongchang Lyu",
+        "Jiankai Tang",
+        "Zhidian Huang",
+        "Zhengxiao Du",
+        "Xiao Liu",
+        "Aohan Zeng",
+        "Lei Hou",
+        "Yuxiao Dong",
+        "Jie Tang",
+        "Juanzi Li"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+      ],
+      "citation_publication_date": [
+        "2024/8"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2024.acl-long.172.pdf"
+      ],
+      "citation_firstpage": [
+        "3119"
+      ],
+      "citation_lastpage": [
+        "3137"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2024.acl-long.172"
+      ]
+    }
+  },
+  {
+    "key": "alce",
+    "url": "https://aclanthology.org/2023.emnlp-main.398/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Enabling Large Language Models to Generate Text with Citations"
+      ],
+      "citation_author": [
+        "Tianyu Gao",
+        "Howard Yen",
+        "Jiatong Yu",
+        "Danqi Chen"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing"
+      ],
+      "citation_publication_date": [
+        "2023/12"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2023.emnlp-main.398.pdf"
+      ],
+      "citation_firstpage": [
+        "6465"
+      ],
+      "citation_lastpage": [
+        "6488"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2023.emnlp-main.398"
+      ]
+    }
+  },
+  {
+    "key": "replug",
+    "url": "https://aclanthology.org/2024.naacl-long.463/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "REPLUG: Retrieval-Augmented Black-Box Language Models"
+      ],
+      "citation_author": [
+        "Weijia Shi",
+        "Sewon Min",
+        "Michihiro Yasunaga",
+        "Minjoon Seo",
+        "Richard James",
+        "Mike Lewis",
+        "Luke Zettlemoyer",
+        "Wen-tau Yih"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)"
+      ],
+      "citation_publication_date": [
+        "2024/6"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2024.naacl-long.463.pdf"
+      ],
+      "citation_firstpage": [
+        "8371"
+      ],
+      "citation_lastpage": [
+        "8384"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2024.naacl-long.463"
+      ]
+    }
+  },
+  {
+    "key": "hyde",
+    "url": "https://aclanthology.org/2023.acl-long.99/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Precise Zero-Shot Dense Retrieval without Relevance Labels"
+      ],
+      "citation_author": [
+        "Luyu Gao",
+        "Xueguang Ma",
+        "Jimmy Lin",
+        "Jamie Callan"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+      ],
+      "citation_publication_date": [
+        "2023/7"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2023.acl-long.99.pdf"
+      ],
+      "citation_firstpage": [
+        "1762"
+      ],
+      "citation_lastpage": [
+        "1777"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2023.acl-long.99"
+      ]
+    }
+  },
+  {
+    "key": "distraction",
+    "url": "https://proceedings.mlr.press/v202/shi23a.html",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_publisher": [
+        "PMLR"
+      ],
+      "citation_title": [
+        "Large Language Models Can Be Easily Distracted by Irrelevant Context"
+      ],
+      "citation_language": [
+        "en"
+      ],
+      "citation_abstract_html_url": [
+        "https://proceedings.mlr.press/v202/shi23a.html"
+      ],
+      "citation_pdf_url": [
+        "https://proceedings.mlr.press/v202/shi23a/shi23a.pdf"
+      ],
+      "citation_firstpage": [
+        "31210"
+      ],
+      "citation_lastpage": [
+        "31227"
+      ],
+      "citation_author": [
+        "Freda Shi",
+        "Xinyun Chen",
+        "Kanishka Misra",
+        "Nathan Scales",
+        "David Dohan",
+        "Ed H. Chi",
+        "Nathanael Schärli",
+        "Denny Zhou"
+      ],
+      "citation_publication_date": [
+        "2023/07/03"
+      ],
+      "citation_inbook_title": [
+        "International Conference on Machine Learning"
+      ],
+      "citation_conference_title": [
+        "International Conference on Machine Learning"
+      ],
+      "citation_issn": [
+        "2640-3498"
+      ]
+    }
+  },
+  {
+    "key": "selfrag",
+    "url": "https://arxiv.org/abs/2310.11511",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection"
+      ],
+      "citation_author": [
+        "Asai, Akari",
+        "Wu, Zeqiu",
+        "Wang, Yizhong",
+        "Sil, Avirup",
+        "Hajishirzi, Hannaneh"
+      ],
+      "citation_date": [
+        "2023/10/17"
+      ],
+      "citation_online_date": [
+        "2023/10/17"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2310.11511"
+      ],
+      "citation_arxiv_id": [
+        "2310.11511"
+      ],
+      "citation_abstract": [
+        "Despite their remarkable capabilities, large language models (LLMs) often produce responses containing factual inaccuracies due to their sole reliance on the parametric knowledge they encapsulate. Retrieval-Augmented Generation (RAG), an ad hoc approach that augments LMs with retrieval of relevant knowledge, decreases such issues. However, indiscriminately retrieving and incorporating a fixed number of retrieved passages, regardless of whether retrieval is necessary, or passages are relevant, diminishes LM versatility or can lead to unhelpful response generation. We introduce a new framework called Self-Reflective Retrieval-Augmented Generation (Self-RAG) that enhances an LM's quality and factuality through retrieval and self-reflection. Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand, and generates and reflects on retrieved passages and its own generations using special tokens, called reflection tokens. Generating reflection tokens makes the LM controllable during the inference phase, enabling it to tailor its behavior to diverse task requirements. Experiments show that Self-RAG (7B and 13B parameters) significantly outperforms state-of-the-art LLMs and retrieval-augmented models on a diverse set of tasks. Specifically, Self-RAG outperforms ChatGPT and retrieval-augmented Llama2-chat on Open-domain QA, reasoning and fact verification tasks, and it shows significant gains in improving factuality and citation accuracy for long-form generations relative to these models."
+      ]
+    }
+  },
+  {
+    "key": "crag",
+    "url": "https://arxiv.org/abs/2401.15884",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Corrective Retrieval Augmented Generation"
+      ],
+      "citation_author": [
+        "Yan, Shi-Qi",
+        "Gu, Jia-Chen",
+        "Zhu, Yun",
+        "Ling, Zhen-Hua"
+      ],
+      "citation_date": [
+        "2024/01/29"
+      ],
+      "citation_online_date": [
+        "2024/10/07"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2401.15884"
+      ],
+      "citation_arxiv_id": [
+        "2401.15884"
+      ],
+      "citation_abstract": [
+        "Large language models (LLMs) inevitably exhibit hallucinations since the accuracy of generated texts cannot be secured solely by the parametric knowledge they encapsulate. Although retrieval-augmented generation (RAG) is a practicable complement to LLMs, it relies heavily on the relevance of retrieved documents, raising concerns about how the model behaves if retrieval goes wrong. To this end, we propose the Corrective Retrieval Augmented Generation (CRAG) to improve the robustness of generation. Specifically, a lightweight retrieval evaluator is designed to assess the overall quality of retrieved documents for a query, returning a confidence degree based on which different knowledge retrieval actions can be triggered. Since retrieval from static and limited corpora can only return sub-optimal documents, large-scale web searches are utilized as an extension for augmenting the retrieval results. Besides, a decompose-then-recompose algorithm is designed for retrieved documents to selectively focus on key information and filter out irrelevant information in them. CRAG is plug-and-play and can be seamlessly coupled with various RAG-based approaches. Experiments on four datasets covering short- and long-form generation tasks show that CRAG can significantly improve the performance of RAG-based approaches."
+      ]
+    }
+  },
+  {
+    "key": "beir",
+    "url": "https://arxiv.org/abs/2104.08663",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models"
+      ],
+      "citation_author": [
+        "Thakur, Nandan",
+        "Reimers, Nils",
+        "Rücklé, Andreas",
+        "Srivastava, Abhishek",
+        "Gurevych, Iryna"
+      ],
+      "citation_date": [
+        "2021/04/17"
+      ],
+      "citation_online_date": [
+        "2021/10/21"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2104.08663"
+      ],
+      "citation_arxiv_id": [
+        "2104.08663"
+      ],
+      "citation_abstract": [
+        "Existing neural information retrieval (IR) models have often been studied in homogeneous and narrow settings, which has considerably limited insights into their out-of-distribution (OOD) generalization capabilities. To address this, and to facilitate researchers to broadly evaluate the effectiveness of their models, we introduce Benchmarking-IR (BEIR), a robust and heterogeneous evaluation benchmark for information retrieval. We leverage a careful selection of 18 publicly available datasets from diverse text retrieval tasks and domains and evaluate 10 state-of-the-art retrieval systems including lexical, sparse, dense, late-interaction and re-ranking architectures on the BEIR benchmark. Our results show BM25 is a robust baseline and re-ranking and late-interaction-based models on average achieve the best zero-shot performances, however, at high computational costs. In contrast, dense and sparse-retrieval models are computationally more efficient but often underperform other approaches, highlighting the considerable room for improvement in their generalization capabilities. We hope this framework allows us to better evaluate and understand existing retrieval systems, and contributes to accelerating progress towards better robust and generalizable systems in the future. BEIR is publicly available at https://github.com/UKPLab/beir."
+      ]
+    }
+  },
+  {
+    "key": "fid",
+    "url": "https://aclanthology.org/2021.eacl-main.74/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering"
+      ],
+      "citation_author": [
+        "Gautier Izacard",
+        "Édouard Grave"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume"
+      ],
+      "citation_publication_date": [
+        "2021/4"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2021.eacl-main.74.pdf"
+      ],
+      "citation_firstpage": [
+        "874"
+      ],
+      "citation_lastpage": [
+        "880"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2021.eacl-main.74"
+      ]
+    }
+  },
+  {
+    "key": "kilt",
+    "url": "https://aclanthology.org/2021.naacl-main.200/",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_title": [
+        "KILT: a Benchmark for Knowledge Intensive Language Tasks"
+      ],
+      "citation_author": [
+        "Fabio Petroni",
+        "Aleksandra Piktus",
+        "Angela Fan",
+        "Patrick Lewis",
+        "Majid Yazdani",
+        "Nicola De Cao",
+        "James Thorne",
+        "Yacine Jernite",
+        "Vladimir Karpukhin",
+        "Jean Maillard",
+        "Vassilis Plachouras",
+        "Tim Rocktäschel",
+        "Sebastian Riedel"
+      ],
+      "citation_conference_title": [
+        "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies"
+      ],
+      "citation_publication_date": [
+        "2021/6"
+      ],
+      "citation_pdf_url": [
+        "https://aclanthology.org/2021.naacl-main.200.pdf"
+      ],
+      "citation_firstpage": [
+        "2523"
+      ],
+      "citation_lastpage": [
+        "2544"
+      ],
+      "citation_doi": [
+        "10.18653/v1/2021.naacl-main.200"
+      ]
+    }
+  },
+  {
+    "key": "faiss",
+    "url": "https://doi.org/10.1109/TBDATA.2019.2921572"
+  },
+  {
+    "key": "holm",
+    "url": "https://www.jstor.org/stable/4615733",
+    "checked": "2026-11-14",
+    "metadata": {}
+  },
+  {
+    "key": "mcnemar",
+    "url": "https://doi.org/10.1007/BF02295996",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_journal_title": [
+        "Psychometrika"
+      ],
+      "citation_publisher": [
+        "Cambridge University Press"
+      ],
+      "citation_title": [
+        "Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages"
+      ],
+      "citation_author": [
+        "Quinn McNemar"
+      ],
+      "citation_publication_date": [
+        "1947/06"
+      ],
+      "citation_online_date": [
+        "2025/01/01"
+      ],
+      "citation_volume": [
+        "12"
+      ],
+      "citation_issue": [
+        "2"
+      ],
+      "citation_firstpage": [
+        "153"
+      ],
+      "citation_lastpage": [
+        "157"
+      ],
+      "citation_issn": [
+        "0033-3123",
+        "1860-0980"
+      ],
+      "citation_pdf_url": [
+        "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/698C2461BE63F5848763502D54E534FD/S0033312300045178a.pdf/div-class-title-note-on-the-sampling-error-of-the-difference-between-correlated-proportions-or-percentages-div.pdf"
+      ],
+      "citation_abstract": [
+        "Two formulas are presented for judging the significance of the difference between correlated proportions. The chi square equivalent of one of the developed formulas is pointed out."
+      ],
+      "citation_doi": [
+        "10.1007/BF02295996"
+      ]
+    }
+  },
+  {
+    "key": "efron",
+    "url": "https://doi.org/10.1214/aos/1176344552",
+    "checked": "2026-11-14",
+    "metadata": {}
+  },
+  {
+    "key": "health",
+    "url": "https://link.springer.com/article/10.1007/s10791-025-09505-5",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_pdf_url": [
+        "https://link.springer.com/content/pdf/10.1007/s10791-025-09505-5.pdf"
+      ],
+      "citation_fulltext_html_url": [
+        "https://link.springer.com/article/10.1007/s10791-025-09505-5"
+      ],
+      "citation_journal_title": [
+        "Discover Computing"
+      ],
+      "citation_journal_abbrev": [
+        "Discov Computing"
+      ],
+      "citation_publisher": [
+        "Springer Netherlands"
+      ],
+      "citation_issn": [
+        "2948-2992"
+      ],
+      "citation_title": [
+        "Enhancing Health Information Retrieval with RAG by prioritizing topical relevance and factual accuracy"
+      ],
+      "citation_volume": [
+        "28"
+      ],
+      "citation_issue": [
+        "1"
+      ],
+      "citation_publication_date": [
+        "2025/12"
+      ],
+      "citation_online_date": [
+        "2025/04/01"
+      ],
+      "citation_firstpage": [
+        "27"
+      ],
+      "citation_lastpage": [
+        ""
+      ],
+      "citation_article_type": [
+        "Research"
+      ],
+      "citation_fulltext_world_readable": [
+        ""
+      ],
+      "citation_language": [
+        "en"
+      ],
+      "citation_doi": [
+        "10.1007/s10791-025-09505-5"
+      ],
+      "citation_springer_api_url": [
+        "http://api.springer.com/xmldata/jats?q=doi:10.1007/s10791-025-09505-5&api_key="
+      ],
+      "citation_reference": [
+        "Buchanan J, Kock N. Information overload: A decision making perspective. In: Multiple Criteria Decision Making in the New Millennium: Proceedings of the Fifteenth International Conference on Multiple Criteria Decision Making (MCDM) Ankara, Turkey, July 10–14, 2001;2000:49–58. Springer",
+        "Goeuriot L, Suominen H, Kelly L, Alemany LA, Brew-Sam N, Cotik V, Filippo D, Gonzalez Saez G, Luque F, Mulhem P, et al. CLEF eHealth Evaluation Lab 2021. In: Advances in Information Retrieval: 43rd European Conference on IR Research, ECIR 2021, Virtual Event, March 28–April 1, 2021, Proceedings, Part II 2021;43:593–600. Springer",
+        "Goodrich B, Rao V, Liu PJ, Saleh M. Assessing the factual accuracy of generated text. In: Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining, 2019:166–175",
+        "citation_journal_title=Int J Environ Res Publ Health; citation_title=Health misinformation detection in the social web: an overview and a data science approach; citation_author=S Sotto, M Viviani; citation_volume=19; citation_issue=4; citation_publication_date=2022; citation_pages=2173; citation_id=CR4",
+        "Abdullah M, Madain A, Jararweh Y. Chatgpt: Fundamentals, applications and social impacts. In: 2022 Ninth International Conference on Social Networks Analysis, Management and Security (SNAMS), 2022:1–8. Ieee",
+        "Touvron H, Martin L, Stone K, Albert P, Almahairi A, Babaei Y, Bashlykov N, Batra S, Bhargava P, Bhosale S, et al. Llama 2: Open foundation and fine-tuned chat models. arXiv preprint \n                  arXiv:2307.09288\n                  \n                 2023",
+        "Du Z, Qian Y, Liu X, Ding M, Qiu J, Yang Z, Tang J. Glm: General language model pretraining with autoregressive blank infilling. arXiv preprint \n                  arXiv:2103.10360\n                  \n                 2021",
+        "Ackerman R, Balyan R. Automatic multilingual question generation for health data using llms. In: International Conference on AI-generated Content, 2023:1–11. Springer",
+        "Frisoni G, Cocchieri A, Presepi A, Moro G, Meng Z. To generate or to retrieve? on the effectiveness of artificial contexts for medical open-domain question answering. arXiv preprint \n                  arXiv:2403.01924\n                  \n                 2024.",
+        "Kell G, Roberts A, Umansky S, Qian L, Ferrari D, Soboczenski F, Wallace B, Patel N, Marshall IJ. Question answering systems for health professionals at the point of care–a systematic review. arXiv preprint \n                  arXiv:2402.01700\n                  \n                 2024.",
+        "Bang Y, Cahyawijaya S, Lee N, Dai W, Su D, Wilie B, Lovenia H, Ji Z, Yu T, Chung W, et al. A multitask, multilingual, multimodal evaluation of chatgpt on reasoning, hallucination, and interactivity. arXiv preprint \n                  arXiv:2302.04023\n                  \n                 2023.",
+        "Guo B, Zhang X, Wang Z, Jiang M, Nie J, Ding Y, Yue J, Wu Y. How close is chatgpt to human experts? comparison corpus, evaluation, and detection. arXiv preprint \n                  arXiv:2301.07597\n                  \n                 2023.",
+        "Cao M, Dong Y, Wu J, Cheung JCK. Factual error correction for abstractive summarization models. In: Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 6251–6258. Association for Computational Linguistics, Online 2020.",
+        "Raunak V, Menezes A, Junczys-Dowmunt M. The curious case of hallucinations in neural machine translation. In: Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, pp. 1172–1183. Association for Computational Linguistics, Online 2021.",
+        "citation_journal_title=ACM Comput Surv; citation_title=Survey of hallucination in natural language generation; citation_author=Z Ji, N Lee, R Frieske, T Yu, D Su, Y Xu, E Ishii, YJ Bang, A Madotto, P Fung; citation_volume=55; citation_issue=12; citation_publication_date=2023; citation_pages=10; citation_id=CR15",
+        "Saxena S, Prasad S, Prakash M, Shankar A, Vaddina V, Gopalakrishnan S, et al. Minimizing factual inconsistency and hallucination in large language models. arXiv preprint \n                  arXiv:2311.13878\n                  \n                 2023.",
+        "Huang L, Yu W, Ma W, Zhong W, Feng Z, Wang H, Chen Q, Peng W, Feng X, Qin B, et al. A survey on hallucination in large language models: Principles, taxonomy, challenges, and open questions. arXiv preprint \n                  arXiv:2311.05232\n                  \n                 2023.",
+        "Zhang Y, Li Y, Cui L, Cai D, Liu L, Fu T, Huang X, Zhao E, Zhang Y, Chen Y, et al. Siren’s song in the ai ocean: a survey on hallucination in large language models. arXiv preprint \n                  arXiv:2309.01219\n                  \n                 2023.",
+        "He H, Zhang H, Roth D. Rethinking with retrieval: Faithful large language model inference. arXiv preprint \n                  arXiv:2301.00303\n                  \n                 2022.",
+        "Li X, Zhu X, Ma Z, Liu X, Shah S. Are chatgpt and gpt-4 general-purpose solvers for financial text analytics? an examination on several typical tasks. arXiv preprint \n                  arXiv:2305.05862\n                  \n                 2023.",
+        "Shen X, Chen Z, Backes M, Zhang Y. In chatgpt we trust? measuring and characterizing the reliability of chatgpt. arXiv preprint \n                  arXiv:2304.08979\n                  \n                 2023.",
+        "citation_journal_title=Adv Neural Inform Process Syst; citation_title=Retrieval-augmented generation for knowledge-intensive nlp tasks; citation_author=P Lewis, E Perez, A Piktus, F Petroni, V Karpukhin, N Goyal, H Küttler, M Lewis, W-T Yih, T Rocktäschel; citation_volume=33; citation_publication_date=2020; citation_pages=9459-9474; citation_id=CR22",
+        "Perković G, Drobnjak A, Botički I. Hallucinations in llms: Understanding and addressing challenges. In: 2024 47th MIPRO ICT and Electronics Convention (MIPRO), 2024: 2084–2088. IEEE.",
+        "Borgeaud S, Mensch A, Hoffmann J, Cai T, Rutherford E, Millican K, Van Den Driessche GB, Lespiau J-B, Damoc B, Clark A, et al. Improving language models by retrieving from trillions of tokens. In: International Conference on Machine Learning, 2022:2206–2240. PMLR.",
+        "Guu K, Lee K, Tung Z, Pasupat P, Chang M. Retrieval augmented language model pre-training. In: International Conference on Machine Learning, 2020:3929–3938. PMLR.",
+        "citation_journal_title=J Machine Learn Res; citation_title=Atlas: few-shot learning with retrieval augmented language models; citation_author=G Izacard, P Lewis, M Lomeli, L Hosseini, F Petroni, T Schick, J Dwivedi-Yu, A Joulin, S Riedel, E Grave; citation_volume=24; citation_issue=251; citation_publication_date=2023; citation_pages=1-43; citation_id=CR26",
+        "Setty S, Jijo K, Chung E, Vidra N. Improving retrieval for rag based question answering models on financial documents. arXiv preprint \n                  arXiv:2404.07221\n                  \n                 2024.",
+        "Kang C, Novak D, Urbanova K, Cheng Y, Hu Y. Domain-specific improvement on psychotherapy chatbot using assistant. arXiv preprint \n                  arXiv:2404.16160\n                  \n                 2024.",
+        "Adlakha V, BehnamGhader P, Lu XH, Meade N, Reddy S. Evaluating correctness and faithfulness of instruction-following models for question answering. arXiv preprint \n                  arXiv:2307.16877\n                  \n                 2023.",
+        "Clarke CL, Maistro M, Smucker MD, Zuccon G. Overview of the trec 2020 health misinformation track. In: TREC 2020.",
+        "Zhao R, Arana-Catania M, Zhu L, Kochkina E, Gui L, Zubiaga A, Procter R, Liakata M, He Y. Panacea: An automated misinformation detection system on covid-19. arXiv preprint \n                  arXiv:2303.01241\n                  \n                 2023.",
+        "Mendes E, Chen Y, Xu W, Ritter A. Human-in-the-loop evaluation for early misinformation detection: A case study of covid-19 treatments. arXiv preprint \n                  arXiv:2212.09683\n                  \n                 2022.",
+        "Yue Z, Zeng H, Kou Z, Shang L, Wang D. Contrastive domain adaptation for early misinformation detection: A case study on covid-19. In: Proceedings of the 31st ACM International Conference on Information & Knowledge Management, 2022:2423–2433.",
+        "citation_journal_title=Inform Process Management; citation_title=Fake news detection via knowledgeable prompt learning; citation_author=G Jiang, S Liu, Y Zhao, Y Sun, M Zhang; citation_volume=59; citation_issue=5; citation_publication_date=2022; citation_id=CR34",
+        "Chen C, Shu K. Can llm-generated misinformation be detected? arXiv preprint \n                  arXiv:2309.13788\n                  \n                 2023.",
+        "citation_journal_title=Multimedia Tools Appl; citation_title=Vec4cred: a model for health misinformation detection in web pages; citation_author=R Upadhyay, G Pasi, M Viviani; citation_volume=82; citation_issue=4; citation_publication_date=2023; citation_pages=5271-5290; citation_id=CR36",
+        "Upadhyay R, Pasi G, Viviani M. Health misinformation detection in web content: A structural-, content-based, and context-aware approach based on web2vec. In: Proceedings of the Conference on Information Technology for Social Good. GoodIT ’21, pp. 19–24. Association for Computing Machinery, New York, NY, USA 2021.",
+        "Upadhyay R, Pasi G, Viviani M. Leveraging socio-contextual information in bert for fake health news detection in social media. In: Proceedings of the 3rd International Workshop on Open Challenges in Online Social Networks. OASIS ’23, pp. 38–46. Association for Computing Machinery, New York, NY, USA 2023.",
+        "Brand E, Roitero K, Soprano M, Demartini G, et al. E-bart: Jointly predicting and explaining truthfulness. In: Proceedings of the Conference for Truth and Trust Online 2021.",
+        "Kou Z, Shang L, Zhang Y, Wang D. Hc-covid: A hierarchical crowdsource knowledge graph approach to explainable covid-19 misinformation detection. Proceedings of the ACM on Human-Computer Interaction 6(GROUP), 2022:1–25",
+        "Wu J, Liu Q, Xu W, Wu S. Bias mitigation for evidence-aware fake news detection by causal intervention. In: Proceedings of the 45th International ACM SIGIR Conference on Research and Development in Information Retrieval, 2022:2308–2313",
+        "citation_journal_title=Front Artif Intell; citation_title=Explainable online health information truthfulness in consumer health search; citation_author=R Upadhyay, P Knoth, G Pasi, M Viviani; citation_volume=6; citation_publication_date=2023; citation_pages=1184851; citation_id=CR42",
+        "Shang L, Zhang Y, Yue Z, Choi Y, Zeng H, Wang D. A knowledge-driven domain adaptive approach to early misinformation detection in an emergent health domain on social media. In: 2022 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM), 2022: 34–41. IEEE",
+        "Hassan N, Arslan F, Li C, Tremayne M. Toward automated fact-checking: Detecting check-worthy factual claims by claimbuster. In: Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 2017:1803–1812",
+        "citation_journal_title=Trans Assoc Computational Linguistics; citation_title=A survey on automated fact-checking; citation_author=Z Guo, M Schlichtkrull, A Vlachos; citation_volume=10; citation_publication_date=2022; citation_pages=178-206; citation_id=CR45",
+        "Zeng X, La Barbera D, Roitero K, Zubiaga A, Mizzaro S. Combining large language models and crowdsourcing for hybrid human-ai misinformation detection. In: Proceedings of the 47th International ACM SIGIR Conference on Research and Development in Information Retrieval, 2024:2332–2336",
+        "Goeuriot L, Suominen H, Pasi G, Bassani E, Brew-Sam N, González-Sáez G, Kelly L, Mulhem P, Seneviratne S, Upadhyay R, et al. Consumer health search at clef ehealth 2021. In: CEUR Workshop Proceedings, 2021:1–19. CEUR",
+        "Di Nunzio GM, Marchesin S, Vezzani F. A Study on Reciprocal Ranking Fusion in Consumer Health Search. IMS UniPD ad CLEF eHealth 2020 Task 2. In: CLEF (Working Notes) 2020.",
+        "Cormack GV, Clarke CL, Buettcher S. Reciprocal rank fusion outperforms condorcet and individual rank learning methods. In: Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval, 2009:758–759",
+        "Mulhem P, Saez GG, Mannion A, Schwab D, Frej J. Lig-health at adhoc and spoken ir consumer health search: expanding queries using umls and fasttext. In: CLEF 2020.",
+        "Seneviratne S, Daskalaki E, Hossain MZ, Lenskiy A. Sandidoc at clef 2020-consumer health search: Adhoc ir task. In: CLEF (Working Notes) 2020.",
+        "Fernández-Pichel M, Losada DE, Pichel JC, Elsweiler D. Citius at the trec 2020 health misinformation track. In: TREC 2020.",
+        "Zhang B, Naderi N, Jaume-Santero F, Teodoro D. Ds4dh at trec health misinformation 2021: multi-dimensional ranking models with transfer learning and rank fusion. arXiv preprint \n                  arXiv:2202.06771\n                  \n                 2022.",
+        "Schlicht IB, Paula AFM, Rosso P. Upv at trec health misinformation track 2021 ranking with sbert and quality estimators. arXiv preprint \n                  arXiv:2112.06080\n                  \n                 2021.",
+        "Abualsaud M, Chen IX, Ghajar K, Minh L, Smucker M, Tahami AV, Zhang D. Uwaterloomds at the trec 2021 health misinformation track. In: Proceedings of the Thirtieth REtrieval Conference Proceedings (TREC 2021). National Institute of Standards and Technology (NIST), Special Publication, 2021:1–18",
+        "Pankaj S, Gautam A. Augmented bio-sbert: Improving performance for pairwise sentence tasks in bio-medical domain. In: Proceedings of the Fifth Workshop on Technologies for Machine Translation of Low-Resource Languages (LoResMT 2022), 2022:43–47",
+        "citation_journal_title=J Machine Learn Res; citation_title=Exploring the limits of transfer learning with a unified text-to-text transformer; citation_author=C Raffel, N Shazeer, A Roberts, K Lee, S Narang, M Matena, Y Zhou, W Li, PJ Liu; citation_volume=21; citation_issue=140; citation_publication_date=2020; citation_pages=1-67; citation_id=CR57",
+        "Wan H, Feng S, Tan Z, Wang H, Tsvetkov Y, Luo M. Dell: Generating reactions and explanations for llm-based misinformation detection. arXiv preprint \n                  arXiv:2402.10426\n                  \n                 2024.",
+        "citation_journal_title=Companion Proc ACM Web Conf; citation_title=Automated claim matching with large language models: empowering fact-checkers in the fight against misinformation; citation_author=EC Choi, E Ferrara; citation_volume=2024; citation_publication_date=2024; citation_pages=1441-1449; citation_id=CR59",
+        "Cao Y, Nair AM, Eyimife E, Soofi NJ, Subbalakshmi K, Wullert II JR, Basu C, Shallcross D. Can large language models detect misinformation in scientific news reporting? arXiv preprint \n                  arXiv:2402.14268\n                  \n                 2024.",
+        "Wang J, Yang Z, Yao Z, Yu H. Jmlr: Joint medical llm and retrieval training for enhancing reasoning and professional question answering capability. arXiv preprint \n                  arXiv:2402.17887\n                  \n                 2024.",
+        "Khlaut J, Dancette C, Ferreres E, Bennani A, Hérent P, Manceron P. Efficient medical question answering with knowledge-augmented question generation. arXiv preprint \n                  arXiv:2405.14654\n                  \n                 2024.",
+        "Shi W, Min S, Yasunaga M, Seo M, James R, Lewis M, Zettlemoyer L, Yih W-t. Replug: Retrieval-augmented black-box language models. arXiv preprint \n                  arXiv:2301.12652\n                  \n                 2023.",
+        "Ren R, Wang Y, Qu Y, Zhao WX, Liu J, Tian H, Wu H, Wen J-R, Wang H. Investigating the Factual Knowledge Boundary of Large Language Models with Retrieval Augmentation 2023.",
+        "Izacard G, Grave E. Leveraging passage retrieval with generative models for open domain question answering. In: Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume, pp. 874–880. Association for Computational Linguistics, Online 2021.",
+        "Trivedi H, Balasubramanian N, Khot T, Sabharwal A. Interleaving retrieval with chain-of-thought reasoning for knowledge-intensive multi-step questions. In: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 10014–10037. Association for Computational Linguistics, Toronto, Canada 2023.",
+        "Li D, Rawat AS, Zaheer M, Wang X, Lukasik M, Veit A, Yu F, Kumar S. Large language models with controllable working memory. In: Findings of the Association for Computational Linguistics: ACL 2023, pp. 1774–1793. Association for Computational Linguistics, Toronto, Canada 2023.",
+        "Cai D, Wang Y, Bi W, Tu Z, Liu X, Lam W, Shi S. Skeleton-to-response: Dialogue generation guided by retrieval memory. In: Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), pp. 1219–1228. Association for Computational Linguistics, Minneapolis, Minnesota 2019.",
+        "Cai D, Wang Y, Bi W, Tu Z, Liu X, Shi S. Retrieval-guided dialogue response generation via a matching-to-generation framework. In: Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), pp. 1866–1875. Association for Computational Linguistics, Hong Kong, China 2019.",
+        "Peng B, Galley M, He P, Cheng H, Xie Y, Hu Y, Huang Q, Liden L, Yu Z, Chen W, et al. Check your facts and try again: Improving large language models with external knowledge and automated feedback. arXiv preprint \n                  arXiv:2302.12813\n                  \n                 2023.",
+        "Cui J, Li Z, Yan Y, Chen B, Yuan L. Chatlaw: Open-source legal large language model with integrated external knowledge bases. arXiv preprint \n                  arXiv:2306.16092\n                  \n                 2023.",
+        "Zhou S, Alon U, Xu FF, Jiang Z, Neubig G. Docprompting: Generating code by retrieving the docs. In: The Eleventh International Conference on Learning Representations 2023.",
+        "Chern I, Chern S, Chen S, Yuan W, Feng K, Zhou C, He J, Neubig G, Liu P, et al. Factool: Factuality detection in generative ai–a tool augmented framework for multi-task and multi-domain scenarios. arXiv preprint \n                  arXiv:2307.13528\n                  \n                 2023.",
+        "Pan L, Wu X, Lu X, Luu AT, Wang WY, Kan M-Y, Nakov P. Fact-checking complex claims with program-guided reasoning. arXiv preprint \n                  arXiv:2305.12744\n                  \n                 2023.",
+        "Zhang X, Gao W. Towards llm-based fact verification on news claims with a hierarchical step-by-step prompting method. arXiv preprint \n                  arXiv:2310.00305\n                  \n                 2023.",
+        "citation_journal_title=Trans Assoc Comput Linguist; citation_title=Justilm: Few-shot justification generation for explainable fact-checking of real-world claims; citation_author=F Zeng, W Gao; citation_volume=12; citation_publication_date=2024; citation_pages=334-354; citation_id=CR76",
+        "citation_journal_title=Foundations Trends Inform Retrieval; citation_title=The probabilistic relevance framework and beyond; citation_author=S Robertson, H Zaragoza; citation_volume=3; citation_issue=4; citation_publication_date=2009; citation_pages=333-389; citation_id=CR77",
+        "Upadhyay R, Pasi G, Viviani M. A passage retrieval transformer-based re-ranking model for truthful consumer health search. In: Joint European Conference on Machine Learning and Knowledge Discovery in Databases, 2023:355–371. Springer",
+        "citation_journal_title=Bioinformatics; citation_title=Biobert: a pre-trained biomedical language representation model for biomedical text mining; citation_author=J Lee, W Yoon, S Kim, D Kim, S Kim, CH So, J Kang; citation_volume=36; citation_issue=4; citation_publication_date=2020; citation_pages=1234-1240; citation_id=CR79",
+        "Izacard G, Grave E. Leveraging passage retrieval with generative models for open domain question answering. arXiv preprint \n                  arXiv:2007.01282\n                  \n                 2020.",
+        "Phan LN, Anibal JT, Tran H, Chanana S, Bahadroglu E, Peltekian A, Altan-Bonnet G. Scifive: a text-to-text transformer model for biomedical literature. arXiv preprint \n                  arXiv:2106.03598\n                  \n                 2021.",
+        "Bajaj P, Campos D, Craswell N, Deng L, Gao J, Liu X, Majumder R, McNamara A, Mitra B, Nguyen T, et al. MS MARCO: A human generated machine reading comprehension dataset. arXiv preprint \n                  arXiv:1611.09268\n                  \n                 2016.",
+        "Schwarz J, Morris M. Augmenting web pages and search results to support credibility assessment. In: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems, 2011:1245–1254",
+        "Upadhyay R, Pasi G, Viviani M. An unsupervised approach to genuine health information retrieval based on scientific evidence. In: International Conference on Web Information Systems Engineering, 2022:119–135. Springer",
+        "Lioma C, Simonsen JG, Larsen B. Evaluation measures for relevance and credibility in ranked lists. In: Proceedings of the ACM SIGIR International Conference on Theory of Information Retrieval, 2017:91–98"
+      ],
+      "citation_author": [
+        "Upadhyay, Rishabh",
+        "Viviani, Marco"
+      ],
+      "citation_author_email": [
+        "uhrishabh@gmail.com",
+        "marco.viviani@unimib.it"
+      ],
+      "citation_author_institution": [
+        "Inception AI, Abu Dhabi, United Arab Emirates",
+        "University of Milano-Bicocca, Milan, Italy"
+      ],
+      "citation_cover_date": [
+        "2025/12/01"
+      ]
+    }
+  },
+  {
+    "key": "pairings",
+    "url": "https://link.springer.com/article/10.1007/s10791-026-10156-3",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_pdf_url": [
+        "https://link.springer.com/content/pdf/10.1007/s10791-026-10156-3.pdf"
+      ],
+      "citation_fulltext_html_url": [
+        "https://link.springer.com/article/10.1007/s10791-026-10156-3"
+      ],
+      "citation_journal_title": [
+        "Discover Computing"
+      ],
+      "citation_journal_abbrev": [
+        "Discov Computing"
+      ],
+      "citation_publisher": [
+        "Springer Netherlands"
+      ],
+      "citation_issn": [
+        "2948-2992"
+      ],
+      "citation_title": [
+        "Evaluating retriever reranker pairings in RAG based on quality and efficiency trade-offs"
+      ],
+      "citation_volume": [
+        "29"
+      ],
+      "citation_issue": [
+        "1"
+      ],
+      "citation_publication_date": [
+        "2026/12"
+      ],
+      "citation_online_date": [
+        "2026/05/09"
+      ],
+      "citation_firstpage": [
+        "259"
+      ],
+      "citation_lastpage": [
+        ""
+      ],
+      "citation_article_type": [
+        "Research"
+      ],
+      "citation_fulltext_world_readable": [
+        ""
+      ],
+      "citation_language": [
+        "en"
+      ],
+      "citation_doi": [
+        "10.1007/s10791-026-10156-3"
+      ],
+      "citation_springer_api_url": [
+        "http://api.springer.com/xmldata/jats?q=doi:10.1007/s10791-026-10156-3&api_key="
+      ],
+      "citation_reference": [
+        "citation_journal_title=ELT Forum J English Language Teaching; citation_title=Artificial intelligence (AI) technology in OpenAI Chatgpt application: a review of Chatgpt in writing English essay; citation_author=TN Fitria; citation_volume=12; citation_publication_date=2023; citation_pages=44-58; citation_doi=10.15294/elt.v12i1.64069; citation_id=CR1",
+        "Coignion T, Quinton C, Rouvoy R. A performance study of llm-generated code on leetcode. In: Proceedings of the 28th International Conference on Evaluation and Assessment in Software Engineering, 2024. p. 79–89.",
+        "Perković G, Drobnjak A, Botički I. Hallucinations in LLMs: understanding and addressing challenges. In: 2024 47th MIPRO ICT and Electronics Convention (MIPRO), IEEE; 2024. p. 2084–2088.",
+        "Chen X, Wang L, Wu W, Tang Q, Liu Y. Honest ai: fine-tuning“ small” language models to say“ i don’t know”, and reducing hallucination in rag. arXiv preprint \n                  arXiv:2410.09699\n                  \n                . 2024.",
+        "Thiyagarajan K. Multimodal RAG for enhanced information retrieval and generation in retail. In: 2025 International Conference on Visual Analytics and Data Visualization (ICVADV), IEEE; 2025. p. 102–106.",
+        "Al Ghadban Y, Lu H, Adavi U, Sharma A, Gara S, Das N, Kumar B, John R, Devarsetty P, Hirst JE. Transforming healthcare education: harnessing large language models for frontline health worker capacity building using retrieval-augmented generation. medRxiv, 2023.",
+        "Genesis J, Keane F. Integrating knowledge retrieval with generation: a comprehensive survey of RAG models in NLP 2025.",
+        "Yang Y, Tang W, Lu Y, Wang J, Jiang Y. Similarity measurement model for standard clauses based on rag. In: International Conference on Computer Engineering and Networks, Springer. 2024. p. 319–330.",
+        "Zhou S, Liu Y, Ouyang C, Yu Y, Luo X, Ren L. RASR: a multi-perspective semantic text similarity computation method integrating rag. In: CCF International Conference on Natural Language Processing and Chinese Computing, Springer. 2025 . p. 439–451.",
+        "Leto A, Aguerrebere C, Bhati I, Willke T, Tepper M, Vo VA. Toward optimal search and retrieval for rag. arXiv preprint \n                  arXiv:2411.07396\n                  \n                . 2024.",
+        "Wang Z, Liang Z, Shao Z, Ma Y, Dai H, Chen B, Mao L, Lei C, Ding Y, Li H. Infogain-rag: boosting retrieval-augmented generation through document information gain-based reranking and filtering. In: Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing, 2025. p. 7201–7215.",
+        "Déjean H, Clinchant S, Formal T. A thorough comparison of cross-encoders and LLMs for reranking splade. arXiv preprint \n                  arXiv:2403.10407\n                  \n                . 2024.",
+        "citation_journal_title=Adv Neural Inf Process Syst; citation_title=Retrieval-augmented generation for knowledge-intensive NLP tasks; citation_author=P Lewis, E Perez, A Piktus, F Petroni, V Karpukhin, N Goyal, H Küttler, M Lewis, W-T Yih, T Rocktäschel; citation_volume=33; citation_publication_date=2020; citation_pages=9459-9474; citation_id=CR13",
+        "citation_journal_title=SN Comput Sci; citation_title=Analyzing retrieval scaling in RAG systems for complex QA benchmarks; citation_author=JS Rayo Mosquera, RF Manrique; citation_volume=6; citation_issue=7; citation_publication_date=2025; citation_pages=762; citation_doi=10.1007/s42979-025-04302-9; citation_id=CR14",
+        "Barry M, Caillaut G, Halftermeyer P, Qader R, Mouayad M, Le Deit F, Cariolaro D, Gesnouin J. Graphrag: leveraging graph-based efficiency to minimize hallucinations in LLM-driven RAG for finance data. In: Proceedings of the Workshop on Generative AI and Knowledge Graphs (GenAIK), 2025. p. 54–65.",
+        "AboulEla S, Zabihitari P, Ibrahim N, Afshar M, Kashef R. Exploring RAG solutions to reduce hallucinations in LLMs. In: 2025 IEEE International Systems Conference (SysCon), IEEE; 2025. p. 1–8.",
+        "Koo H, Kim M, Hwang SJ. Optimizing query generation for enhanced document retrieval in rag. arXiv preprint \n                  arXiv:2407.12325\n                  \n                . 2024.",
+        "Eibich M, Nagpal S, Fred-Ojala A. Aragog: advanced RAG output grading. arXiv preprint \n                  arXiv:2404.01037\n                  \n                . 2024.",
+        "citation_journal_title=Orclever Proc Res Dev; citation_title=Enhancing retrieval-augmented generation accuracy with dynamic chunking and optimized vector search; citation_author=D Tanyildiz, S Ayvaz, MF Amasyali; citation_volume=5; citation_issue=1; citation_publication_date=2024; citation_pages=215-225; citation_doi=10.56038/oprd.v5i1.516; citation_id=CR19",
+        "Ilyas QM, Aziz S. Enhancing the RAG pipeline through advanced optimization techniques. In: Generative AI Foundations, Developments, and Applications. Palmdale, PA: IGI Global Scientific Publishing; 2025. p. 59–80.",
+        "Rathee M, Venktesh V, MacAvaney S, Anand A. Test-time corpus feedback: from retrieval to rag. arXiv preprint \n                  arXiv:2508.15437\n                  \n                . 2025.",
+        "Abdallah A, Abdalla M, Piryani B, Mozafari J, Ali M, Jatowt A. Rerankarena: a unified platform for evaluating retrieval, reranking and RAG with human and LLM feedback. In: Proceedings of the 34th ACM International Conference on Information and Knowledge Management, 2025. p. 6593–6597.",
+        "Papadimitriou I, Gialampoukidis I, Vrochidis S, et al. Rag playground: a framework for systematic evaluation of retrieval strategies and prompt engineering in RAG systems. arXiv preprint \n                  arXiv:2412.12322\n                  \n                . 2024.",
+        "Niu T, Joty S, Liu Y, Xiong C, Zhou Y, Yavuz S. Judgerank: leveraging large language models for reasoning-intensive reranking. arXiv preprint \n                  arXiv:2411.00142\n                  \n                . 2024.",
+        "citation_journal_title=Nat Lang Proc; citation_title=Maximizing RAG efficiency: a comparative analysis of RAG methods; citation_author=T Şakar, H Emekci; citation_volume=31; citation_issue=1; citation_publication_date=2025; citation_pages=1-25; citation_doi=10.1017/nlp.2024.53; citation_id=CR25",
+        "Ong KR, Wong WP. Optimizing information retrieval in RAG through intelligent reranking and follow-up query predictions, 2025.",
+        "Mikulić I, Vlaić M, Delač G, Šilić M, Vladimir K. Integrating external knowledge with LLMs: a systematic review of RAG approaches. In: 2025 MIPRO 48th ICT and Electronics Convention, IEEE, 2025. p. 93–98.",
+        "Dallaire E. Practical RAG evaluation: a rarity-aware set-based metric and cost-latency-quality trade-offs. arXiv preprint \n                  arXiv:2511.09545\n                  \n                . 2025.",
+        "Moreira GDSP, Ak R, Schifferer B, Xu M, Osmulski R, Oldridge E. Enhancing Q&A text retrieval with ranking models: Benchmarking, fine-tuning and deploying rerankers for rag. arXiv preprint \n                  arXiv:2409.07691\n                  \n                . 2024.",
+        "Maia M, Handschuh S, Freitas A, Davis B, McDermott R, Zarrouk M, Balahur A. Www’18 open challenge: financial opinion mining and question answering. In: Companion Proceedings of the the Web Conference 2018, 2018. p. 1941–1942.",
+        "Thakur N, Reimers N, Rücklé A, Srivastava A, Gurevych I. Beir: a heterogenous benchmark for zero-shot evaluation of information retrieval models. arXiv preprint \n                  arXiv:2104.08663\n                  \n                . 2021.",
+        "Wang J, Yi X, Guo R, Jin H, Xu P, Li S, Wang X, Guo X, Li C, Xu X, et al. Milvus: a purpose-built vector data management system. In: Proceedings of the 2021 International Conference on Management of Data, 2021. p. 2614–2627.",
+        "Wang B, Zhao D, Tallent NR, Guo L. On the reproducibility limitations of RAG systems. arXiv preprint \n                  arXiv:2509.18869\n                  \n                . 2025.",
+        "Bhat S, Karegowda AG, Naidu VS, Akshatha C. Leveraging hyde and RAG in gemma LLM framework for enlightened deep learning chatbots. Human-Centric Intelligent Systems, 2025. p. 1–15.",
+        "Vake D, Vičič J, Tošić A. Bridging the question-answer gap in retrieval-augmented generation: hypothetical prompt embeddings. IEEE Access 2025."
+      ],
+      "citation_author": [
+        "Elkiran, Harun",
+        "Rasheed, Jawad"
+      ],
+      "citation_author_email": [
+        "harun.elkiran@izu.edu.tr",
+        "jawad.rasheed@izu.edu.tr"
+      ],
+      "citation_author_institution": [
+        "Institute of Graduate Education, Istanbul Sabahattin Zaim University, Istanbul, Turkey",
+        "Department of Software Engineering, Istanbul Sabahattin Zaim University, Istanbul, Turkey",
+        "Faculty of Engineering and Natural Sciences, Istanbul Medipol University, Istanbul, Turkey",
+        "Department of Software Engineering, Istanbul Nisantasi University, Istanbul, Turkey"
+      ],
+      "citation_cover_date": [
+        "2026/12/01"
+      ]
+    }
+  },
+  {
+    "key": "chinese",
+    "url": "https://link.springer.com/article/10.1007/s44163-026-02613-1",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_pdf_url": [
+        "https://link.springer.com/content/pdf/10.1007/s44163-026-02613-1.pdf"
+      ],
+      "citation_fulltext_html_url": [
+        "https://link.springer.com/article/10.1007/s44163-026-02613-1"
+      ],
+      "citation_journal_title": [
+        "Discover Artificial Intelligence"
+      ],
+      "citation_journal_abbrev": [
+        "Discov Artif Intell"
+      ],
+      "citation_publisher": [
+        "Springer International Publishing"
+      ],
+      "citation_issn": [
+        "2731-0809"
+      ],
+      "citation_title": [
+        "Comparative evaluation of similarity metrics for Chinese retrieval augmented generation"
+      ],
+      "citation_volume": [
+        "6"
+      ],
+      "citation_issue": [
+        "1"
+      ],
+      "citation_publication_date": [
+        "2026/12"
+      ],
+      "citation_online_date": [
+        "2026/10/28"
+      ],
+      "citation_firstpage": [
+        "1675"
+      ],
+      "citation_lastpage": [
+        ""
+      ],
+      "citation_article_type": [
+        "Research"
+      ],
+      "citation_fulltext_world_readable": [
+        ""
+      ],
+      "citation_language": [
+        "en"
+      ],
+      "citation_doi": [
+        "10.1007/s44163-026-02613-1"
+      ],
+      "citation_springer_api_url": [
+        "http://api.springer.com/xmldata/jats?q=doi:10.1007/s44163-026-02613-1&api_key="
+      ],
+      "citation_reference": [
+        "Touvron H, Lavril T, Izacard G et al. LLaMA: open and efficient foundation language models. arXiv preprint arXiv:2302.13971. 2023. Available: \n                  https://arxiv.org/abs/2302.13971\n                  \n                .",
+        "Ji Z, Lee N, Frieske R, Yu T, Su D, Xu Y, Ishii E, Bang YJ, Madotto A, Fung P. Survey of Hallucination in Natural Language Generation. ACM Computing Surveys. Article 248. 2023;55(12):1-38. Available: \n                  https://doi.org/10.1145/3571730\n                  \n                .",
+        "Kasneci E, Sessler K, Küchemann S, Bannert M, Dementieva D, Fischer F, Kasneci G. ChatGPT for good? On opportunities and challenges of large language models for education. Learning and Individual Differences. 2023;103:102274. Available: \n                  https://doi.org/10.1016/j.lindif.2023.102274\n                  \n                .",
+        "Sivarajah U, Weerakkody V, Waller P et al. Hallucination: a key challenge to artificial intelligence-generated content. npj Digital Medicine. 2024;7(1):58. Available: \n                  https://pmc.ncbi.nlm.nih.gov/articles/PMC10726751/\n                  \n                .",
+        "Huang L, Yu W, Ma W, Zhong W, Feng Z, Wang H, Chen Q, Peng W, Feng X, Qin B, Liu T. A survey on hallucination in large language models: principles, taxonomy, challenges, and open questions. arXiv preprint arXiv:2311.05232. 2023. Available: \n                  https://arxiv.org/abs/2311.05232\n                  \n                .",
+        "Alkaissi H, McFarlane SI. Artificial hallucinations in ChatGPT: implications in scientific writing. Cureus. 2023;15(2):e35179. Available: \n                  https://doi.org/10.7759/cureus.35179\n                  \n                .",
+        "Zhang Y, Li Q, Nahata S, Jamal T, Cheng S-K, Cauwenberghs G, Jung T-P. Integrating large language model, EEG, and eye-tracking for word-level neural state classification in reading comprehension. IEEE Transactions on Neural Systems and Rehabilitation Engineering. 2024;32:3465–3475. Available: \n                  https://doi.org/10.1109/TNSRE.2024.3435460\n                  \n                .",
+        "Zhang Y, Yang S, Cauwenberghs G, Jung T-P. From word embedding to reading embedding using large language model, EEG and eye-tracking. 2024 46th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC). 2024;1–4. Available: \n                  https://doi.org/10.1109/EMBC53108.2024.10781627\n                  \n                .",
+        "Lewis P, Perez E, Piktus A, Petroni F, Karpukhin V, Goyal N, Riedel S. Retrieval-augmented generation for knowledge-intensive NLP tasks. NeurIPS 2020. 2020. Available: \n                  https://arxiv.org/abs/2005.11401\n                  \n                .",
+        "Karpukhin V, Oguz B, Min S, Lewis P, Wu L, Edunov S, Chen D, Yih W-T. Dense passage retrieval for open-domain question answering. Proceedings of EMNLP 2020. 2020:6769–6781. Available: \n                  https://aclanthology.org/2020.emnlp-main.550\n                  \n                .",
+        "Amugongo LM, Mascheroni P, Brooks S, Doering S. Retrieval-augmented generation for large language models in healthcare: a systematic review. PLOS Digital Health. 2025;4(6):e0000877. Available: \n                  https://doi.org/10.1371/journal.pdig.0000877\n                  \n                .",
+        "Wang S, Liu J, Song S et al. DomainRAG: A Chinese Benchmark for Evaluating Domain-specific Retrieval-Augmented Generation. OpenReview. 2024. Available: \n                  https://openreview.net/forum?id=fpWpD9k7eH\n                  \n                .",
+        "Lyu Y, Li Z, Niu S, Xiong F, Tang B, Wang W, Wu H, Liu H, Xu T, Chen E. CRUD-RAG: a comprehensive chinese benchmark for retrieval-augmented generation of large language models. arXiv preprint arXiv:2401.17043. 2024. Available: \n                  https://arxiv.org/abs/2401.17043\n                  \n                 .",
+        "Huang A. Similarity measures for text document clustering. Proceedings of the Sixth New Zealand Computer Science Research Student Conference. 2008:49–56. Available: \n                  https://www.academia.edu/24048440/Similarity_Measures_for_Text_Document_Clustering\n                  \n                .",
+        "Xiao S, Liu Z, Zhang P, Muennighoff N. C-pack: packaged resources to advance general Chinese embedding. arXiv preprint arXiv:2309.07597. 2023. Available: \n                  https://arxiv.org/abs/2309.07597\n                  \n                .",
+        "Wang Y, Sun Q, He S. M3E: moka massive mixed embedding. Model resource. 2023. Available: \n                  https://huggingface.co/moka-ai/m3e-base\n                  \n                .",
+        "citation_journal_title=Psychometrika; citation_title=Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages; citation_author=Q McNemar; citation_volume=12; citation_issue=2; citation_publication_date=1947; citation_pages=153-7; citation_doi=10.1007/BF02295996; citation_id=CR17",
+        "citation_journal_title=Scand J Stat; citation_title=A Simple Sequentially Rejective Multiple Test Procedure; citation_author=S Holm; citation_volume=6; citation_issue=2; citation_publication_date=1979; citation_pages=65-70; citation_id=CR18",
+        "Tang H, Li H, Liu J, Hong Y, Wu H, Wang H. DuReader_robust: a Chinese dataset towards evaluating robustness and generalization of machine reading comprehension in real-world applications. Proceedings of ACL-IJCNLP 2021 (Volume 2: Short Papers). 2021:955–963. Available: \n                  https://aclanthology.org/2021.acl-short.120\n                  \n                .",
+        "Yang A, Yang B, Zhang B, Hui B, Zheng B, Yu B et al. Qwen2.5 Technical Report. arXiv preprint arXiv:2412.15115. 2024. Available: \n                  https://arxiv.org/abs/2412.15115\n                  \n                .",
+        "Gibney E. China’s cheap, open AI model DeepSeek Thrills scientists. Nature. 2025;638:13–14. Available: \n                  https://pubmed.ncbi.nlm.nih.gov/39849139/\n                  \n                .",
+        "Patterson D, Gonzalez J, Le Q, Liang C, Munguia L-M, Rothchild D, So D, Texier M, Dean J. Carbon emissions and large neural network training. arXiv preprint arXiv:2104.10350. 2021. Available: \n                  https://arxiv.org/abs/2104.10350\n                  \n                .",
+        "Reimers N, Gurevych I. Sentence-BERT: sentence embeddings using siamese BERT-networks. Proceedings of EMNLP 2019. 2019. Available: \n                  https://aclanthology.org/D19-1410\n                  \n                .",
+        "Cui Y, Liu T, Che W, Xiao L, Chen Z, Ma W, Wang S, Hu G. A Span-Extraction Dataset for Chinese Machine Reading Comprehension. Proceedings of EMNLP-IJCNLP 2019. 2019:5883–5889. Available: \n                  https://aclanthology.org/D19-1600/\n                  \n                .",
+        "Kaplan J, McCandlish S, Henighan T et al. Scaling laws for neural language models. arXiv preprint arXiv:2001.08361. 2020. Available: \n                  https://arxiv.org/abs/2001.08361\n                  \n                .",
+        "Qi P, Zhang Y, Zhang Y, Bolton J, Manning CD. Stanza: a python NLP toolkit for many human languages. Proceedings of ACL 2020 System Demonstrations. 2020:89–98. Available: \n                  https://aclanthology.org/2020.acl-demos.14\n                  \n                .",
+        "Afzali M, Kumar S. Comparative analysis of various similarity measures for finding similarity of two documents. Int J Database Theory Appl. 2017;10(2):23–32. Available: \n                  https://article.nadiapub.com/IJDTA/vol10_no2/2.pdf\n                  \n                .",
+        "Izacard G, Grave E. Leveraging passage retrieval with generative models for open domain question answering. Proceedings of EACL 2021. 2021:874–880. Available: \n                  https://aclanthology.org/2021.eacl-main.74/\n                  \n                .",
+        "Rajpurkar P, Jia R, Liang P. Know what you don’t know: unanswerable questions for SQuAD. Proceedings of ACL 2018. 2018:784–789. Available: \n                  https://aclanthology.org/P18-2124/\n                  \n                .",
+        "Niu S, Tang Z, Wang Y, Yu Z, Jiang Y, Xiong C. RAGTruth: a hallucination corpus for developing trustworthy retrieval-augmented language models. Proceedings of ACL 2024. 2024. Available: \n                  https://aclanthology.org/2024.acl-long.585\n                  \n                .",
+        "Song S, Liu Y, Zhou J, Wang Z. RAG-HAT: a hallucination-aware tuning pipeline for LLM in retrieval-augmented generation. Proceedings of EMNLP 2024 Industry Track. 2024. Available: \n                  https://aclanthology.org/2024.emnlp-industry.113\n                  \n                .",
+        "Varoquaux G. Cross-validation failure: small sample sizes lead to large error bars. NeuroImage. 2018;180:68–77. Available: \n                  https://www.sciencedirect.com/science/article/abs/pii/S1053811917305311\n                  \n                .",
+        "Brown TB, Mann B, Ryder N, Subbiah M, Kaplan J, Dhariwal P, … Amodei D. Language Models are Few-Shot Learners. NeurIPS 2020. 2020. Available: \n                  https://arxiv.org/abs/2005.14165\n                  \n                .",
+        "Khashabi D, Min S, Khot T, Sabharwal A, Tafjord O, Clark P, Hajishirzi H. UnifiedQA: crossing format boundaries with a single QA system. Findings of EMNLP 2020 2020:1896–1907. Available: \n                  https://aclanthology.org/2020.findings-emnlp.171\n                  \n                .",
+        "Chen D, Fisch A, Weston J, Bordes A. Reading Wikipedia to answer open-domain questions. Proceedings of ACL 2017. 2017:1870–1879. Available: \n                  https://aclanthology.org/P17-1171\n                  \n                .",
+        "Shuster K, Poff S, Chen M, Kiela D, Weston J. Retrieval augmentation reduces hallucination in conversation. Findings of EMNLP 2021. 2021. Available: \n                  https://arxiv.org/abs/2104.07567\n                  \n                .",
+        "Voorhees EM. The TREC-8 question answering track. TREC 1999. 1999. Available: \n                  https://trec.nist.gov/pubs/trec8/papers/qa_report.pdf\n                  \n                .",
+        "Robertson S, Zaragoza H. The probabilistic relevance framework: BM25 and beyond. Foundations and Trends in Information Retrieval. 2009;3(4):333–389. Available: \n                  https://doi.org/10.1561/1500000019\n                  \n                .",
+        "Guu K, Lee K, Tung Z, Pasupat P, Chang M. REALM: retrieval-augmented language model pre-training. ICML 2020. 2020. Available: \n                  https://arxiv.org/abs/2002.08909\n                  \n                .",
+        "Maynez J, Narayan S, Bohnet B, McDonald R. On faithfulness and factuality in abstractive summarization. Proceedings of ACL 2020. 2020:1906–1919. Available: \n                  https://aclanthology.org/2020.acl-main.173\n                  \n                .",
+        "Lin S, Hilton J, Evans O. TruthfulQA: measuring how models mimic human falsehoods. Proceedings of ACL 2022. 2022:3214–3252. Available: \n                  https://aclanthology.org/2022.acl-long.229\n                  \n                .",
+        "Parcalabescu L, Frank A. On measuring faithfulness or self-consistency of natural language explanations. Proceedings of ACL 2024. 2024. Available: \n                  https://aclanthology.org/2024.acl-long.329\n                  \n                .",
+        "Lei Y, Ding L, Cao Y, Zan C, Yates A, Tao D. Unsupervised dense retrieval with relevance-aware contrastive pre-training. Findings of the Association for Computational Linguistics: ACL 2023. 2023:10932–10940. Available: \n                  https://aclanthology.org/2023.findings-acl.695\n                  \n                .",
+        "Dziri N, Kamalloo E, Milton S, Yu M, Zaiane O, Reddy S. On the origin of hallucinations in conversational models: is it the datasets or the models? NAACL 2022. 2022:5272–5287. Available: \n                  https://aclanthology.org/2022.naacl-main.387\n                  \n                .",
+        "Honovich O, Herzig J, Aharoni R, Elkind C, Szpektor I. TrueTeacher: learning factual consistency evaluation with large language models. EMNLP 2023. 2023:2137–2149. Available: \n                  https://aclanthology.org/2023.emnlp-main.127\n                  \n                .",
+        "Wang Y, Jiang Z, Zhang S, Xu R et al. Factuality of large language models: a survey. EMNLP 2024. 2024. Available: \n                  https://aclanthology.org/2024.emnlp-main.1088\n                  \n                .",
+        "Li S, Park S, Lee I, Bastani O. TRAQ: trustworthy retrieval augmented question answering via conformal prediction. arXiv preprint arXiv:2307.04642. 2023. Available: \n                  https://arxiv.org/abs/2307.04642\n                  \n                .",
+        "Ye S, Ouyang B, Zeng L, Qian T, Chu X, Tang J, Chen X. Jupiter: fast and resource-efficient collaborative inference of generative LLMs on edge devices. arXiv preprint arXiv:2504.08242. 2025. Available: \n                  https://arxiv.org/abs/2504.08242\n                  \n                .",
+        "Seemakhupt K, Liu S, Khan S et al. EdgeRAG: online-indexed RAG for edge devices. arXiv preprint arXiv:2412.21023. 2024. Available: \n                  https://arxiv.org/abs/2412.21023\n                  \n                .",
+        "Ding L. AdaRubric: task-adaptive rubrics for reliable LLM agent evaluation and reward learning. arXiv preprint arXiv:2603.21362. 2026. Available: \n                  https://arxiv.org/abs/2603.21362\n                  \n                ."
+      ],
+      "citation_author": [
+        "Chen, Ronghao"
+      ],
+      "citation_author_email": [
+        "chen.ronghao@outlook.com"
+      ],
+      "citation_author_institution": [
+        "School of Statistics and Data Science, Shanghai University of International Business and Economics (SUIBE), Shanghai, China"
+      ],
+      "citation_cover_date": [
+        "2026/12/01"
+      ]
+    }
+  },
+  {
+    "key": "survey",
+    "url": "https://link.springer.com/article/10.1007/s44163-026-02373-y",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_pdf_url": [
+        "https://link.springer.com/content/pdf/10.1007/s44163-026-02373-y.pdf"
+      ],
+      "citation_fulltext_html_url": [
+        "https://link.springer.com/article/10.1007/s44163-026-02373-y"
+      ],
+      "citation_journal_title": [
+        "Discover Artificial Intelligence"
+      ],
+      "citation_journal_abbrev": [
+        "Discov Artif Intell"
+      ],
+      "citation_publisher": [
+        "Springer International Publishing"
+      ],
+      "citation_issn": [
+        "2731-0809"
+      ],
+      "citation_title": [
+        "A Survey of conversational AI from rule based to generative and retrieval augmented generation chatbots"
+      ],
+      "citation_volume": [
+        "6"
+      ],
+      "citation_issue": [
+        "1"
+      ],
+      "citation_publication_date": [
+        "2026/12"
+      ],
+      "citation_online_date": [
+        "2026/09/28"
+      ],
+      "citation_firstpage": [
+        "1292"
+      ],
+      "citation_lastpage": [
+        ""
+      ],
+      "citation_article_type": [
+        "Review"
+      ],
+      "citation_fulltext_world_readable": [
+        ""
+      ],
+      "citation_language": [
+        "en"
+      ],
+      "citation_doi": [
+        "10.1007/s44163-026-02373-y"
+      ],
+      "citation_springer_api_url": [
+        "http://api.springer.com/xmldata/jats?q=doi:10.1007/s44163-026-02373-y&api_key="
+      ],
+      "citation_reference": [
+        "Ji Y et al. Survey of hallucination in natural language generation. ACM Comput Surv, 55, 12, 2023.",
+        "Lewis P et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, in Proc. NeurIPS, 2020.",
+        "Gao Y et al. Retrieval-Augmented Generation for Large Language Models: A Survey, arXiv:2312.10997, 2023.",
+        "Bender EM, Gebru T, McMillan-Major A, Mitchell M. On the dangers of stochastic parrots, in Proc. FAccT, 2021.",
+        "Zhao Z, Liu S, Yang S-Y, Miao C. MedRAG: Enhancing retrieval-augmented generation with knowledge graph-elicited reasoning for healthcare copilot. arXiv preprint arXiv:2502.04413, 2025.",
+        "European Commission. Regulatory frameworks for AI in healthcare, finance, education, and legal domains. EU AI Act Rep, 2024.",
+        "Gao Y, Xiong Y, Gao X, Jia K, Pan J, Bi Y, Dai Y, Sun J, Wang M, Wang H. Retrieval-augmented generation for large language models: A survey, arXiv:2312.10997, 2023.",
+        "Fan W, Ding Y, Ning L, Wang S, Li H, Yin D, Chua TS, Li Q. A survey on RAG meeting LLMs: Towards retrieval-augmented large language models, in Proc. ACM SIGKDD, 2024.",
+        "Li Y, Ding L, Yuan Y, Liu X, Zhang M, Ouyang Y, Tao D. A survey of RAG-reasoning systems in large language models, in Proc. Findings EMNLP, 2025.",
+        "Brown A, Roman M, Devereux B. A systematic literature review of retrieval-augmented generation: Techniques, metrics, and challenges. Big Data Cogn Comput, 9, 12, 2025.",
+        "Sharma C. Retrieval-augmented generation: A comprehensive survey of architectures, enhancements, and robustness frontiers, arXiv preprint arXiv:2506.00054, 2025.",
+        "Yunhao Liu Z, Jia X, Gao K, Xu, Yun, Xiong. 2026. Rethinking Soft Compression in Retrieval-Augmented Generation: A Query-Conditioned Selector Perspective. In Proceedings of the ACM Web Conference 2026 (WWW ‘26). Association for Computing Machinery, New York, NY, USA, 2441–2452. \n                  https://doi.org/10.1145/3774904.3792700\n                  \n                ",
+        "Zhao Z, Rodriguez JAM, de Melo GA. Knowledge-grounded dialogue: A survey of retrieval, selection, and generation, in Proc. ACL, 2024.",
+        "Kim S, Kim YH, Lee DS. A survey on knowledge-grounded dialogue systems. Artif Intell Rev, 57, 4, 2024.",
+        "Wang L, Ma C, Feng X, Zhang Z, Yang H, Zhang J, Chen Z, Tang J, Chen X, Lin Y, Zhao WX, Wei Z, Wen J. A survey on large language model based autonomous agents. Front Comput Sci. 2024;18(6). \n                  https://doi.org/10.1007/s11704-024-40231-1\n                  \n                .",
+        "Xi Z, Chen W, Guo X, He W, Ding Y, Hong B, Zhang M, Wang J, Jin S, Zhou E, Zheng R, Fan X, Wang X, Xiong L, Zhou Y, Wang W, Jiang C, Zou Y, Liu X, Yin Z, Dou S, Weng R, Cheng W, Zhang Q, Qin W, Zheng Y, Qiu X, Huang X, Gui T. The rise and potential of large language model based agents: A survey, arXiv preprint arXiv:2309.07864, 2023.",
+        "Karpukhin V et al. Dense Passage Retrieval for Open-Domain Question Answering, in Proc. EMNLP, 2020.",
+        "Guu K et al. REALM: Retrieval-Augmented Language Model Pre-Training, in Proc. ICML, 2020.",
+        "citation_title=Introduction to Information Retrieval; citation_publication_date=2008; citation_id=CR19; citation_author=CD Manning; citation_author=P Raghavan; citation_author=H Schütze; citation_publisher=Cambridge Univ. Press",
+        "Xiong L et al. Approximate nearest neighbor negative contrastive learning for dense text retrieval, in Proc. ICLR, 2021.",
+        "Izacard P, Grave E. Leveraging passage retrieval with generative models for open domain question answering, in Proc. EACL, 2021. (Fusion-in-Decoder).",
+        "citation_journal_title=Commun ACM; citation_title=ELIZA A computer program for the study of natural language communication between man and machine; citation_author=J Weizenbaum; citation_volume=9; citation_issue=1; citation_publication_date=1966; citation_pages=36-45; citation_doi=10.1145/365153.365168; citation_id=CR22",
+        "citation_journal_title=IEEE Lat Am Trans; citation_title=Towards a Set of Heuristics for Evaluating Chatbots; citation_author=LM Sánchez-Adame, S Mendoza, J Urquiza, J Rodríguez, A Meneses-Viveros; citation_volume=19; citation_issue=12; citation_publication_date=2021; citation_pages=2037-45; citation_doi=10.1109/TLA.2021.9480145; citation_id=CR23",
+        "citation_journal_title=LDV Forum; citation_title=Chatbots: Are they really useful?; citation_author=A Shawar, E Atwell; citation_volume=22; citation_issue=1; citation_publication_date=2007; citation_pages=29-49; citation_id=CR24",
+        "citation_journal_title=Artif Intell; citation_title=Artificial paranoia; citation_author=KM Colby, S Weber, FD Hilf; citation_volume=2; citation_issue=1; citation_publication_date=1971; citation_pages=1-25; citation_doi=10.1016/0004-3702(71)90002-6; citation_id=CR25",
+        "Brown T et al. Language models are few-shot learners, in Proc. NeurIPS, 2020.",
+        "citation_journal_title=Found Trends Inf Retr; citation_title=The probabilistic relevance framework: BM25 and beyond; citation_author=SE Robertson, H Zaragoza; citation_volume=3; citation_issue=4; citation_publication_date=2009; citation_pages=333-89; citation_id=CR27",
+        "Reimers N, Gurevych I. Sentence-BERT: Sentence embeddings using Siamese BERT-networks, in Proc. EMNLP-IJCNLP, 2019.",
+        "Zhou Y, Shen T, Geng X, Tao C, Long G, Xu C, Jiang D. Fine-grained distillation for long document retrieval, in Proc. AAAI, 2024.",
+        "Lin Y et al. A survey on neural information retrieval, IEEE Trans. Knowl. Data Eng., vol. 34, no. 6, pp. 2731–2750, 2022.",
+        "Guo D et al. A deep look into neural ranking models for information retrieval. Inf Process Manage, 57, 6, 2020.",
+        "Asai J et al. SELF-RAG: Learning to retrieve, generate, and critique through self-reflection, in Proc. ICLR, 2024.",
+        "Peng K, Ding L, Yuan Y, Liu X, Zhang M, Ouyang Y, Tao D. Revisiting demonstration selection strategies in in-context learning, in Proc. ACL, 2024.",
+        "Voloshyn S. L-RAG: Balancing context and retrieval with entropy-based lazy loading, arXiv:2601.06551, 2026.",
+        "Zubkova H, Park J-H, Lee S-W. SUGAR: Leveraging contextual confidence for smarter retrieval, arXiv:2501.04899, 2025.",
+        "Shuster O et al. The language model is hallucinating, arXiv:2202.03629, 2022.",
+        "Chen X et al. Faithfulness in text generation: A survey. Comput Linguist, 2024.",
+        "Yu Z et al. CRAG: Improving retrieval-augmented generation via contextualized retrieval, arXiv:2401.15884, 2024.",
+        "Liang J, Hu S, Lin H, Wu Y, Zhao R, Li Z. Reasoning RAG via System 1 or System 2: A survey on reasoning agentic retrieval-augmented generation for industry challenges, in Proc. IJCNLP Findings, 2025.",
+        "Deng J, Huang J, Wong ZH, Liang H, Xu Q, Cui B, Zhang W. Data-centric perspectives on agentic retrieval-augmented generation: A survey, in Proc. Findings ACL, 2026.",
+        "Yan S-Q, Gu J-C, Zhu Y, Ling Z-H. Corrective retrieval augmented generation, in Proc. EMNLP, 2024.",
+        "Asai A, Wu Z, Wang Y, Sil A, Hajishirzi H. Self-RAG: Learning to retrieve, generate, and critique through self-reflection, in Proc. ICLR, 2024.",
+        "Zhang Q, Chen S, Bei Y, Yuan Z, Zhou H, Hong Z, Dong J, Chen H, Chang Y, Huang X. A survey of graph retrieval-augmented generation for customized large language models, arXiv:2501.13958, 2025.",
+        "Anil R et al. PaLM: Scaling language modeling with pathways. J Mach Learn Res, 24, 2023.",
+        "Hu EJ et al. LoRA: Low-rank adaptation of large language models, in Proc. ICLR, 2022.",
+        "Lewis P, Perez E, Piktus A, Petroni F, Karpukhin V, Goyal N, Küttler H. Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, and Douwe Kiela. 2020. Retrieval-augmented generation for knowledge-intensive NLP tasks. In Proceedings of the 34th International Conference on Neural Information Processing Systems (NIPS ‘20). Curran Associates Inc., Red Hook, NY, USA, Article 793, 9459–9474.",
+        "citation_journal_title=IEEE Trans Big Data; citation_title=Billion-scale similarity search with GPUs; citation_author=J Johnson, M Douze, H Jégou; citation_volume=7; citation_issue=3; citation_publication_date=2021; citation_pages=535-47; citation_doi=10.1109/TBDATA.2019.2921572; citation_id=CR47",
+        "Xu Z, Wei S, Han Z, Jin J, Yang Z, Li X, Tan H, Guo Z, Wang H. CiteCheck: Towards accurate citation faithfulness detection. arXiv preprint arXiv:2502.10881, 2025.",
+        "Rashkin H, Nikolaev V, Lamm M, Aroyo L, Collins M, Das D, Petrov S, Tomar GS. Measuring faithfulness in long-form generations, in Proc. EMNLP, 2023.",
+        "Mallen A, Asai A, Zhong V, Das R, Khashabi D, Hajishirzi H. When not to trust retrieval: A study of retrieval-augmented generation, in Proc. ICLR, 2023.",
+        "Lehman E, Rodriguez JAM, de Melo GA. ClinRAG: Clinical decision support with retrieval-augmented generation, arXiv:2405.03978, 2024.",
+        "Zhou Y, Shen T, Geng X, Tao C, Xu C, Long G, Jiao B, Jiang D. Towards robust ranker for text retrieval, in Proc. Findings ACL, 2023.",
+        "Santhanam K, Khattab O, Saad-Falcon J, Potts C, Zaharia M. ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction, in Proc. 2022 Conf. North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT), Seattle, WA, USA, Jul. 2022, pp. 3715–3734. \n                  https://doi.org/10.18653/v1/2022.naacl-main.272\n                  \n                ",
+        "Touvron H, Lavril T, Izacard G, Martinet X, Lachaux M-A, Lacroix T, Rozière B, Goyal N, Hambro E, Azhar F, Rodriguez A, Joulin A, Grave E, Lample G. LLaMA: Open and efficient foundation language models, arXiv:2302.13971, 2023.",
+        "Zhong Q, Ding L, Liu J, Du B, Tao D. (2023). Can ChatGPT Understand Too? A Comparative Study on ChatGPT and Fine-tuned BERT. arXiv preprint arXiv:2302.10198.",
+        "Park JS, Kim YH, Lee DS. Llama-as-Judge: Hybrid evaluation frameworks for knowledge-grounded dialogue, arXiv:2408.04567, 2024.",
+        "Wei S et al. Jailbroken: How does LLM safety training fail? arXiv:2307.02483, 2023.",
+        "Lin C. ROUGE: A package for automatic evaluation of summaries, in Proc. ACL Workshop, 2004.",
+        "Zhang T et al. BERTScore: Evaluating text generation with BERT, in Proc. ICLR, 2020.",
+        "Liu NF, Zhang T, Liang P. Evaluating verifiability in generative search engines, in Proc. EMNLP, 2023.",
+        "Wang Y, Liu S, Zhang H. Bridging the gap: Automated metrics vs. human evaluation in knowledge-grounded dialogue, arXiv:2309.04567, 2023.",
+        "Es S, Rodriguez JAM, de Melo GA. Disentangling retrieval and generation in RAG evaluation, in Proc. EMNLP Findings, 2024.",
+        "Lin T et al. TruthfulQA: Measuring how models mimic human falsehoods, in Proc. ACL, 2022.",
+        "Honovich O, Aharoni R, Herzig J, Choshen L. True teacher: Factual consistency evaluation in retrieval-augmented generation, in Proc. ACL, 2023.",
+        "Min S, Krishna K, Lyu X, Lewis M, Yih W, Koh PW, Iyyer M, Zettlemoyer L, Hajishirzi H. FActScore: Fine-grained atomic evaluation of factual precision in long-form text generation, in Proc. EMNLP, 2023.",
+        "Liu Y, Iter D, Xu Y, Wang S, Xu R, Zhu C. G-Eval: NLG evaluation using GPT-4 with better human alignment, in Proc. EMNLP, 2023.",
+        "Wataoka K, Takahashi T, Ri R. Self-preference bias in LLM-as-a-judge. arXiv preprint arXiv:2410.21819, 2025.",
+        "Gao Z, Cao Y, Wang H, Ke A, Feng Y, Zhou SK, Xie X. FRAG: A flexible modular framework for retrieval-augmented generation based on knowledge graphs, in Proc. ACL Findings, 2025.",
+        "Belinkov P, Glass J. Analysis methods in neural language processing. Synth Lect Hum Lang Technol, 2019.",
+        "citation_journal_title=Artif Intell Rev; citation_title=Survey on evaluation of dialogue systems; citation_author=J Deriu; citation_volume=54; citation_publication_date=2021; citation_pages=681-707; citation_doi=10.1007/s10462-020-09866-x; citation_id=CR70",
+        "Es S, Rodriguez JAM, de Melo GA. RAGAS: Automated evaluation of retrieval-augmented generation, in Proc. EMNLP Findings, 2024.",
+        "Pan L, Ho JCS, Liang P. Position bias in LLM-based evaluation of retrieval-augmented generation, arXiv:2403.07865, 2024.",
+        "Alzubi SMJMAA. Prompt sensitivity and variance in LLM evaluators, in Proc. EACL, 2024.",
+        "citation_journal_title=Nature; citation_title=Large language models encode clinical knowledge; citation_author=S Singhal; citation_volume=620; citation_publication_date=2023; citation_pages=172-80; citation_doi=10.1038/s41586-023-06291-2; citation_id=CR74",
+        "Lehman E et al. Do we still need clinical language models? in Proc. ACL, 2023.",
+        "citation_journal_title=JMIR Form Res; citation_title=Retrieval-Augmented Generation for Medical Question Answering on a Heart Failure Dataset: Performance Analysis; citation_author=S Zhang, E Phan, P Velmovitsky, Q Pham, S Sanner; citation_volume=10; citation_publication_date=2026; citation_pages=e84932; citation_doi=10.2196/84932; citation_id=CR76",
+        "Katz J et al. GPT-4 passes the bar exam. SSRN, 2023.",
+        "Katz J, Rodriguez JAM, de Melo GA. LegalRAG: Retrieval-augmented generation for legal document analysis, in Proc. EMNLP Legal Workshop, 2024.",
+        "Chen Z, Zhang Q, Xiang Z, Wei Z, Gao L, Huang X, Zhang Z, Su J. LegalGraphRAG: Multi-agent graph retrieval-augmented generation for reliable legal reasoning, arXiv preprint arXiv:2605.28120, 2026.",
+        "Jonas Wallat M, Heuss M, de Rijke, Anand A. 2025. Correctness is not Faithfulness in Retrieval Augmented Generation Attributions. In Proceedings of the 2025 International ACM SIGIR Conference on Innovative Concepts and Theories in Information Retrieval (ICTIR) (ICTIR ‘25). Association for Computing Machinery, New York, NY, USA, 22–32. \n                  https://doi.org/10.1145/3731120.3744592\n                  \n                ",
+        "Honovich O, Aharoni R, Herzig J, Choshen L. Verification-aware legal RAG, in Proc. ACL, 2024.",
+        "citation_journal_title=SN COMPUT SCI; citation_title=Evaluating Retrieval Augmented Generation: A Comprehensive Review of Evaluation Dimensions, Question Types, and Application; citation_author=S Knollmeyer, O Caymazer, L Koval; citation_volume=7; citation_publication_date=2026; citation_pages=576; citation_doi=10.1007/s42979-026-05134-x; citation_id=CR82",
+        "Shen Y, Zhang J, Chen F, Kaiyuan Yan, and, Li H. 2025. FinSearch: A Temporal-Aware Search Agent Framework for Real-Time Financial Information Retrieval with Large Language Models. In Proceedings of the 6th ACM International Conference on AI in Finance (ICAIF ‘25). Association for Computing Machinery, New York, NY, USA, 10–17. \n                  https://doi.org/10.1145/3768292.3770382\n                  \n                ",
+        "Chanyeol Choi J, Kwon A, Lopez-Lira C, Kim M, Kim J, Hwang J, Ha H, Choi S, Yun Y, Kim, Lee Y. 2025. FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering. In Proceedings of the 6th ACM International Conference on AI in Finance (ICAIF ‘25). Association for Computing Machinery, New York, NY, USA, 632–637. \n                  https://doi.org/10.1145/3768292.3770362\n                  \n                ",
+        "Gao Z, Cao Y, Ke A. EnterpriseKG: GraphRAG for corporate knowledge management, in Proc. ACL Industry Track, 2025.",
+        "citation_journal_title=AI Regul; citation_title=Regulatory compliance for AI in finance; citation_author=F Doshi-Velez, YMHHRR Rao; citation_volume=2; citation_issue=1; citation_publication_date=2024; citation_pages=45-67; citation_id=CR86",
+        "citation_journal_title=IEEE Access; citation_title=A survey on neural question answering; citation_author=Z Sun; citation_volume=9; citation_publication_date=2021; citation_pages=162148-66; citation_id=CR87",
+        "Min A, Rodriguez JAM, de Melo GA. EduRAG: Personalized tutoring with retrieval-augmented generation, in Proc. ACL, 2024.",
+        "Rodrigues B, Pinto R, Gonçalves G. A Systematic Literature Review of AI-Driven Intelligent Tutoring Systems in Engineering Education: Emphasizing Personalization, Feedback, and Student Monitoring, in IEEE Access, vol. 13, pp. 190152–190177, 2025, \n                  https://doi.org/10.1109/ACCESS.2025.3626473\n                  \n                ",
+        "Lewis M, Rodriguez JAM, de Melo GA. SciRAG: Retrieval-augmented generation for biomedical literature synthesis, in Proc. ACL BioNLP Workshop, 2024.",
+        "European Parliament EUAI, Act. Risk classifications and compliance requirements for educational AI. Official J EU, 2024.",
+        "Min A et al. Rethinking the role of demonstrations: What makes in-context learning work? in Proc. EMNLP, 2022.",
+        "Ran P, Rodriguez JAM. Conflicting evidence handling in scientific RAG systems, arXiv:2408.12034, 2024.",
+        "citation_journal_title=J King Saud Univ Comput Inf Sci; citation_title=Sentiment-aware semantic captioning for multimodal aspect-based sentiment analysis; citation_author=K Jiang, X Xiao, X Lu, null SemCap; citation_volume=38; citation_publication_date=2026; citation_pages=81; citation_doi=10.1007/s44443-026-00472-5; citation_id=CR94",
+        "citation_journal_title=Artif Intell Rev; citation_title=Multi-level textual-visual alignment and fusion network for multimodal aspect-based sentiment analysis; citation_author=Y Li, H Ding, Y Lin; citation_volume=57; citation_publication_date=2024; citation_pages=78; citation_doi=10.1007/s10462-023-10685-z; citation_id=CR95",
+        "Durmus A, He H, Diab D. FEVEROUS: Fact extraction and verification, in Proc. ACL, 2021.",
+        "Carlini N et al. Extracting training data from large language models, in Proc. USENIX Security, 2021.",
+        "Blodgett A et al. Language (technology) is power, in Proc. ACL, 2020.",
+        "Wang Y et al. Knowledge-intensive NLP: A survey. IEEE Trans Knowl Data Eng, 2022.",
+        "Lowe M et al. Towards an automatic Turing test, arXiv:1708.07149, 2017.",
+        "Yalavarthi SV. Open-source reproduction and explainability analysis of corrective retrieval augmented generation, arXiv:2603.16169, 2026.",
+        "citation_journal_title=Radiol Phys Technol; citation_title=Evaluation of a retrieval-augmented generation system using a Japanese Institutional Nuclear Medicine Manual and large language model-automated scoring; citation_author=Y Fukui, Y Kawata, K Kobashi; citation_volume=18; citation_publication_date=2025; citation_pages=861-76; citation_doi=10.1007/s12194-025-00941-y; citation_id=CR102",
+        "Saad-Falcon A, Khattab O, Potts C, Zaharia M. ARES: Automated RAG evaluation with confidence intervals, in Proc. ICLR, 2024.",
+        "Ru D, Qiu L, Hu X, Zhang T, Shi P, Chang S, Cheng J, Wang C, Sun S, Li H, Zhang Z, Wang B, Jiang J, He T, Wang Z, Liu P, Zhang Y, Zhang Z. RAGChecker: A fine-grained framework for diagnosing retrieval-augmented generation, arXiv preprint arXiv:2408.08067, 2024.",
+        "Es S, Rodriguez JAM, de Melo GA. Prediction-powered inference for RAG evaluation, arXiv:2406.07820, 2024.",
+        "Documentation RAGAS. HHEM: Hallucination Evaluation Metric, docs.ragas.io, 2024."
+      ],
+      "citation_author": [
+        "Ghaywat, Vaishnavi",
+        "Singh, Abhyuday",
+        "Shahade, Aniket K.",
+        "Khan, Wasim",
+        "Deshmukh, Priyanka V."
+      ],
+      "citation_author_institution": [
+        "Symbiosis Institute of Technology, Pune Campus, Symbiosis International (Deemed University), Pune, India",
+        "Symbiosis Institute of Technology, Pune Campus, Symbiosis International (Deemed University), Pune, India",
+        "Symbiosis Institute of Technology, Pune Campus, Symbiosis International (Deemed University), Pune, India",
+        "Symbiosis Centre for Applied Artificial Intelligence, Symbiosis International (Deemed University), Pune, India",
+        "Symbiosis Institute of Technology, Pune Campus, Symbiosis International (Deemed University), Pune, India",
+        "Symbiosis Institute of Technology, Pune Campus, Symbiosis International (Deemed University), Pune, India"
+      ],
+      "citation_author_email": [
+        "aniket.shahade@sitpune.edu.in"
+      ],
+      "citation_cover_date": [
+        "2026/12/01"
+      ]
+    }
+  },
+  {
+    "key": "hybrid",
+    "url": "https://link.springer.com/article/10.1007/s44163-026-01059-9",
+    "checked": "2026-11-14",
+    "metadata": {
+      "citation_pdf_url": [
+        "https://link.springer.com/content/pdf/10.1007/s44163-026-01059-9.pdf"
+      ],
+      "citation_fulltext_html_url": [
+        "https://link.springer.com/article/10.1007/s44163-026-01059-9"
+      ],
+      "citation_journal_title": [
+        "Discover Artificial Intelligence"
+      ],
+      "citation_journal_abbrev": [
+        "Discov Artif Intell"
+      ],
+      "citation_publisher": [
+        "Springer International Publishing"
+      ],
+      "citation_issn": [
+        "2731-0809"
+      ],
+      "citation_title": [
+        "Hybrid retrieval generation for structured reasoning with large language models"
+      ],
+      "citation_volume": [
+        "6"
+      ],
+      "citation_issue": [
+        "1"
+      ],
+      "citation_publication_date": [
+        "2026/12"
+      ],
+      "citation_online_date": [
+        "2026/03/10"
+      ],
+      "citation_firstpage": [
+        "335"
+      ],
+      "citation_lastpage": [
+        ""
+      ],
+      "citation_article_type": [
+        "Research"
+      ],
+      "citation_fulltext_world_readable": [
+        ""
+      ],
+      "citation_language": [
+        "en"
+      ],
+      "citation_doi": [
+        "10.1007/s44163-026-01059-9"
+      ],
+      "citation_springer_api_url": [
+        "http://api.springer.com/xmldata/jats?q=doi:10.1007/s44163-026-01059-9&api_key="
+      ],
+      "citation_reference": [
+        "OpenAI. GPT-4 technical report. 2023. \n                  https://openai.com/research/gpt-4\n                  \n                .",
+        "Holstein K, Wortman Vaughan J, Daumé H III, Dudik M, Wallach H. Improving fairness in machine learning systems: what do industry practitioners need?. In: Proceedings of the 2020 CHI conference on human factors in computing systems. 2020. pp. 1–16. \n                  https://doi.org/10.1145/3313831.3376440\n                  \n                .",
+        "citation_journal_title=Int J Artif Intell Educ; citation_title=Evolution and revolution in artificial intelligence in education; citation_author=I Roll, R Wylie; citation_volume=26; citation_issue=2; citation_publication_date=2016; citation_pages=582-599; citation_doi=10.1007/s40593-016-0110-3; citation_id=CR3",
+        "citation_journal_title=ACM Comput Surv; citation_title=Survey of hallucination in natural language generation; citation_author=Z Ji, N Lee, R Frieske, T Yu, D Su, Y Xu, P Fung; citation_volume=55; citation_issue=12; citation_publication_date=2023; citation_pages=1-38; citation_doi=10.1145/3571730; citation_id=CR4",
+        "Manakul P, Liusie A, Gales M. SelfCheckGPT: zero-resource black-box hallucination detection for generative large language models. In: Proceedings of the 2023 conference on empirical methods in natural language processing. 2023. pp. 9004–9017.",
+        "citation_journal_title=Adv Neural Inf Process Syst; citation_title=Retrieval-augmented generation for knowledge-intensive NLP tasks; citation_author=P Lewis, E Perez, A Piktus, F Petroni, V Karpukhin, N Goyal, D Kiela; citation_volume=33; citation_publication_date=2020; citation_pages=9459-9474; citation_id=CR6",
+        "Izacard G, Grave E. Leveraging passage retrieval with generative models for open-domain question answering. In: Proceedings of the 16th conference of the European chapter of the association for computational linguistics. 2021. pp 874–880.",
+        "Ren R, Wang Y, Qu Y, Zhao WX, Liu J, Wu H, Wang H. Investigating the factual knowledge boundary of large language models with retrieval augmentation. In: Proceedings of the 31st international conference on computational linguistics. 2025. pp. 3697–3715.",
+        "Singh J, Kumar M, Dey S. LLMs for STEM tutoring: a capability assessment. In: Proceedings of the 18th workshop on innovative use of NLP for building educational applications. 2023. pp. 112–124. \n                  https://doi.org/10.18653/v1/2023.bea-1.11\n                  \n                .",
+        "citation_journal_title=Comput Educ Artif Intell; citation_title=Automated writing feedback with GPT models in educational settings; citation_author=Z Zhang, Z Chen, X Liu, H Wang; citation_volume=4; citation_publication_date=2023; citation_doi=10.1016/j.caeai.2023.100091; citation_id=CR10",
+        "citation_title=Taxonomy of educational objectives: the classification of educational goals. Handbook I: cognitive domain; citation_publication_date=1956; citation_id=CR11; citation_author=BS Bloom; citation_publisher=David McKay Company",
+        "Zhang Y, Xu Z, Huo D, Guo X, Zhou Q, Zhang Y. AdaGCRAG: adaptive graph-chunk retrieval for lightweight RAG. In: Proceedings of the international semantic web conference. Springer, Cham; 2025. pp. 594–610.",
+        "citation_journal_title=Electronics; citation_title=RAP-RAG: a retrieval-augmented generation framework with adaptive retrieval task planning; citation_author=X Ji, L Xu, L Gu, J Ma, Z Zhang, W Jiang; citation_volume=14; citation_issue=21; citation_publication_date=2025; citation_doi=10.3390/electronics14214269; citation_id=CR13",
+        "Yu W. Retrieval-augmented generation across heterogeneous knowledge. In: Proceedings of NAACL-HLT 2022 student research workshop. 2022. pp. 52–58.",
+        "citation_journal_title=Proc ACL; citation_title=Deep bidirectional language–knowledge graph pretraining; citation_author=M Yasunaga, H Ren, A Bosselut, P Liang, J Leskovec; citation_volume=2022; citation_publication_date=2022; citation_pages=1085-1099; citation_id=CR15",
+        "Kent D, Shen Y, Liu Y. Evaluating curriculum alignment in LLMs for educational use. In: Proceedings of the 2023 Learning@Scale conference. 2023. pp. 45–57. \n                  https://doi.org/10.1145/3573051.3597359\n                  \n                .",
+        "citation_journal_title=Found Trends Inf Retr; citation_title=Multi-hop question answering; citation_author=V Mavi, A Jangra, A Jatowt; citation_volume=17; citation_issue=5; citation_publication_date=2024; citation_pages=457-586; citation_doi=10.1561/1500000102; citation_id=CR17",
+        "Srikumar V, Wang Z, Chang K. Personalized learning with LLMs: student modeling and adaptive hinting. In: Proceedings of EDM 2023. 2023.",
+        "Sun Y, Wang C, Bender EM. Prompt engineering in educational NLP: a systematic analysis. In: Proceedings of the 61st annual meeting of the association for computational linguistics 2023. pp. 114–129. \n                  https://doi.org/10.18653/v1/2023.acl-long.12\n                  \n                .",
+        "Thakur N, Reimers N, Rücklé A, Srivastava A, Gurevych I. BEIR: a heterogeneous benchmark for zero-shot evaluation of information retrieval models. In: Proceedings NeurIPS Datasets Benchmarks Track. 2021.",
+        "Petroni F, Piktus A, Fan A, Lewis P, Yazdani M, Riedel S (2021) KILT: a benchmark for knowledge-intensive language tasks. In: Proceedings of NAACL-HLT 2021. 2021. pp. 2523–2544. \n                  https://doi.org/10.18653/v1/2021.naacl-main.200\n                  \n                ",
+        "citation_journal_title=Proceedings of CVPR; citation_title=TQA: visual reasoning and natural language question answering in textbooks; citation_author=A Kembhavi, M Salvato, M Seo, H Hajishirzi, A Farhadi; citation_volume=2017; citation_publication_date=2017; citation_pages=5652-5660; citation_doi=10.1109/CVPR.2017.599; citation_id=CR22",
+        "citation_journal_title=Int J Artif Intell Educ; citation_title=The ASSISTments ecosystem: building a platform for minimally invasive research on learning and teaching; citation_author=N Heffernan, K Ostrow, X Xiong, J Williams, C Heffernan; citation_volume=30; citation_issue=4; citation_publication_date=2020; citation_pages=593-618; citation_doi=10.1007/s40593-020-00219-y; citation_id=CR23",
+        "citation_journal_title=Adv Neural Inf Process Syst; citation_title=Perception of knowledge boundary for large language models through semi-open-ended question answering; citation_author=Z Wen, Z Tian, Z Jian, Z Huang, P Ke, Y Gao, D Li; citation_volume=37; citation_publication_date=2024; citation_pages=88906-88931; citation_id=CR24",
+        "citation_journal_title=Proc SIGIR; citation_title=ColBERT: efficient passage search via contextualized late interaction over BERT; citation_author=O Khattab, M Zaharia; citation_volume=2020; citation_publication_date=2020; citation_pages=39-48; citation_doi=10.1145/3397271.3401075; citation_id=CR25",
+        "citation_journal_title=Discov Artif Intell; citation_title=Interpretable stance detection in social media via topic-guided transformers; citation_author=R Muthusami, K Saritha, KS Rao; citation_volume=5; citation_publication_date=2025; citation_pages=355; citation_doi=10.1007/s44163-025-00635-9; citation_id=CR26",
+        "citation_title=Evaluating the quality of learning: the SOLO taxonomy; citation_publication_date=1982; citation_id=CR27; citation_author=J Biggs; citation_author=K Collis; citation_publisher=Academic Press",
+        "citation_journal_title=Proceedings of EMNLP; citation_title=Dense passage retrieval for open-domain question answering; citation_author=V Karpukhin, B Oguz, S Min, P Lewis, L Wu, S Edunov, WT Yih; citation_volume=2020; citation_publication_date=2020; citation_pages=6769-6781; citation_id=CR28",
+        "citation_journal_title=Proc ICML; citation_title=Improving language models by retrieving from trillions of tokens; citation_author=S Borgeaud, A Mensch, J Hoffmann, T Cai, E Rutherford, K Millican, L Sifre; citation_volume=2022; citation_publication_date=2022; citation_pages=2206-2240; citation_id=CR29",
+        "citation_journal_title=Proc ACL; citation_title=TC-RAG: Turing-complete RAG for medical LLM systems; citation_author=X Jiang, Y Fang, R Qiu, H Zhang, Y Xu, H Chen, Y Wang; citation_volume=2025; citation_publication_date=2025; citation_pages=11400-11426; citation_id=CR30",
+        "Liu S, Ma Q, Li X. LightRAG: efficient hybrid retrieval with abstract memory clustering. In: Proceedings of EMNLP 2024. 2024.",
+        "citation_journal_title=ACM SIGMOD Rec; citation_title=Retrieval-augmented generation: what is there for data management researchers?; citation_author=A Khan, Y Luo, W Zhang, M Zhou, X Zhou; citation_volume=54; citation_issue=4; citation_publication_date=2026; citation_pages=33-42; citation_doi=10.1145/3793217.3793229; citation_id=CR32",
+        "citation_journal_title=Proc FEVER; citation_title=Fathom: a fast and modular RAG pipeline for fact-checking; citation_author=FB Rashid, S Hakak; citation_volume=2025; citation_publication_date=2025; citation_pages=258-265; citation_id=CR33",
+        "D’Souza S, Reddy K, Watanabe A. Curriculum-aware NLP systems for K-12 STEM: challenges and datasets. In: Proceedings of BEA 2022. 2022. pp 65–75. \n                  https://doi.org/10.18653/v1/2022.bea-1.7\n                  \n                .",
+        "citation_journal_title=Front Digit Educ; citation_title=Explainable few-shot knowledge tracing; citation_author=H Li, J Yu, Y Ouyang, Z Liu, W Rong, H Liu, Z Xiong; citation_volume=2; citation_issue=4; citation_publication_date=2025; citation_pages=34; citation_doi=10.1007/s44366-025-0071-x; citation_id=CR35",
+        "Tran J, Chen S, Reddy S. Deploying generative AI in low-resource classrooms: a field study. In: Proceedings of Learning@Scale 2023. 2023. pp 89–101. \n                  https://doi.org/10.1145/3573051.3597363\n                  \n                .",
+        "citation_journal_title=Discov Educ; citation_title=Lightweight lexical augmentation for robust transformer-based student feedback classification; citation_author=R Muthusami, K Saritha; citation_publication_date=2026; citation_doi=10.1007/s44217-026-01159-9; citation_id=CR37",
+        "citation_journal_title=J Mach Learn Res; citation_title=Scaling instruction-finetuned language models; citation_author=HW Chung, L Hou, S Longpre, B Zoph, Y Tay, W Fedus, J Wei; citation_volume=25; citation_issue=70; citation_publication_date=2024; citation_pages=1-53; citation_id=CR38",
+        "Liu M, Tang R, Nogueira R, Lin J, Zhao Y. Caching strategies for efficient retrieval-augmented generation. In: Proceedings of EMNLP 2021. 2021. pp. 2500–2510. \n                  https://doi.org/10.18653/v1/2021.emnlp-main.200\n                  \n                .",
+        "Lu S, Zhu Y, Ma X, Rajani NF, Xiong C. Learn to explain: multimodal reasoning via thought chains for science question answering. In: Proceedings of EMNLP 2022. 2022. pp. 4785–4800. \n                  https://doi.org/10.18653/v1/2022.emnlp-main.308\n                  \n                .",
+        "citation_journal_title=Proc CVPR; citation_title=Are you smarter than a sixth grader? Textbook question answering for multimodal machine comprehension; citation_author=A Kembhavi, M Salvato, M Seo, H Hajishirzi, A Farhadi; citation_volume=2017; citation_publication_date=2017; citation_pages=4999-5007; citation_doi=10.1109/CVPR.2017.531; citation_id=CR41",
+        "citation_journal_title=Proc AIED; citation_title=EdNet: a large-scale hierarchical dataset in education; citation_author=Y Choi, Y Lee, J Baek, D Shin, J Ha; citation_volume=2020; citation_publication_date=2020; citation_pages=69-73; citation_doi=10.1007/978-3-030-52237-7_14; citation_id=CR42",
+        "Chase H. LangChain: building applications with LLMs through composability. 2022. \n                  https://github.com/langchain-ai/langchain\n                  \n                .",
+        "Xiong L, Bajaj P, Song X, Campos D, Craswell N, Bennett PN, Wang S. Approximate nearest neighbor negative contrastive learning for dense text retrieval. In: Proceedings of ICLR 2021. 2021.",
+        "Ramírez S. FastAPI: high performance web framework for building APIs with Python. 2018. \n                  https://fastapi.tiangolo.com\n                  \n                .",
+        "citation_journal_title=IEEE Data Eng Bull; citation_title=Accelerating the machine learning lifecycle with MLflow; citation_author=M Zaharia, A Chen, A Davidson, A Ghodsi, SA Hong, A Konwinski, C Zumar; citation_volume=41; citation_issue=4; citation_publication_date=2018; citation_pages=39-45; citation_id=CR46",
+        "Sticha A, Braunschweiler N, Doddipatla RS, Knill KM. Advancing faithfulness of large language models in goal-oriented dialogue question answering. In: Proceedings of the 6th ACM conference on conversational user interfaces. 2024. pp. 1–7.",
+        "citation_journal_title=Proc EMNLP-IJCNLP; citation_title=Sentence-BERT: sentence embeddings using Siamese BERT networks; citation_author=N Reimers, I Gurevych; citation_volume=2019; citation_publication_date=2019; citation_pages=3982-3992; citation_id=CR48",
+        "citation_journal_title=Trans Assoc Comput Linguist; citation_title=Heterogeneous supervision for relation extraction: a representation learning approach; citation_author=B Liu, X Ren, C Zhang, J Han; citation_volume=6; citation_publication_date=2018; citation_pages=83-96; citation_doi=10.1162/tacl_a_00002; citation_id=CR49"
+      ],
+      "citation_author": [
+        "Muthusami, Rathinasamy",
+        "Saritha, Kandhasamy"
+      ],
+      "citation_author_email": [
+        "r.muthusami@gmail.com",
+        "sarimathspacet@gmail.com"
+      ],
+      "citation_author_institution": [
+        "Department of Computer Applications, Dr. Mahalingam College of Engineering and Technology, Pollachi, India",
+        "Department of Mathematics, P. A. College of Engineering and Technology, Pollachi, India"
+      ],
+      "citation_cover_date": [
+        "2026/12/01"
+      ]
+    }
+  }
+]

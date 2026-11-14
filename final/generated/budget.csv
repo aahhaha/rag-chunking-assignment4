@@ -1,0 +1,4 @@
+Method,Main EM %,Capped EM %,Change pp and 95 percent CI
+Fixed,55.67,54.67,"-1.00 [-2.33, +0.00]"
+Overlap,58.67,58.67,"+0.00 [-1.00, +1.00]"
+Semantic,1.33,24.67,"+23.33 [+18.33, +28.33]"

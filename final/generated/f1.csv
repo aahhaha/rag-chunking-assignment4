@@ -1,0 +1,4 @@
+B minus A,Difference pp,95 percent CI pp
+overlap minus fixed,+3.06,"[-0.66, +6.63]"
+semantic minus fixed,-58.35,"[-62.44, -54.38]"
+semantic minus overlap,-61.41,"[-65.22, -57.49]"

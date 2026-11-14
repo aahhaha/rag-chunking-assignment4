@@ -1,0 +1,4 @@
+Method,Rule,Chunks,Mean chars
+Fixed,500 chars; no overlap,3235,496
+Overlap,500 chars; 50 overlap,3585,497
+Semantic,95th percentile,589,2720

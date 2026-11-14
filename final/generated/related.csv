@@ -1,0 +1,5 @@
+Study,Intervention and evidence,Relation to this study
+Qu et al. [5],Semantic versus fixed segmentation across retrieval and generation tasks,Mixed benefits; different benchmark and cost evaluation
+Kiss et al. [6],Max Min semantic method; clustering and multiple choice RAG,Different semantic algorithm and answer task
+Elkiran and Rasheed [12],Retriever and reranker pairings; quality and efficiency,Pipeline interactions; no matching chunking comparison
+Present study,Three splitters; 500 paired questions; matched context check,Compact models; explicit input limits and saved outputs
