@@ -5,9 +5,9 @@
 1. The student ran `assignment4/analyse.py` on 27 October 2026.
 2. The assistant independently checked six main exact McNemar p-values against `scipy.stats.binomtest`.
 3. The assistant installed the analysis requirements in a new Python 3.12 environment, reran analysis, and obtained a byte-identical `main_summary.csv`.
-4. The Codex AI assistant performed a full 500-question-per-method inference rerun on the student computer on 27 October 2026, using the existing Python 3.11 environment and cached models. All 1,500 predictions and numerical outcomes matched. Duration: 3,887.93 seconds.
+4. The historical metadata labels the following execution as Codex on the student computer: a full 500-question-per-method inference rerun on the student computer on 27 October 2026, using the existing Python 3.11 environment and cached models. All 1,500 predictions and numerical outcomes matched. Duration: 3,887.93 seconds.
 
-The full inference rerun was not performed by an independently verified classmate and did not install the full model environment from scratch. The student reported instructor acceptance of this alternative on 2 November 2026. See `instructor_acceptance.json`; no exact date of the instructor conversation or signed approval is asserted.
+On 16 November 2026 Aibyn clarified that his classmate Bekzhan executed run_experiment.py with ChatGPT command guidance. The supplied Assignment4_AibynSamat_Final.docx describes his own laptop. This conflicts with the old operator and machine labels, which are preserved rather than rewritten. See reproduction/author_clarification_2026-11-16.json. The classmate attribution is author-reported. The run did not install the model environment from scratch. The student reported instructor acceptance of this alternative on 2 November 2026. See `instructor_acceptance.json`; no exact date of the instructor conversation or signed approval is asserted.
 
 ## Evidence
 

@@ -1,6 +1,6 @@
 # Final Defence Speaking Script
 
-About 10 minutes at 115 to 125 words per minute. Practise aloud and use your own wording.
+About 10 minutes. Rehearse aloud and use your own wording.
 
 ## Slide 1 Chunking and Context Limits
 
@@ -44,7 +44,7 @@ The main limitation is that semantic chunking changes both the boundaries and th
 
 ## Slide 11 Rechecking the Results
 
-The repository saves the prediction and scores for every question. The analysis checks the IDs before comparing methods, so the pairs line up correctly. Codex later reran the full model pipeline on my computer, and all 1,500 saved prediction strings and numeric outcomes matched. That took about 65 minutes in the existing environment. The disclosure in the article explains the AI assistance. This was a technical repeatability check, not an independent human replication. There was also a separate clean installation check for the saved-output analysis. For a quick demonstration, I can regenerate all Results tables and figures without running the models again.
+The repository saves predictions and scores for every question, and the analysis checks question IDs before comparing methods. My classmate Bekzhan ran run_experiment.py on his laptop, using ChatGPT to help with the commands. The saved comparison shows that all 1,500 predictions and numeric outcomes matched, with a runtime of about 65 minutes. The old machine metadata labels the operator as Codex on my computer, so the repository includes my correction and preserves the original logs. This used an existing environment, not a fresh model installation. A separate clean installation check covered the analysis. I can regenerate the Results tables and figures without running the models again.
 
 ## Slide 12 Conclusion
 

@@ -14,5 +14,10 @@
     "Final_Defence_Aibyn_Samat.pdf": "2e7d3efa5730daf758a1ceb865e8c85c0ce28d562f007d280747efa962d6211a",
     "Cover_Letter.docx": "4cf6454eddae48c372c59ad486d2486b0b0347db6d6ea55412d46273bcb6e011",
     "Supplementary_Results.docx": "604db43a2d2ba9722c1a20a18d2d9608d68bfb8d7011d5080e443b665062ac71"
+  },
+  "author_requested_correction": {
+    "date": "2026-11-16",
+    "scope": "Attribution of full experiment execution to Bekzhan with ChatGPT command guidance",
+    "original_approved_hashes_retained": true
   }
 }

@@ -6,7 +6,7 @@ The final manuscript integrates the earlier chunking research and saved experime
 
 ## Submission files
 
-- `submission/Final_Manuscript_Aibyn_Samat.docx`: journal-formatted article, 5,288 main-text words and 226-word abstract.
+- `submission/Final_Manuscript_Aibyn_Samat.docx`: journal-formatted article, 5,309 main-text words and 226-word abstract.
 - `submission/Journal_Fit_and_Readiness.docx`: Appendix A with primary and backup journals, Appendix B checklist and rubric evidence map.
 - `submission/Cover_Letter.docx`: one-page cover letter for Discover Computing.
 - `submission/Supplementary_Results.docx`: budget outcomes, raw p values and hashes.
@@ -57,9 +57,9 @@ Discover Computing accepts Word for Research articles and does not mandate a sep
 
 ## Integrity and actions remaining for the student
 
-On 16 November 2026 Aibyn Samat confirmed that he read all 30 references, reviewed the article and declarations, checked his personal details and approved the version for course submission. This is author self-report recorded in author_approval.json, with hashes of the approved artifacts. University similarity checking is not performed in this package. External human reproduction is not performed. The AI-operated technical rerun and clean saved-output analysis are described accurately in the manuscript and the original reproduction folder.
+On 16 November 2026 Aibyn Samat confirmed that he read all 30 references, reviewed the article and declarations, checked his personal details and approved the version for course submission. This is author self-report recorded in author_approval.json, with hashes of the originally approved artifacts. The author subsequently requested the reproduction attribution correction documented in reproduction_clarification.json. University similarity checking is not performed in this package. Aibyn reports that Bekzhan ran the full experiment with ChatGPT command guidance on his own laptop. The supplied Assignment 4 report supports that account; original metadata instead labels Codex on the student computer. The correction is documented in reproduction_clarification.json without rewriting the old logs. The model rerun used an existing environment.
 
-Historical outputs and earlier release tags are preserved. The original `final` tag is preserved; the editorial revision uses `final-revised`, and the author approval record is included in `final-approved`. No passwords, authentication tokens, private messages, full downloaded article texts or raw Canva template are included in the submission package. The modified slides contain template design elements under Canva's applicable use terms; the raw template is not relicensed as project code.
+Historical outputs and earlier release tags are preserved. The original `final` tag is preserved; the editorial revision uses `final-revised`, and the author approval record is included in `final-approved`; this attribution correction uses `final-corrected`. No passwords, authentication tokens, private messages, full downloaded article texts or raw Canva template are included in the submission package. The modified slides contain template design elements under Canva's applicable use terms; the raw template is not relicensed as project code.
 
 ## Licensing
 

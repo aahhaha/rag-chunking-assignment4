@@ -50,13 +50,17 @@ checks=[
  ['CRediT AI interests funding ethics','Yes','Statements included. The author confirms personal declarations before actual journal submission.'],
  ['Prior participant consent and approval','Not applicable','Public benchmark analysis; no new human participants.'],
  ['Similarity check acceptable','No','Requires the university system and its threshold; no score is invented.'],
- ['Reproduction by another person','No','AI operated technical rerun and clean analysis check completed. Course instructor accepted the earlier individual arrangement; no external human rerun is claimed.'],
+ ['Reproduction by another person','Yes, reported','Aibyn reports that Bekzhan ran run_experiment.py with ChatGPT command guidance. Existing environment; see reproduction_clarification.json for the operator metadata correction.'],
  ['Final author approval', 'Yes', 'Author confirmed approval of the article, declarations and personal details on 16 November 2026.'],
- ['Final repository release', 'Yes', 'Release final-approved records author approval. Earlier final and final-revised tags are retained.'],
+ ['Final repository release','Yes','Release final-corrected records the reproduction attribution correction. Earlier tags are retained.'],
  ['Individual project permission','Yes as reported','Student confirmed on 14 November 2026 that the instructor accepted the individual final project.'],
 ]
 for part,items in enumerate([checks[:8],checks[8:]]):
+ if part: d.add_page_break()
  t=b.table(d,'Readiness status against the course checklist' if part==0 else 'Readiness checklist continued',['Check','Status','Evidence or remaining action'],items,[2.05,1.0,3.75])
+ if part:
+  from docx.oxml.ns import qn
+  for h in t.rows[0]._tr.findall('./'+qn('w:trPr')+'/'+qn('w:tblHeader')):h.getparent().remove(h)
  for i,row in enumerate(t.rows):
   for cell in row.cells:
    for para in cell.paragraphs:para.paragraph_format.keep_with_next=i<len(t.rows)-1

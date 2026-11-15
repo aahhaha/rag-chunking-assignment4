@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-16",
+  "reported_by": "Aibyn Samat",
+  "reported_operator": "Bekzhan (classmate)",
+  "reported_command": "run_experiment.py (full model inference, not only analyse.py)",
+  "guidance": "Author says ChatGPT provided command-line instructions; Bekzhan entered commands and ran the code.",
+  "reported_machine": "Bekzhan own laptop, as described in the supplied Assignment 4 report",
+  "source_document_name": "Assignment4_AibynSamat_Final.docx",
+  "source_document_sha256": "b2306726a884218e0cd6c94c58d7fc038967e3f9578f23ead700309936c3356b",
+  "source_statement": "This record documents a full inference rerun that my classmate Bekzhan ran on his own laptop.",
+  "metadata_discrepancy": "Historical environment.json and comparison.json label the operator Codex AI assistant on student computer. Their original contents are preserved. Operator and machine attribution are author-reported, not independently resolved from those logs.",
+  "clean_model_installation": false,
+  "new_run_or_new_numeric_results": false
+}
