@@ -2,7 +2,7 @@
 
 The current final submission is under [`final/`](final/README.md), with the article, journal fit and readiness appendices, cover letter, supplementary results and a 12-slide Canva-based presentation. Start with [`final/START_HERE_RU.md`](final/START_HERE_RU.md) for Moodle files and defence preparation.
 
-Final release: https://github.com/aahhaha/rag-chunking-assignment4/releases/tag/final-revised
+Final release: https://github.com/aahhaha/rag-chunking-assignment4/releases/tag/final-approved
 
 To regenerate all final Results tables and figures from saved predictions, install `requirements-analysis.txt` and run `python final/reproduce.py` from this directory. Earlier experiments and release tags are retained below.
 

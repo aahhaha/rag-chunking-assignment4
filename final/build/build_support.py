@@ -42,7 +42,7 @@ checks=[
  ['Consistent reported results','Yes','Main values and matched comparisons generated from analysis.json and saved CSVs.'],
  ['Traceable numerical results','Yes','Generated table CSVs, hashes, result IDs and evidence map accompany the code. Historical chunk and subgroup summaries are distinguished.'],
  ['References real and formatted','Yes','30 published sources with source links; DOI included where available.'],
- ['All references read by the author','No','Personal reading and approval remain for Aibyn. reference_reading_register.csv supports this check. AI retrieval does not establish author reading.'],
+ ['All references read by the author', 'Yes', 'Aibyn Samat confirmed reading all 30 references on 16 November 2026. Recorded in author_approval.json.'],
  ['At least 25 and half recent','Yes','30 references; 18 published in 2022 or later, exceeding half even under the stricter recent window.'],
  ['Explicit supported contributions','Yes','Paired comparison, matched context diagnosis and traceable technical reproduction.'],
  ['Validity and limitations','Yes','Internal, construct, external and statistical limitations discussed.'],
@@ -51,11 +51,15 @@ checks=[
  ['Prior participant consent and approval','Not applicable','Public benchmark analysis; no new human participants.'],
  ['Similarity check acceptable','No','Requires the university system and its threshold; no score is invented.'],
  ['Reproduction by another person','No','AI operated technical rerun and clean analysis check completed. Course instructor accepted the earlier individual arrangement; no external human rerun is claimed.'],
- ['Final author approval','No','Student must read and approve the final version before upload or journal submission.'],
- ['Final repository release','Yes','The original final tag is retained. The edited package uses final-revised: https://github.com/aahhaha/rag-chunking-assignment4/releases/tag/final-revised.'],
+ ['Final author approval', 'Yes', 'Author confirmed approval of the article, declarations and personal details on 16 November 2026.'],
+ ['Final repository release', 'Yes', 'Release final-approved records author approval. Earlier final and final-revised tags are retained.'],
  ['Individual project permission','Yes as reported','Student confirmed on 14 November 2026 that the instructor accepted the individual final project.'],
 ]
-b.table(d,'Readiness status against the course checklist',['Check','Status','Evidence or remaining action'],checks,[2.05,1.0,3.75])
+for part,items in enumerate([checks[:8],checks[8:]]):
+ t=b.table(d,'Readiness status against the course checklist' if part==0 else 'Readiness checklist continued',['Check','Status','Evidence or remaining action'],items,[2.05,1.0,3.75])
+ for i,row in enumerate(t.rows):
+  for cell in row.cells:
+   for para in cell.paragraphs:para.paragraph_format.keep_with_next=i<len(t.rows)-1
 d.add_heading('Course rubric evidence map',1)
 for name,pts,where in [
  ('A1 Title abstract introduction contributions',8,'Manuscript title, Abstract and Section 1'),('A2 Related work',7,'Section 2; Table 1; verified references'),('A3 Materials and methods',10,'Section 3; original code and configuration record'),('A4 Results',12,'Section 4; Tables 2-8; Figures 1-2; Supplementary Results'),('A5 Discussion and conclusion',8,'Sections 5 and 6'),('A6 Writing and formatting',5,'Journal formatting, source register and document layout review'),('B Journal fit and cover letter',5,'Appendix A and one page cover letter'),('C Reproducibility',12,'Repository, release final, regeneration command and explicit external reproduction status'),('D1 Presentation',10,'12 slides and timed speaking script'),('D2 Individual defence',23,'Student rehearsal, code demonstration and oral explanations')]:

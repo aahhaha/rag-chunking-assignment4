@@ -1,0 +1,18 @@
+{
+  "author": "Aibyn Samat",
+  "date": "2026-11-16",
+  "basis": "Explicit author confirmation in the project conversation",
+  "approval_scope": "Course submission to the instructor; not a journal submission",
+  "final_author_approval": true,
+  "declarations_and_personal_details_confirmed": true,
+  "all_references_read": true,
+  "reading_status_basis": "Author self-report; not independently verified",
+  "approved_artifact_sha256": {
+    "Final_Manuscript_Aibyn_Samat.docx": "ddfbb2821c2657be839386efac3e25ab04d28cccb9af23b526ddcafe00b6e57b",
+    "Final_Manuscript_Aibyn_Samat.pdf": "9185ddb7f2e756f5b24090fc325509dcb5258abb16e40b23bb68ce20e24f5b4c",
+    "Final_Defence_Aibyn_Samat.pptx": "2ab14ffb663d3cc0d3dd134f644fd7e2c1cc8b3ef673017b16015bd4e927f5ba",
+    "Final_Defence_Aibyn_Samat.pdf": "2e7d3efa5730daf758a1ceb865e8c85c0ce28d562f007d280747efa962d6211a",
+    "Cover_Letter.docx": "4cf6454eddae48c372c59ad486d2486b0b0347db6d6ea55412d46273bcb6e011",
+    "Supplementary_Results.docx": "604db43a2d2ba9722c1a20a18d2d9608d68bfb8d7011d5080e443b665062ac71"
+  }
+}

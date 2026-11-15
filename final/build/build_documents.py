@@ -52,7 +52,7 @@ for k in KEYS:
   if first:venue+=':'+first[0]+('-'+last[0] if last and last[0] else '')
   venue+='.'
   url='https://doi.org/'+m['citation_doi'][0] if m.get('citation_doi') else E[k]['url']
- REF.append(dict(number=NUM[k],key=k,authors=authors,title=title,venue=venue,year=year,url=url,author_read='Author confirmation required',verified='Publisher metadata checked; see source URL'))
+ REF.append(dict(number=NUM[k],key=k,authors=authors,title=title,venue=venue,year=year,url=url,author_read=('Yes; Aibyn Samat confirmed on 16 November 2026' if (ROOT/'author_approval.json').exists() else 'Author confirmation required'),verified='Publisher metadata checked; see source URL'))
 (ROOT/'references.json').write_text(json.dumps(REF,indent=2,ensure_ascii=False),encoding='utf-8')
 with (ROOT/'reference_reading_register.csv').open('w',newline='',encoding='utf-8-sig') as f:
  w=csv.DictWriter(f,fieldnames=list(REF[0]));w.writeheader();w.writerows(REF)

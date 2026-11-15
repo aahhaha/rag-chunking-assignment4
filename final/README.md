@@ -57,9 +57,9 @@ Discover Computing accepts Word for Research articles and does not mandate a sep
 
 ## Integrity and actions remaining for the student
 
-The source register verifies bibliographic records; it does not certify that the student has read them. The author must review the manuscript, references and declarations and approve the final version. University similarity checking is not performed in this package. External human reproduction is not performed. The AI-operated technical rerun and clean saved-output analysis are described accurately in the manuscript and the original reproduction folder.
+On 16 November 2026 Aibyn Samat confirmed that he read all 30 references, reviewed the article and declarations, checked his personal details and approved the version for course submission. This is author self-report recorded in author_approval.json, with hashes of the approved artifacts. University similarity checking is not performed in this package. External human reproduction is not performed. The AI-operated technical rerun and clean saved-output analysis are described accurately in the manuscript and the original reproduction folder.
 
-Historical outputs and earlier release tags are preserved. The original `final` tag is preserved; this edited release uses `final-revised`. No passwords, authentication tokens, private messages, full downloaded article texts or raw Canva template are included in the submission package. The modified slides contain template design elements under Canva's applicable use terms; the raw template is not relicensed as project code.
+Historical outputs and earlier release tags are preserved. The original `final` tag is preserved; the editorial revision uses `final-revised`, and the author approval record is included in `final-approved`. No passwords, authentication tokens, private messages, full downloaded article texts or raw Canva template are included in the submission package. The modified slides contain template design elements under Canva's applicable use terms; the raw template is not relicensed as project code.
 
 ## Licensing
 
